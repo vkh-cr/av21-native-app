@@ -5,7 +5,7 @@ import {
   Provider as PaperProvider,
 } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
-import AvDrawer from "./src/components/Drawer";
+import AvDrawer from "./src/components/AvDrawer";
 
 import Home from "./src/screens/Home";
 
@@ -22,8 +22,7 @@ export default function Main() {
   return (
     <NavigationContainer>
       <PaperProvider theme={theme}>
-        {/* <AvDrawer /> */}
-        <Home />
+        <AvDrawer />
       </PaperProvider>
     </NavigationContainer>
   );
