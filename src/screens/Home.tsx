@@ -27,6 +27,13 @@ export default function Home({ navigation }: HomeProps) {
       </AppHeader>
       {news.data.map((item, index) => (
         <Card key={index} style={{ padding: 10, margin: 10 }}>
+          {item.image !== "" && (
+            <Card.Cover
+              source={{
+                uri: `data:image/png;base64, ${item.image}`,
+              }}
+            />
+          )}
           <Card.Title title={item.title} />
           <Card.Content>
             <Text>{item.description}</Text>
