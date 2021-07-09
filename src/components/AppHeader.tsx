@@ -6,19 +6,19 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { useCallback } from "react";
 import { Appbar } from "react-native-paper";
 
-interface AppHeaderProps<T extends string> {
+interface AppHeaderProps<T> {
   title: string;
   subtitle?: string;
   navigation: DrawerNavigationProp<Record<string, object | undefined>, T>;
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-export const AppHeader = <T extends string>({
+export function AppHeader<T>({
   title,
   subtitle,
   navigation,
-  children
-}: AppHeaderProps<T>) => {
+  children,
+}: AppHeaderProps<T>) {
   const handleMenuPress = useCallback(() => {
     navigation.toggleDrawer();
   }, []);
@@ -27,7 +27,7 @@ export const AppHeader = <T extends string>({
     <Appbar.Header>
       <Appbar.Action icon="menu" onPress={handleMenuPress} />
       <Appbar.Content title={title} subtitle={subtitle} />
-      { children }
+      {children}
     </Appbar.Header>
   );
-};
+}
