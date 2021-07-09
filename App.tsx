@@ -12,7 +12,7 @@ export default function Main() {
     ...DefaultTheme,
     colors: {
       ...DefaultTheme.colors,
-      primary: Colors.cyanA400,
+      primary: "#056970",
       accent: Colors.amber100,
     },
   };

@@ -3,19 +3,28 @@ import { DrawerScreenProps, useIsDrawerOpen } from "@react-navigation/drawer";
 
 import { StatusBar } from "expo-status-bar";
 
-import { useCallback } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { AppHeader } from "../components/AppHeader";
-
+import { useNews } from "../hooks/useNews";
+import { Appbar, Card, Text } from "react-native-paper";
 interface HomeProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Home"> {}
+  extends DrawerScreenProps<Record<string, object | undefined>, "Home"> { }
 
 export default function Home({ navigation }: HomeProps) {
+  const news = useNews()
+
   return (
-    <View>
-      <AppHeader title="Title" subtitle="subtitle" navigation={navigation} />
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <ScrollView>
       <StatusBar style="auto" />
-    </View>
+      <AppHeader title="Title" subtitle="subtitle" navigation={navigation}> </AppHeader>
+      { news.map((item, index) =>
+        <Card key={index} style={{padding: 10, margin: 10}}>
+          <Card.Title title={item.title} />
+          <Card.Content>
+            <Text>{item.description}</Text>
+          </Card.Content>
+        </Card>
+      )}
+    </ScrollView>
   );
 }

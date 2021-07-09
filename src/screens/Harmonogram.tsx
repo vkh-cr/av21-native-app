@@ -14,7 +14,7 @@ export default function Harmonogram({ navigation }: HarmonogramProps) {
   return (
     <View>
       <AppHeader title="Harmonogram" subtitle="nevim" navigation={navigation} />
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Trolololo</Text>
       <StatusBar style="auto" />
     </View>
   );

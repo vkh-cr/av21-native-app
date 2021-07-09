@@ -10,12 +10,14 @@ interface AppHeaderProps<T extends string> {
   title: string;
   subtitle?: string;
   navigation: DrawerNavigationProp<Record<string, object | undefined>, T>;
+  children: React.ReactNode
 }
 
 export const AppHeader = <T extends string>({
   title,
   subtitle,
   navigation,
+  children
 }: AppHeaderProps<T>) => {
   const handleMenuPress = useCallback(() => {
     navigation.toggleDrawer();
@@ -25,6 +27,7 @@ export const AppHeader = <T extends string>({
     <Appbar.Header>
       <Appbar.Action icon="menu" onPress={handleMenuPress} />
       <Appbar.Content title={title} subtitle={subtitle} />
+      { children }
     </Appbar.Header>
   );
 };

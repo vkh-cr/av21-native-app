@@ -4,15 +4,20 @@ import {
   DrawerItem,
 } from "@react-navigation/drawer";
 import React from "react";
-import { Text, StyleSheet, View } from "react-native";
-import { Drawer, Switch, TouchableRipple } from "react-native-paper";
+import { StyleSheet, View, Image } from "react-native";
+import { Drawer } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+//@ts-ignore
+import logo from '../../assets/logo-drawer.png'
 
 const DrawerContent = (props: DrawerContentComponentProps) => {
   const navigation = props.navigation;
   return (
     <DrawerContentScrollView {...props}>
       <View style={styles.drawerContent}>
+        <Drawer.Section style={styles.drawerLogoSection}>
+          <Image source={logo} style={{ width: 100, height: 130}}/>
+        </Drawer.Section>
         <Drawer.Section style={styles.drawerSection}>
           <DrawerItem
             icon={({ color, size }) => (
@@ -98,6 +103,12 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
 const styles = StyleSheet.create({
   drawerContent: {
     flex: 1,
+  },
+  drawerLogoSection: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    height: 150,
   },
   userInfoSection: {
     paddingLeft: 20,
