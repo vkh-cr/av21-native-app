@@ -8,7 +8,6 @@ import { StyleSheet, View, Image } from "react-native";
 import { Drawer } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-//@ts-ignore
 import logo from "../../assets/logo-drawer.png";
 
 const DrawerContent = (props: DrawerContentComponentProps) => {
