@@ -1,5 +1,7 @@
-export const news = {
-  version: 1, 
+import { News, StaticData } from "./types";
+
+export const news: News = {
+  version: 1,
   data: [
     {
       title: "Blabla",
@@ -57,15 +59,18 @@ export const news = {
       imageUrl: "",
       date: new Date(),
     },
-  ]
+  ],
 };
 
-export const staticData = {version: 1, data: {
-  activities: [],
-  people: [],
-  contacts: [],
-  harmonogram: [],
-  maps: [],
-  images: [],
-  texts: [], 
-}}
+export const staticData: StaticData = {
+  version: 1,
+  data: {
+    activities: [],
+    presenters: [],
+    contacts: [],
+    harmonogram: [],
+    maps: [],
+    images: [],
+    texts: [],
+  },
+};

@@ -1,18 +1,8 @@
 import { useEffect, useState } from "react";
 import { news as staticNews } from "../data";
+import { News } from "../types";
 import { getData } from "../util";
 import { useSync } from "./useSync";
-
-type News = {
-  version: number;
-  data: {
-    title: string;
-    description: string;
-    image: string;
-    imageUrl: string;
-    date: Date;
-  }[];
-};
 
 export const useNews = (): { news: News; refreshNews: () => void } => {
   const [news, setNews] = useState<News | null>(null);
