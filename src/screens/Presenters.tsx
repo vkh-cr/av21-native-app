@@ -4,14 +4,14 @@ import { DrawerScreenProps } from "@react-navigation/drawer";
 import { Text, View } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 
-interface HarmonogramProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Home"> {}
+interface PresentersProps
+  extends DrawerScreenProps<Record<string, object | undefined>, "Presenters"> {}
 
-export default function Harmonogram({ navigation }: HarmonogramProps) {
+export default function Presenters({ navigation }: PresentersProps) {
   return (
     <View>
       <AppHeader
-        title="Harmonogram"
+        title="Přednášející"
         // subtitle="nevim"
         navigation={navigation}
       />

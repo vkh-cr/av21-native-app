@@ -1,14 +1,15 @@
+import * as React from "react";
 import {
   DrawerContentScrollView,
   DrawerContentComponentProps,
   DrawerItem,
 } from "@react-navigation/drawer";
-import React from "react";
 import { StyleSheet, View, Image } from "react-native";
 import { Drawer } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 //@ts-ignore
-import logo from '../../assets/logo-drawer.png'
+import logo from "../../assets/logo-drawer.png";
 
 const DrawerContent = (props: DrawerContentComponentProps) => {
   const navigation = props.navigation;
@@ -16,14 +17,14 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
     <DrawerContentScrollView {...props}>
       <View style={styles.drawerContent}>
         <Drawer.Section style={styles.drawerLogoSection}>
-          <Image source={logo} style={{ width: 100, height: 130}}/>
+          <Image source={logo} style={{ width: 100, height: 130 }} />
         </Drawer.Section>
         <Drawer.Section style={styles.drawerSection}>
           <DrawerItem
             icon={({ color, size }) => (
               <MaterialCommunityIcons name="home" color={color} size={size} />
             )}
-            label="Domu"
+            label="Domů"
             onPress={() => {
               navigation.navigate("Home");
             }}
@@ -45,9 +46,9 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
             icon={({ color, size }) => (
               <MaterialCommunityIcons name="heart" color={color} size={size} />
             )}
-            label="Duchovni program"
+            label="Duchovní program"
             onPress={() => {
-              // todo navigate somewhere
+              navigation.navigate("Program");
             }}
           />
           <DrawerItem
@@ -58,9 +59,9 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
                 size={size}
               />
             )}
-            label="Prednasejici"
+            label="Přednášející"
             onPress={() => {
-              // todo navigate somewhere
+              navigation.navigate("Presenters");
             }}
           />
           <DrawerItem
@@ -69,7 +70,7 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
             )}
             label="Aktivity"
             onPress={() => {
-              // todo navigate somewhere
+              navigation.navigate("Activities");
             }}
           />
           <DrawerItem
@@ -78,7 +79,7 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
             )}
             label="Mapy"
             onPress={() => {
-              // todo navigate somewhere
+              navigation.navigate("Maps");
             }}
           />
           <DrawerItem
@@ -91,7 +92,7 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
             )}
             label="Kontakt"
             onPress={() => {
-              // todo navigate somewhere
+              navigation.navigate("Contacts");
             }}
           />
         </Drawer.Section>

@@ -1,9 +1,9 @@
 import * as React from "react";
-import { DrawerScreenProps, useIsDrawerOpen } from "@react-navigation/drawer";
+import { DrawerScreenProps } from "@react-navigation/drawer";
 
 import { StatusBar } from "expo-status-bar";
 
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import { useNews } from "../hooks/useNews";
 import { Appbar, Card, Text } from "react-native-paper";
@@ -22,7 +22,11 @@ export default function Home({ navigation }: HomeProps) {
   return (
     <ScrollView>
       <StatusBar style="auto" />
-      <AppHeader title="Title" subtitle="subtitle" navigation={navigation}>
+      <AppHeader
+        title="Absolventský Velehrad 2021"
+        // subtitle="subtitle"
+        navigation={navigation}
+      >
         <Appbar.Action icon="refresh" onPress={handleRefresh} />
       </AppHeader>
       {news.data.map((item, index) => (

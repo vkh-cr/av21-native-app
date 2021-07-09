@@ -1,19 +1,16 @@
 import * as React from "react";
 import { DrawerNavigationProp } from "@react-navigation/drawer";
-import { NavigationProp } from "@react-navigation/native";
-import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
 import { useCallback } from "react";
 import { Appbar } from "react-native-paper";
 
-interface AppHeaderProps<T> {
+interface AppHeaderProps<T extends string> {
   title: string;
   subtitle?: string;
   navigation: DrawerNavigationProp<Record<string, object | undefined>, T>;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-export function AppHeader<T>({
+export function AppHeader<T extends string>({
   title,
   subtitle,
   navigation,
