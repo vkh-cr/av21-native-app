@@ -7,8 +7,6 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import AvDrawer from "./src/components/AvDrawer";
 
-import Home from "./src/screens/Home";
-
 export default function Main() {
   const theme = {
     ...DefaultTheme,

@@ -7,13 +7,13 @@ import { useCallback } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 
-interface HomeProps
+interface HarmonogramProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Home"> {}
 
-export default function Home({ navigation }: HomeProps) {
+export default function Harmonogram({ navigation }: HarmonogramProps) {
   return (
     <View>
-      <AppHeader title="Title" subtitle="subtitle" navigation={navigation} />
+      <AppHeader title="Harmonogram" subtitle="nevim" navigation={navigation} />
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
