@@ -12,7 +12,19 @@ export interface News {
 }
 
 export interface ActivityData {}
-export interface PresenterData {}
+
+export interface Course {
+  title: string;
+}
+
+export interface PresenterData {
+  id: string;
+  firstName: string;
+  lastName: string;
+  description: string;
+  avatar?: string;
+  courses: Course[];
+}
 export interface ContactData {}
 export interface HarmonogramData {}
 export interface MapData {}
