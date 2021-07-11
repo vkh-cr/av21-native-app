@@ -13,11 +13,11 @@ interface HomeProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Home"> {}
 
 export default function Home({ navigation }: HomeProps) {
-  const { news, refreshNews } = useNews();
+  const { news, syncNews, loading } = useNews();
 
   const handleRefresh = useCallback(() => {
-    refreshNews();
-  }, [refreshNews]);
+    syncNews();
+  }, [syncNews]);
 
   return (
     <ScrollView>
@@ -27,7 +27,11 @@ export default function Home({ navigation }: HomeProps) {
         // subtitle="subtitle"
         navigation={navigation}
       >
-        <Appbar.Action icon="refresh" onPress={handleRefresh} />
+        <Appbar.Action
+          icon="refresh"
+          onPress={handleRefresh}
+          disabled={loading}
+        />
       </AppHeader>
       {news.data.map((item, index) => (
         <Card key={index} style={{ padding: 10, margin: 10 }}>

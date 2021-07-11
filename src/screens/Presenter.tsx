@@ -4,13 +4,7 @@ import { DrawerScreenProps } from "@react-navigation/drawer";
 import { View, ScrollView } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import { usePresenter } from "../hooks/usePresenter";
-import {
-  Avatar,
-  Badge,
-  Headline,
-  Paragraph,
-  Surface,
-} from "react-native-paper";
+import { Avatar, Chip, Headline, Paragraph, Surface } from "react-native-paper";
 import { StyleSheet } from "react-native";
 
 interface PresenterProps
@@ -59,9 +53,14 @@ export default function Presenter({ navigation, route }: PresenterProps) {
           <View style={styles.courses}>
             <Headline>Vede toto: </Headline>
             {presenter?.courses.map((course, index) => (
-              <Badge key={index} size={24} style={styles.badge}>
+              <Chip
+                key={index}
+                icon="pulse"
+                mode="outlined"
+                style={styles.badge}
+              >
                 {course.title}
-              </Badge>
+              </Chip>
             ))}
           </View>
         )}

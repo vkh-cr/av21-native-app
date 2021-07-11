@@ -6,10 +6,15 @@ import {
 } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import AvDrawer from "./src/components/AvDrawer";
-import { useSync } from "./src/hooks/useSync";
+import { useNews } from "./src/hooks/useNews";
+import { useEffect } from "react";
 
 export default function Main() {
-  useSync(true);
+  const { syncNews } = useNews();
+
+  useEffect(() => {
+    syncNews();
+  }, []);
 
   const theme = {
     ...DefaultTheme,

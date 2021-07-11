@@ -1,29 +1,65 @@
 import { useEffect, useState } from "react";
 import { news as staticNews } from "../data";
 import { News } from "../types";
-import { getData } from "../util";
-import { useSync } from "./useSync";
+import { getData, storeData } from "../util";
 
-export const useNews = (): { news: News; refreshNews: () => void } => {
+const fetchNews = async () => {
+  try {
+    const response = await fetch("https://ff0000.cz/remote.json");
+    const raw = await response.text();
+    const json = JSON.parse(raw);
+    return json;
+  } catch (e) {
+    return null;
+  }
+};
+
+export const useNews = (): {
+  news: News;
+  syncNews: () => void;
+  loading: boolean;
+} => {
   const [news, setNews] = useState<News | null>(null);
-  const { refreshNews } = useSync(false);
+  const [loading, setLoading] = useState(false);
+
+  async function tryLoadRemoteNews() {
+    setLoading(true);
+    try {
+      const remoteNews = await fetchNews();
+      const localNews = await getData("@news");
+
+      const { version: remoteVersion } = remoteNews || {};
+      const { version: localVersion } = localNews || {};
+
+      if (!localVersion || (localVersion < remoteVersion && remoteVersion)) {
+        storeData("@news", JSON.stringify(remoteNews));
+      }
+    } catch (error) {
+      console.log("remote sync error", error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  const loadNews = async () => {
+    try {
+      const news = await getData("@news");
+      setNews(news);
+    } catch (error) {
+      console.log("storing error", error);
+    }
+  };
 
   useEffect(() => {
-    const loadNews = async () => {
-      try {
-        const news = await getData("@news");
-        setNews(news);
-      } catch (error) {}
-    };
     loadNews();
-  }, []);
+  }, [loadNews]);
 
   return {
     news: news || staticNews,
-    refreshNews: async () => {
-      await refreshNews();
-      const news = await getData("@news");
-      setNews(news);
+    syncNews: async () => {
+      await tryLoadRemoteNews();
+      await loadNews();
     },
+    loading,
   };
 };
