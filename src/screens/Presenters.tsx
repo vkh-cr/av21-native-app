@@ -1,11 +1,10 @@
 import * as React from "react";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import { Avatar, List } from "react-native-paper";
 import { useStaticData } from "../hooks/useStaticData";
-import { useCallback } from "react";
 
 interface PresentersProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Presenters"> {}
@@ -41,6 +40,7 @@ export default function Presenters({ navigation }: PresentersProps) {
                   {...props}
                   style={{ ...props.style, ...styles.avatar }}
                   size={42}
+                  labelStyle={{ letterSpacing: 0.5 }}
                   label={`${presenter.firstName.substring(
                     0,
                     1

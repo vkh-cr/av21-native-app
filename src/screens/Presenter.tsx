@@ -41,6 +41,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
           ) : (
             <Avatar.Text
               style={styles.avatar}
+              labelStyle={{ letterSpacing: 1 }}
               size={256}
               label={`${presenter?.firstName.substring(
                 0,
