@@ -3,7 +3,7 @@ import { DrawerScreenProps } from "@react-navigation/drawer";
 
 import { View, StyleSheet, ScrollView } from "react-native";
 import { AppHeader } from "../components/AppHeader";
-import { Avatar, List } from "react-native-paper";
+import { Avatar, List, Surface } from "react-native-paper";
 import { useStaticData } from "../hooks/useStaticData";
 
 interface PresentersProps
@@ -25,29 +25,27 @@ export default function Presenters({ navigation }: PresentersProps) {
             onPress={() =>
               navigation.navigate("Presenter", { presenterId: presenter.id })
             }
-            left={(props) =>
-              presenter.avatar ? (
-                <Avatar.Image
-                  {...props}
-                  style={{ ...props.style, ...styles.avatar }}
-                  size={42}
-                  source={{
-                    uri: `data:image/png;base64, ${presenter.avatar}`,
-                  }}
-                />
-              ) : (
-                <Avatar.Text
-                  {...props}
-                  style={{ ...props.style, ...styles.avatar }}
-                  size={42}
-                  labelStyle={{ letterSpacing: 0.5 }}
-                  label={`${presenter.firstName.substring(
-                    0,
-                    1
-                  )} ${presenter.lastName.substring(0, 1)}`}
-                />
-              )
-            }
+            left={(props) => (
+              <Surface {...props} style={{ ...props.style, ...styles.surface }}>
+                {presenter.avatar ? (
+                  <Avatar.Image
+                    size={42}
+                    source={{
+                      uri: `data:image/png;base64, ${presenter.avatar}`,
+                    }}
+                  />
+                ) : (
+                  <Avatar.Text
+                    size={42}
+                    labelStyle={{ letterSpacing: 0.5 }}
+                    label={`${presenter.firstName.substring(
+                      0,
+                      1
+                    )} ${presenter.lastName.substring(0, 1)}`}
+                  />
+                )}
+              </Surface>
+            )}
             right={(props) => {
               return <List.Icon {...props} icon="chevron-right" />;
             }}
@@ -61,10 +59,18 @@ export default function Presenters({ navigation }: PresentersProps) {
 }
 
 const styles = StyleSheet.create({
-  avatar: {
-    alignSelf: "center",
-  },
+  avatar: {},
   scrollView: {
     height: "100%",
+  },
+  surface: {
+    width: 46,
+    height: 46,
+    padding: 8,
+    borderRadius: 23,
+    elevation: 4,
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
