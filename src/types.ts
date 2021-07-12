@@ -13,7 +13,7 @@ export interface News {
 
 export interface ActivityData {}
 
-export interface Course {
+export interface ActivityData {
   title: string;
 }
 
@@ -23,7 +23,7 @@ export interface PresenterData {
   lastName: string;
   description: string;
   avatar?: string;
-  courses: Course[];
+  activities: ActivityData[];
 }
 export interface ContactData {}
 export interface HarmonogramData {}

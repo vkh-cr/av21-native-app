@@ -5,7 +5,11 @@ import { getData, storeData } from "../util";
 
 const fetchNews = async () => {
   try {
-    const response = await fetch("https://ff0000.cz/remote.json");
+    const response = await fetch("https://ff0000.cz/remote.json", {
+      headers: {
+        "Cache-Control": "no-cache",
+      },
+    });
     const raw = await response.text();
     const json = JSON.parse(raw);
     return json;
@@ -52,7 +56,7 @@ export const useNews = (): {
 
   useEffect(() => {
     loadNews();
-  }, [loadNews]);
+  }, []);
 
   return {
     news: news || staticNews,

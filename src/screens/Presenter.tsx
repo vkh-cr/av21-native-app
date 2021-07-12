@@ -49,17 +49,17 @@ export default function Presenter({ navigation, route }: PresenterProps) {
           style={styles.headline}
         >{`${presenter?.firstName} ${presenter?.lastName}`}</Headline>
         <Paragraph style={styles.paragraph}>{presenter?.description}</Paragraph>
-        {presenter?.courses && presenter.courses.length > 0 && (
-          <View style={styles.courses}>
+        {presenter?.activities && presenter.activities.length > 0 && (
+          <View style={styles.activities}>
             <Headline>Vede toto: </Headline>
-            {presenter?.courses.map((course, index) => (
+            {presenter?.activities.map((activity, index) => (
               <Chip
                 key={index}
                 icon="pulse"
                 mode="outlined"
                 style={styles.badge}
               >
-                {course.title}
+                {activity.title}
               </Chip>
             ))}
           </View>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   paragraph: {
     marginTop: 20,
   },
-  courses: {
+  activities: {
     marginTop: 20,
     paddingTop: 10,
     alignItems: "center",
