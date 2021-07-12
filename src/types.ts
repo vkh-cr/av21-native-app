@@ -12,7 +12,13 @@ export interface News {
 }
 
 export interface ActivityData {
+  id: string;
   title: string;
+  date: string;
+  location: string;
+  description: string;
+  image: string | null;
+  presenter: PresenterData;
 }
 
 export interface PresenterData {
@@ -21,7 +27,7 @@ export interface PresenterData {
   lastName: string;
   description: string;
   avatar?: string;
-  activities: ActivityData[];
+  activities: string[];
 }
 export interface ContactData {}
 export interface HarmonogramData {}

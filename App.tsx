@@ -5,6 +5,7 @@ import {
   Provider as PaperProvider,
 } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from 'expo-status-bar';
 import AvDrawer from "./src/components/AvDrawer";
 import { useNews } from "./src/hooks/useNews";
 import { useEffect } from "react";
@@ -28,6 +29,7 @@ export default function Main() {
   return (
     <NavigationContainer>
       <PaperProvider theme={theme}>
+        
         <AvDrawer />
       </PaperProvider>
     </NavigationContainer>

@@ -21,7 +21,7 @@ export default function Home({ navigation }: HomeProps) {
 
   return (
     <ScrollView>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <AppHeader
         title="Absolventský Velehrad 2021"
         // subtitle="subtitle"

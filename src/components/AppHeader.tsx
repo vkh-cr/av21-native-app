@@ -1,6 +1,7 @@
 import * as React from "react";
 import { DrawerNavigationProp } from "@react-navigation/drawer";
 import { useCallback } from "react";
+import { StyleSheet } from "react-native";
 import { Appbar } from "react-native-paper";
 
 interface AppHeaderProps<T extends string> {
@@ -9,6 +10,7 @@ interface AppHeaderProps<T extends string> {
   subtitle?: string;
   navigation: DrawerNavigationProp<Record<string, object | undefined>, T>;
   children?: React.ReactNode;
+  removeShadow?: boolean;
 }
 
 export function AppHeader<T extends string>({
@@ -17,6 +19,7 @@ export function AppHeader<T extends string>({
   navigation,
   children,
   navBack,
+  removeShadow,
 }: AppHeaderProps<T>) {
   const handleMenuPress = useCallback(() => {
     navigation.toggleDrawer();
@@ -26,7 +29,7 @@ export function AppHeader<T extends string>({
   }, [navigation]);
 
   return (
-    <Appbar.Header>
+    <Appbar.Header style={ removeShadow && styles.withoutShadow }>
       {navBack ? (
         <Appbar.Action icon="chevron-left" onPress={handleBackPress} />
       ) : (
@@ -37,3 +40,10 @@ export function AppHeader<T extends string>({
     </Appbar.Header>
   );
 }
+
+const styles = StyleSheet.create({
+  withoutShadow: {
+    elevation: 0, // remove shadow on Android
+    shadowOpacity: 0, // remove shadow on iOS
+  }
+});

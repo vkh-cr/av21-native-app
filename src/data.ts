@@ -65,7 +65,6 @@ export const news: News = {
 export const staticData: StaticData = {
   version: 1,
   data: {
-    activities: [],
     presenters: [
       {
         id: "1",
@@ -76,8 +75,7 @@ export const staticData: StaticData = {
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         activities: [
-          { title: "Nejaky kurz" },
-          { title: "Nejaky dalsi kurz s delsim nazvem" },
+          "1",
         ],
       },
       {
@@ -88,6 +86,17 @@ export const staticData: StaticData = {
         activities: [],
       },
     ],
+    activities: [{
+      id: "1",
+      title: "Stavy a vztahy - bludný kruh",
+      date: "Sobota vecer",
+      location: "Stojanuv sal, Stojanov",
+      description: `Samota není totéž co osamělost. Samota, pokud se k ní rozhodneme svobodně, může přinášet pozitiva, protože v onom tichu slyšíme cosi v nás, a nebo nám dá poznat to, co v hluku světa nevnímáme.
+        Pocit osamělosti ale může prožívat i ten, kdo žije ve společenství rodiny nebo přátel. 
+        Celý lidský život je o vztazích. Od početí až do posledního výdechu. O vztahu k sobě, k lidem, hodnotám materiálním, duševním i duchovním. Ale všechny uvedené vztahy mohou trpět sedmi nemocemi. Pojďme hledat prevenci i uzdravení.`,
+      image: null,
+      get presenter() { return staticData.data.presenters[0] }
+    }],
     contacts: [],
     harmonogram: [],
     maps: [],
