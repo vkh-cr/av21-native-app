@@ -11,8 +11,6 @@ export interface News {
   data: NewsData[];
 }
 
-export interface ActivityData {}
-
 export interface ActivityData {
   title: string;
 }
