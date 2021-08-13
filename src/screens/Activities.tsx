@@ -20,7 +20,7 @@ export default function Activities({ navigation }: ActivitiesProps) {
       />
       <ScrollView style={styles.scrollView}>
         {staticData.data.activities.map((activity, index) => (
-            <List.Item
+          <List.Item
             key={index}
             onPress={() =>
               navigation.navigate("Activity", { activityId: activity.id })
@@ -29,7 +29,7 @@ export default function Activities({ navigation }: ActivitiesProps) {
               return <List.Icon {...props} icon="chevron-right" />;
             }}
             title={`${activity.title}`}
-            description={`${activity.description.substring(0,100)}}...`}
+            description={`${activity.description.substring(0, 100)}}...`}
           />
         ))}
       </ScrollView>

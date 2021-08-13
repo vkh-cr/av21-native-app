@@ -10,6 +10,7 @@ import Presenters from "../screens/Presenters";
 import Program from "../screens/Program";
 import Presenter from "../screens/Presenter";
 import Activity from "../screens/Activity";
+import Info from "../screens/Info";
 
 const Drawer = createDrawerNavigator();
 
@@ -28,6 +29,7 @@ export default function AvDrawer() {
       <Drawer.Screen name="Contacts" component={Contacts} />
       <Drawer.Screen name="Presenter" component={Presenter} />
       <Drawer.Screen name="Activity" component={Activity} />
+      <Drawer.Screen name="Info" component={Info} />
     </Drawer.Navigator>
   );
 }

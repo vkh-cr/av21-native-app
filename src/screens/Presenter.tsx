@@ -1,12 +1,16 @@
 import * as React from "react";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 
-import { View, ScrollView } from "react-native";
+import { View, Dimensions, Image } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import { usePresenter } from "../hooks/usePresenter";
-import { Avatar, Chip, Headline, Paragraph, Surface } from "react-native-paper";
+import { Chip, Headline, Paragraph } from "react-native-paper";
 import { StyleSheet } from "react-native";
+import { ScrollView, VStack, Center, NativeBaseProvider } from "native-base";
+import { LinearGradient } from "expo-linear-gradient";
 
+// how to dynamically import image ? via DB ooor?
+import petrGlosar from "../../assets/presenters/petr-glogar.png";
 interface PresenterProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> {}
 
@@ -19,51 +23,65 @@ export default function Presenter({ navigation, route }: PresenterProps) {
       <AppHeader
         navBack
         title={`${presenter?.firstName} ${presenter?.lastName}`}
-        // subtitle="nevim"
         navigation={navigation}
+        removeShadow
       />
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <Surface style={styles.surface}>
-          {presenter?.avatar ? (
-            <Avatar.Image
-              style={styles.avatar}
-              size={256}
-              source={{
-                uri: `data:image/png;base64, ${presenter.avatar}`,
-              }}
-            />
-          ) : (
-            <Avatar.Text
-              style={styles.avatar}
-              labelStyle={{ letterSpacing: 1 }}
-              size={256}
-              label={`${presenter?.firstName.substring(
-                0,
-                1
-              )} ${presenter?.lastName.substring(0, 1)}`}
-            />
-          )}
-        </Surface>
 
-        <Headline
-          style={styles.headline}
-        >{`${presenter?.firstName} ${presenter?.lastName}`}</Headline>
-        <Paragraph style={styles.paragraph}>{presenter?.description}</Paragraph>
-        {presenter?.activities && presenter.activities.length > 0 && (
-          <View style={styles.activities}>
-            <Headline>Vede toto: </Headline>
-            {presenter?.activities.map((activity, index) => (
-              <Chip
-                key={index}
-                icon="pulse"
-                mode="outlined"
-                style={styles.badge}
-              >
-                {activity.title}
-              </Chip>
-            ))}
-          </View>
-        )}
+      <LinearGradient
+        colors={["rgba(255,255,255, 0)", "rgba(31,170,170, 1)"]}
+        style={styles.imageWrapper}
+      >
+        <View style={{ flex: 1, flexDirection: "column" }}>
+          <Image
+            source={petrGlosar}
+            style={{
+              ...styles.image,
+              width: Dimensions.get("window").width / 2,
+              height: Dimensions.get("window").width,
+            }}
+          />
+        </View>
+
+        <View style={styles.textContainer}>
+          <Headline style={{ color: "white", fontFamily: "HammersmithOne" }}>
+            {presenter?.firstName}{" "}
+          </Headline>
+          <Headline style={{ color: "white", fontFamily: "HammersmithOne" }}>
+            {presenter?.lastName}
+          </Headline>
+        </View>
+      </LinearGradient>
+
+      {/* TODO: this bullshit doesn't work at all, :angry: */}
+      <ScrollView
+        px={100}
+        _contentContainerStyle={{
+          w: "100%",
+        }}
+      >
+        <View style={{ flex: 1 }}>
+          <Headline
+            style={styles.headline}
+          >{`${presenter?.firstName} ${presenter?.lastName}`}</Headline>
+          <Paragraph style={styles.paragraph}>
+            {presenter?.description}
+          </Paragraph>
+          {presenter?.activities && presenter.activities.length > 0 && (
+            <View style={styles.activities}>
+              <Headline>Vede toto: </Headline>
+              {presenter?.activities.map((activity, index) => (
+                <Chip
+                  key={index}
+                  icon="pulse"
+                  mode="outlined"
+                  style={styles.badge}
+                >
+                  {activity.title}
+                </Chip>
+              ))}
+            </View>
+          )}
+        </View>
       </ScrollView>
     </View>
   );
@@ -72,7 +90,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
 const styles = StyleSheet.create({
   scrollView: {
     height: "100%",
-    paddingTop: 30,
+    paddingTop: 10,
     paddingBottom: 20,
     paddingLeft: 20,
     paddingRight: 20,
@@ -98,13 +116,23 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     shadowColor: "gray",
   },
-  surface: {
-    padding: 8,
-    width: 264,
-    height: 264,
-    borderRadius: 132,
+  imageWrapper: {
+    height: Dimensions.get("window").width,
+    backgroundColor: "#056970",
+    position: "relative",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
+  image: {
+    zIndex: 1,
+    flex: 1,
+    // resizeMode: 'contain',
+  },
+
+  textContainer: {
+    flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    elevation: 5,
+    color: "white",
   },
 });

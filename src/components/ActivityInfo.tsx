@@ -1,14 +1,16 @@
 import * as React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import { Avatar } from 'react-native-paper';
-
+import { Avatar } from "react-native-paper";
 
 export interface ActivityInfoPanelProps {
   icon: string;
   text: string;
 }
 
-export default function ActivityInfoPanel({ icon, text }: ActivityInfoPanelProps) {
+export default function ActivityInfoPanel({
+  icon,
+  text,
+}: ActivityInfoPanelProps) {
   return (
     <View style={styles.row}>
       <View style={styles.icon}>
@@ -18,14 +20,14 @@ export default function ActivityInfoPanel({ icon, text }: ActivityInfoPanelProps
         <Text style={styles.text}>{text}</Text>
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   row: {
     display: "flex",
     flexDirection: "row",
-    height: 64,
+    height: 54,
   },
   icon: {
     paddingRight: 10,
@@ -33,9 +35,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
+    fontFamily: "HammersmithOne",
     padding: 10,
     lineHeight: 44,
     textAlign: "center",
     fontSize: 24,
   },
-})
+});

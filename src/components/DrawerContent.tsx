@@ -36,6 +36,19 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
                 size={size}
               />
             )}
+            label="Info"
+            onPress={() => {
+              navigation.navigate("Info");
+            }}
+          />
+          <DrawerItem
+            icon={({ color, size }) => (
+              <MaterialCommunityIcons
+                name="format-list-numbered"
+                color={color}
+                size={size}
+              />
+            )}
             label="Harmonogram"
             onPress={() => {
               navigation.navigate("Harmonogram");

@@ -1,11 +1,8 @@
 import * as React from "react";
-import {
-  DefaultTheme,
-  Colors,
-  Provider as PaperProvider,
-} from "react-native-paper";
+
+import { NativeBaseProvider, extendTheme } from "native-base";
+import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar } from 'expo-status-bar';
 import AvDrawer from "./src/components/AvDrawer";
 import { useNews } from "./src/hooks/useNews";
 import { useEffect } from "react";
@@ -13,25 +10,29 @@ import { useEffect } from "react";
 export default function Main() {
   const { syncNews } = useNews();
 
+  const [loaded] = useFonts({
+    HammersmithOne: require("./assets/fonts/HammersmithOne-Regular.ttf"),
+  });
+
   useEffect(() => {
     syncNews();
   }, []);
 
-  const theme = {
-    ...DefaultTheme,
+  if (!loaded) {
+    return null;
+  }
+
+  const theme = extendTheme({
     colors: {
-      ...DefaultTheme.colors,
-      primary: "#056970",
-      accent: Colors.amber100,
+      primary: {100: "#056970"},
     },
-  };
+  });
 
   return (
     <NavigationContainer>
-      <PaperProvider theme={theme}>
-        
+      <NativeBaseProvider theme={theme}>
         <AvDrawer />
-      </PaperProvider>
+      </NativeBaseProvider>
     </NavigationContainer>
   );
 }

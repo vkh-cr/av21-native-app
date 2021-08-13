@@ -29,7 +29,7 @@ export function AppHeader<T extends string>({
   }, [navigation]);
 
   return (
-    <Appbar.Header style={ removeShadow && styles.withoutShadow }>
+    <Appbar.Header style={removeShadow && styles.withoutShadow}>
       {navBack ? (
         <Appbar.Action icon="chevron-left" onPress={handleBackPress} />
       ) : (
@@ -45,5 +45,5 @@ const styles = StyleSheet.create({
   withoutShadow: {
     elevation: 0, // remove shadow on Android
     shadowOpacity: 0, // remove shadow on iOS
-  }
+  },
 });

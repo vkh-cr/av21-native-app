@@ -1,7 +1,16 @@
 import * as React from "react";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 
-import { View, ScrollView, Image, Text } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import {
+  View,
+  ScrollView,
+  Image,
+  Text,
+  Dimensions,
+  SafeAreaView,
+  StatusBar,
+} from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import {
   Avatar,
@@ -9,12 +18,11 @@ import {
   Divider,
   Headline,
   Paragraph,
-  Surface,
   Title,
 } from "react-native-paper";
 import { StyleSheet } from "react-native";
 import { useActivity } from "../hooks/useActivity";
-import default_logo from "../../assets/activity_default.png";
+import petrGlosar from "../../assets/presenters/petr-glogar.png";
 import ActivityInfoPanel from "../components/ActivityInfo";
 interface ActivityProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> {}
@@ -22,50 +30,82 @@ interface ActivityProps
 export default function Activity({ navigation, route }: ActivityProps) {
   const params = route.params as { activityId: string };
   const activity = useActivity(params.activityId);
-
+  console.log(Dimensions.get("window").width / 2);
   return (
-    <View>
-      <AppHeader
-        navBack
-        title={activity?.title || "Aktivita"}
-        // subtitle="nevim"
-        navigation={navigation}
-        removeShadow={activity?.image ? false : true}
-      />
+    <SafeAreaView style={styles.container}>
       <View>
-        <Image source={default_logo} style={styles.image} />
-        <View style={styles.bottomView}>
-          <View style={styles.headlineContainer}>
-            <Headline style={styles.headline}>{activity?.title || ""}</Headline>
-          </View>
-          <ActivityInfoPanel icon="calendar" text={`${activity?.date}`} />
-          <ActivityInfoPanel icon="map" text={`${activity?.location}`} />
-          <ActivityInfoPanel
-            icon="account"
-            text={`${activity?.presenter.firstName} ${activity?.presenter.lastName}`}
-          />
-          <Divider />
-          <Title>Anotace</Title>
-          <View style={styles.scrollViewContainer}>
-            <ScrollView contentContainerStyle={styles.scrollView}>
-              <Paragraph>{activity?.description}</Paragraph>
-            </ScrollView>
-          </View>
+        <AppHeader
+          navBack
+          title={activity?.title || "Aktivita"}
+          // subtitle="nevim"
+          navigation={navigation}
+          removeShadow
+        />
+        <View>
+          <LinearGradient
+            colors={["rgba(255,255,255, 0)", "rgba(31,170,170, 1)"]}
+            style={styles.imageWrapper}
+          >
+            <View style={{ flex: 1, flexDirection: "column" }}>
+              <Image
+                source={petrGlosar}
+                style={{
+                  ...styles.image,
+                  width: Dimensions.get("window").width / 2,
+                  height: Dimensions.get("window").width,
+                }}
+              />
+            </View>
+
+            <View style={styles.textContainer}>
+              <Headline
+                style={{ color: "white", fontFamily: "HammersmithOne" }}
+              >
+                {activity?.presenter.firstName}{" "}
+              </Headline>
+              <Headline
+                style={{ color: "white", fontFamily: "HammersmithOne" }}
+              >
+                {activity?.presenter.lastName}
+              </Headline>
+            </View>
+          </LinearGradient>
+          <ScrollView contentContainerStyle={styles.scrollView}>
+            <Headline style={{ fontFamily: "HammersmithOne" }}>
+              {activity?.title || ""}
+            </Headline>
+            <ActivityInfoPanel icon="calendar" text={`${activity?.date}`} />
+            <ActivityInfoPanel icon="map" text={`${activity?.location}`} />
+            <ActivityInfoPanel
+              icon="account"
+              text={`${activity?.presenter.firstName} ${activity?.presenter.lastName}`}
+            />
+            <Divider />
+            <Title>Anotace</Title>
+            <Paragraph>{activity?.description}</Paragraph>
+          </ScrollView>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  scrollViewContainer: { flex: 1 },
-  scrollView: {},
-  image: {
-    width: "100%",
-    height: "25%",
+  container: {
+    flex: 1,
+    // paddingTop: StatusBar.currentHeight,
+  },
+  imageWrapper: {
+    height: Dimensions.get("window").width,
     backgroundColor: "#056970",
-    marginBottom: -125,
-    zIndex: 2,
+    position: "relative",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
+  image: {
+    zIndex: 1,
+    flex: 1,
+    // resizeMode: 'contain',
   },
   bottomView: {
     height: "100%",
@@ -74,8 +114,6 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingLeft: 30,
     paddingRight: 30,
-    borderTopRightRadius: 60,
-    borderTopLeftRadius: 60,
     backgroundColor: "#FFF",
     zIndex: 3,
   },
@@ -99,6 +137,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
+  textContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    color: "white",
+  },
   badge: {
     alignSelf: "center",
     marginTop: 5,
@@ -106,14 +151,5 @@ const styles = StyleSheet.create({
   avatar: {
     shadowRadius: 2,
     shadowColor: "gray",
-  },
-  surface: {
-    padding: 8,
-    width: 264,
-    height: 264,
-    borderRadius: 132,
-    alignItems: "center",
-    justifyContent: "center",
-    elevation: 5,
   },
 });
