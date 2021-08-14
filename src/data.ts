@@ -32,7 +32,7 @@ export const staticData: StaticData = {
         avatar: "",
         description:
           "Mějte s námi slitování, přece jen jsme připravovali AVčko po nocích pro nás, pro Vás.",
-        activities: [1, 2, ],
+        activities: [1],
       },
       {
         id: 1,
@@ -149,7 +149,7 @@ export const staticData: StaticData = {
       },
       {
         id: 13,
-        firstName: "Jakub „Indián”",
+        firstName: "Jakub \"Indián\"",
         lastName: "Venglář",
         display: true,
         avatar: "",
@@ -225,7 +225,7 @@ export const staticData: StaticData = {
         lastName: "Grolich",
         display: true,
         avatar: "",
-        description: "Moravský politik a advokát, od roku 2020 hejtman Jihomoravského kraje. „I na malé dědině se dají dělat velké věci a inspirovat okolí. Když to jde v malém, musí to jít i ve velkém na kraji.”",
+        description: "Moravský politik a advokát, od roku 2020 hejtman Jihomoravského kraje. \"I na malé dědině se dají dělat velké věci a inspirovat okolí. Když to jde v malém, musí to jít i ve velkém na kraji.\"",
         activities: [601, 715],
       },
       {
@@ -288,8 +288,8 @@ export const staticData: StaticData = {
         lastName: "",
         display: true,
         avatar: "",
-        description: `Ilona Machandrová – advokátka, předsedkyně a zakládající členka Christian Refugee Service, z.s., zakladatelka výjezdů Projektu Naděje pro Národy
-        Ludmila Špoková – advokátní koncipientka, místopředsedkyně a zakládající členka Christian Refugee Service, z.s.`,
+        description: `Ilona Machandrová - advokátka, předsedkyně a zakládající členka Christian Refugee Service, z.s., zakladatelka výjezdů Projektu Naděje pro Národy
+        Ludmila Špoková - advokátní koncipientka, místopředsedkyně a zakládající členka Christian Refugee Service, z.s.`,
        activities: [702],
       },
       {
@@ -316,7 +316,7 @@ export const staticData: StaticData = {
         lastName: "Kotvrda",
         display: true,
         avatar: "",
-        description: "Kněz brněnské diecéze, věnuje se mimo obvyklé pastorační služby duchovnímu doprovázení, psychoterapii, doprovázení komunity L‘Arche, společenství Víra a světlo, a křesťanské meditaci podle Johna Maina (wccm.org).",
+        description: "Kněz brněnské diecéze, věnuje se mimo obvyklé pastorační služby duchovnímu doprovázení, psychoterapii, doprovázení komunity L'Arche, společenství Víra a světlo, a křesťanské meditaci podle Johna Maina (wccm.org).",
         activities: [704],
       },
       {
@@ -334,7 +334,7 @@ export const staticData: StaticData = {
         lastName: "Adamčík",
         display: true,
         avatar: "",
-        description: "Od mládí vášnivý sportovec s citem pro pohyb. Postupně jeho kroky vedly k bojovým sportům, až zůstal u Krav Maga. Honza absolvoval instruktorský kurz pod vedením zahraničního experta Mateusze Soga. Má certifikaci pro cvičení dospělých – Instruktor (technický stupeň G3).",
+        description: "Od mládí vášnivý sportovec s citem pro pohyb. Postupně jeho kroky vedly k bojovým sportům, až zůstal u Krav Maga. Honza absolvoval instruktorský kurz pod vedením zahraničního experta Mateusze Soga. Má certifikaci pro cvičení dospělých - Instruktor (technický stupeň G3).",
         activities: [711],
       },
       {
@@ -370,7 +370,7 @@ export const staticData: StaticData = {
         lastName: "Balážia",
         display: true,
         avatar: "",
-        description: "Již 36 let šťastně ženatý muž, více než 20 let se s manželkou zúčastňuje Manželských setkání; věnuje se mužské spiritualitě; napsal dvě publikace a je součástí sdružení „Pre rodiny”.",
+        description: "Již 36 let šťastně ženatý muž, více než 20 let se s manželkou zúčastňuje Manželských setkání; věnuje se mužské spiritualitě; napsal dvě publikace a je součástí sdružení \"Pre rodiny\".",
         activities: [1001],
       },
       {
@@ -406,7 +406,7 @@ export const staticData: StaticData = {
         lastName: "Macurová",
         display: true,
         avatar: "",
-        description: "Prožívá své sedmé léto v Konventu sester alžbětinek a chce se podělit o svou zkušenost víry a Božího vedení v každodenním životě, což je často velké dobrodružství. Řekla by o sobě, že je obyčejná sestra s originálním povoláním. Slouží v Domově sv. Alžběty (domov pro seniory) na různých pozicích. Ráda poznává nová místa a nové lidi. Je vděčná za to, že stabilitas loci je někdy i „labilitas“.",
+        description: "Prožívá své sedmé léto v Konventu sester alžbětinek a chce se podělit o svou zkušenost víry a Božího vedení v každodenním životě, což je často velké dobrodružství. Řekla by o sobě, že je obyčejná sestra s originálním povoláním. Slouží v Domově sv. Alžběty (domov pro seniory) na různých pozicích. Ráda poznává nová místa a nové lidi. Je vděčná za to, že stabilitas loci je někdy i \"labilitas\".",
         activities: [1004],
       },
     ],
@@ -444,7 +444,7 @@ export const staticData: StaticData = {
         description: `Přednáška o tom, proč je samota důležitá a proč nemáme nikomu říkat ani "mistr" ani "učitel".`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 2);
         },
         capacity: 120,
         type: ActivityTypes.PREDNASKA
@@ -458,7 +458,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 3);
         },
         capacity: 120,
         type: ActivityTypes.PREDNASKA
@@ -473,7 +473,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 4);
         },
         capacity: 60,
         type: ActivityTypes.PREDNASKA
@@ -487,7 +487,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 5);
         },
         capacity: 60,
         type: ActivityTypes.PREDNASKA
@@ -501,7 +501,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 6);
         },
         capacity: 60,
         type: ActivityTypes.PREDNASKA
@@ -515,7 +515,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 7);
         },
         type: ActivityTypes.DUCHOVNI
       },
@@ -524,11 +524,11 @@ export const staticData: StaticData = {
         block: 3,
         title: "Jak se nevrátit do normálu",
         location: "Kaple Stojanov",
-        description: `Na povrchu zkáza, nejistota, bezradnost, osamocení… uvnitř smysl a naděje nového a opravdového začátku. Duch svatý v posledních měsících hodně bořil a hodně budoval. Co už jednou pro vždy nechat v troskách a na čem naopak nově stavět? Jak pandemie odhalila samé základy naší víry a našeho života? Jak se společenství rodí z osamocení, služba z bezmoci a radost z krize a bolesti?
+        description: `Na povrchu zkáza, nejistota, bezradnost, osamocení... uvnitř smysl a naděje nového a opravdového začátku. Duch svatý v posledních měsících hodně bořil a hodně budoval. Co už jednou pro vždy nechat v troskách a na čem naopak nově stavět? Jak pandemie odhalila samé základy naší víry a našeho života? Jak se společenství rodí z osamocení, služba z bezmoci a radost z krize a bolesti?
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 8);
         },
         capacity: 100,
         type: ActivityTypes.PREDNASKA
@@ -542,7 +542,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 9);
         },
         capacity: 130,
         type: ActivityTypes.PREDNASKA
@@ -556,7 +556,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 10);
         },
         capacity: 100,
         type: ActivityTypes.PREDNASKA
@@ -570,7 +570,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 11);
         },
         capacity: 12,
         type: ActivityTypes.VOLNOCAS
@@ -578,13 +578,13 @@ export const staticData: StaticData = {
       {
         id: 311,
         block: 3,
-        title: "Výroba barefoot sandálů",
+        title: "Zapojení do života farnosti",
         location: "Třída 1, gymnázium",
         description: `Co farnost, to jedinečné společenství. Máš zkušenost, jak rozdmýchat dění ve farnosti? Hýříš nápady, které čekají na realizaci? Nebo by ses jen rád více zapojil do farního života a schází ti inspirace? Máš pocit, že by to šlo ve Tvé farnosti dělat jinak a lépe? Přijď se o tom za námi pobavit! Průvodcování tímto workshopem jsme s radostí svěřili Kubovi Vašulínovi z moravské farnosti Střelice.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 12);
         },
         capacity: 15,
         type: ActivityTypes.VOLNOCAS
@@ -594,11 +594,11 @@ export const staticData: StaticData = {
         block: 3,
         title: "Frisbee ultimate",
         location: "Hřiště u ZŠ",
-        description: `Ultimate je kolektivní hrou, ve které je cílem chytit disk v koncové zóně. Principem hry se tak podobá například ragby, avšak tento sport je bezkontaktní a s diskem se nesmí běhat. Hráč s diskem (házeč) může stejně jako v basketbalu pivotovat – otáčet se a činit úkroky s jednou nohou stále pevně na zemi. Pohyb a vytvoření prostoru pro přihrávku pak zůstává na jeho spoluhráčích. Zapomeň na házení v kolečku deseti lidí bez nutnosti vyvinout větší námahu. V tomto sportu hrají prim rychlost, taktické myšlení a herní přehled. Ve hře se často střídá útok a obrana. Průprava není nutná. Se vším, co je ke hře třeba, tě seznámí zkušení hráči.
+        description: `Ultimate je kolektivní hrou, ve které je cílem chytit disk v koncové zóně. Principem hry se tak podobá například ragby, avšak tento sport je bezkontaktní a s diskem se nesmí běhat. Hráč s diskem (házeč) může stejně jako v basketbalu pivotovat - otáčet se a činit úkroky s jednou nohou stále pevně na zemi. Pohyb a vytvoření prostoru pro přihrávku pak zůstává na jeho spoluhráčích. Zapomeň na házení v kolečku deseti lidí bez nutnosti vyvinout větší námahu. V tomto sportu hrají prim rychlost, taktické myšlení a herní přehled. Ve hře se často střídá útok a obrana. Průprava není nutná. Se vším, co je ke hře třeba, tě seznámí zkušení hráči.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 13);
         },
         capacity: 20,
         type: ActivityTypes.VOLNOCAS
@@ -612,7 +612,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 14);
         },
         capacity: 24,
         type: ActivityTypes.VOLNOCAS
@@ -626,7 +626,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 15);
         },
         capacity: 140,
         type: ActivityTypes.PREDNASKA
@@ -640,7 +640,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 16);
         },
         capacity: 100,
         type: ActivityTypes.PREDNASKA
@@ -654,7 +654,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 17);
         },
         capacity: 100,
         type: ActivityTypes.PREDNASKA
@@ -695,7 +695,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 10);
         },
         capacity: 12,
         type: ActivityTypes.VOLNOCAS
@@ -722,7 +722,7 @@ export const staticData: StaticData = {
 `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 18);
         },
         type: ActivityTypes.VOLNOCAS,
       },
@@ -735,7 +735,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 19);
         },
         type: ActivityTypes.DUCHOVNI
       },
@@ -766,13 +766,13 @@ export const staticData: StaticData = {
       {
         id: 600,
         block: 6,
-        title: "Stavy a vztahy – bludný kruh",
+        title: "Stavy a vztahy - bludný kruh",
         location: "Slovanský sál",
         description: `Samota není totéž co osamělost. Samota, pokud se k ní rozhodneme svobodně, může přinášet pozitiva, protože v onom tichu slyšíme cosi v nás, a nebo nám dá poznat to, co v hluku světa nevnímáme. Pocit osamělosti ale může prožívat i ten, kdo žije ve společenství rodiny nebo přátel. Celý lidský život je o vztazích. Od početí až do posledního výdechu. O vztahu k sobě, k lidem, hodnotám materiálním, duševním i duchovním. Ale všechny uvedené vztahy mohou trpět sedmi nemocemi. Pojďme hledat prevenci i uzdravení.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 20);
         },
         capacity: 100,
         type: ActivityTypes.PREDNASKA
@@ -785,7 +785,7 @@ export const staticData: StaticData = {
         description: `Kdy už budete mít věk na to, abyste se mohli starat o svět kolem sebe? Co staří dělají lépe, než mladí? A proč jsou to všechno nesmysly?`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 21);
         },
         capacity: 80,
         type: ActivityTypes.PREDNASKA
@@ -799,7 +799,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 22);
         },
         capacity: 80,
         type: ActivityTypes.PREDNASKA
@@ -807,13 +807,13 @@ export const staticData: StaticData = {
       {
         id: 603,
         block: 6,
-        title: "Děti z „konce” Ukrajiny – pomoc, pouto, dobrovolnictví, přátelství",
+        title: "Děti z \"konce\" Ukrajiny - pomoc, pouto, dobrovolnictví, přátelství",
         location: "Sál Stojanov",
         description: `Jak se žije dětem v ústavní péči na Ukrajině? Jak lze pomoci? V čem spočívá dobrovolnická pomoc dětem s postižením? Příběh organizace Bodaj, která již několik let díky dobrovolníkům těmto dětem na Ukrajině pomáhá.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 23);
         },
         capacity: 40,
         type: ActivityTypes.PREDNASKA
@@ -827,7 +827,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 24);
         },
         capacity: 40,
         type: ActivityTypes.PREDNASKA
@@ -855,7 +855,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 10);
         },
         capacity: 12,
         type: ActivityTypes.VOLNOCAS
@@ -869,7 +869,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 25);
         },
         capacity: 10,
         type: ActivityTypes.VOLNOCAS
@@ -883,7 +883,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 26);
         },
         type: ActivityTypes.DUCHOVNI
       },
@@ -892,11 +892,11 @@ export const staticData: StaticData = {
         block: 7,
         title: "Křesťanství a změna epochy",
         location: "Slovanský sál",
-        description: `„Tato doba není jen epochou změn, nýbrž změnou epochy“, tvrdí papež František. Sekularizace nezpůsobila konec náboženství, avšak přispěla k jeho proměně. Pokud chtějí církve odpovědět na výzvu této doby, musí projít hlubokou reformou nejprve v oblasti teologie a spirituality, následně v oblasti pastorace a institucionálních struktur. Důležitou součástí reformy je přechod od navyklého stylu pastorace a misie, od starosti pouze o vlastní věřící a o nárůst jejich počtu, k službě doprovázení lidí na duchovních cestách. Kontemplace a akce, samota i společenství, se musí vzájemně doplňovat.
+        description: `"Tato doba není jen epochou změn, nýbrž změnou epochy", tvrdí papež František. Sekularizace nezpůsobila konec náboženství, avšak přispěla k jeho proměně. Pokud chtějí církve odpovědět na výzvu této doby, musí projít hlubokou reformou nejprve v oblasti teologie a spirituality, následně v oblasti pastorace a institucionálních struktur. Důležitou součástí reformy je přechod od navyklého stylu pastorace a misie, od starosti pouze o vlastní věřící a o nárůst jejich počtu, k službě doprovázení lidí na duchovních cestách. Kontemplace a akce, samota i společenství, se musí vzájemně doplňovat.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 27);
         },
         capacity: 80,
         type: ActivityTypes.PREDNASKA
@@ -909,7 +909,7 @@ export const staticData: StaticData = {
         description: `Jak zvládat bolest a utrpení? Kdo jsem já a jak se mohu poznat? Jak objevit svůj potenciál (poznat své hřivny)? Jak mám o sebe pečovat?`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 29);
         },
         capacity: 80,
         type: ActivityTypes.PREDNASKA
@@ -917,13 +917,13 @@ export const staticData: StaticData = {
       {
         id: 702,
         block: 7,
-        title: "Křesťan a migrace – služba lidem na cestě",
+        title: "Křesťan a migrace - služba lidem na cestě",
         location: "Třída 1, gymnázium",
         description: `Jaký je život na cestě a v čem spočívá pomoc lidem, kteří v Evropě touží začít znovu? O tom se učíme již řadu let na tzv. Balkánské stezce i u nás, v České republice a rády se o naše zážitky podělíme. Dozvědět se můžete třeba jaký se na Balkánské stezce vaří čaj nebo proč si myslíme, že by křesťan neměl být k příchozím lhostejný.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 28);
         },
         capacity: 40,
         type: ActivityTypes.PREDNASKA
@@ -933,11 +933,11 @@ export const staticData: StaticData = {
         block: 7,
         title: "Encyklika Laudato Si´",
         location: "Sál Stojanov",
-        description: `Ekologická encyklika papeže Františka slaví letos šesté výročí vydání. Podíváme se na její východiska a obsah, kapitolu po kapitole – na pozadí fotografií, které ukazují krásu Božího stvoření a pocházejí hlavně ze skandinávské přírody, ale i z farní zahrady v Brně-Žebětíně.
+        description: `Ekologická encyklika papeže Františka slaví letos šesté výročí vydání. Podíváme se na její východiska a obsah, kapitolu po kapitole - na pozadí fotografií, které ukazují krásu Božího stvoření a pocházejí hlavně ze skandinávské přírody, ale i z farní zahrady v Brně-Žebětíně.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 30);
         },
         capacity: 60,
         type: ActivityTypes.PREDNASKA
@@ -951,7 +951,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 31 || presenter.id === 32 );
         },
         capacity: 60,
         type: ActivityTypes.PREDNASKA
@@ -965,7 +965,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 33);
         },
         capacity: 30,
         type: ActivityTypes.VOLNOCAS
@@ -979,7 +979,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 34);
         },
         capacity: 40,
         type: ActivityTypes.VOLNOCAS
@@ -989,11 +989,11 @@ export const staticData: StaticData = {
         block: 7,
         title: "Párová akrobacie",
         location: "Třída 3, gymnázium",
-        description: `Párová akrobacie je úžasně komplexní a hravá seberozvojová aktivita, která se dá cvičit takřka kdekoliv a kdykoliv. „Báze” – tedy osoba, která je při cvičení v kontaktu se zemí, potřebuje jen podložku (bude zajštěno), „letkyním” postačí legíny a přiléhavější tričko. Cvičí se naboso. Kapacitu tohoto workshopu jsme omezili na 12 osob – budeme se párovat a střídat podle potřeby a zaměstnáme všechny pokročilosti. Náš zkušený instruktor se o všechno postará.
+        description: `Párová akrobacie je úžasně komplexní a hravá seberozvojová aktivita, která se dá cvičit takřka kdekoliv a kdykoliv. "Báze" - tedy osoba, která je při cvičení v kontaktu se zemí, potřebuje jen podložku (bude zajštěno), "letkyním" postačí legíny a přiléhavější tričko. Cvičí se naboso. Kapacitu tohoto workshopu jsme omezili na 12 osob - budeme se párovat a střídat podle potřeby a zaměstnáme všechny pokročilosti. Náš zkušený instruktor se o všechno postará.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 35);
         },
         capacity: 12,
         type: ActivityTypes.VOLNOCAS
@@ -1007,7 +1007,7 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 21);
         },
         capacity: 20,
         type: ActivityTypes.VOLNOCAS
@@ -1082,11 +1082,11 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         block: 10,
         title: "Život ví své",
         location: "Slovanský sál",
-        description: `Život ví své... Nechce být jen dějištěm, prostorem a časem, nabídnutým mým projektům a realizacím. Ví, že je věčný a tak věčným být chce. Hic et nunc – zde a teď.
+        description: `Život ví své... Nechce být jen dějištěm, prostorem a časem, nabídnutým mým projektům a realizacím. Ví, že je věčný a tak věčným být chce. Hic et nunc - zde a teď.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 36);
         },
         capacity: 120,
         type: ActivityTypes.PREDNASKA
@@ -1100,7 +1100,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 37);
         },
         capacity: 120,
         type: ActivityTypes.PREDNASKA
@@ -1110,11 +1110,11 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         block: 10,
         title: "Život není peříčko, ale stojí za to ho žít",
         location: "Sál Stojanov",
-        description: `I když má člověk někdy pocit, že je život těžký, málo barevný a příjemný, nebo že je pro něj dokonce nesnesitelný a k neunesení, tak přesto má CENU ho žít. V přednášce bude řeč o tom, jak se postavit k životu čelem, jak najít smysl života a naději v nelehkých okamžicích života. Vše bude podepřeno příběhy lidí, kteří to nevzdali a chytili svůj život „za pačesy“.
+        description: `I když má člověk někdy pocit, že je život těžký, málo barevný a příjemný, nebo že je pro něj dokonce nesnesitelný a k neunesení, tak přesto má CENU ho žít. V přednášce bude řeč o tom, jak se postavit k životu čelem, jak najít smysl života a naději v nelehkých okamžicích života. Vše bude podepřeno příběhy lidí, kteří to nevzdali a chytili svůj život "za pačesy".
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 38);
         },
         capacity: 80,
         type: ActivityTypes.PREDNASKA
@@ -1122,13 +1122,13 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
       {
         id: 1003,
         block: 10,
-        title: "Laudato si´ – péče o společný domov",
+        title: "Laudato si´ - péče o společný domov",
         location: "Třída 1, gymnázium",
         description: `Svět se blíží k šestému hromadnému vymírání. Příčinou jsou poprvé lidé. Papež František a mnozí další bijí na poplach vyzývají lidi ke změně. Co tedy děláme špatně a jak se k tomu můžeme postavit v našem každodenním životě?
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 39);
         },
         capacity: 40,
         type: ActivityTypes.PREDNASKA
@@ -1136,13 +1136,13 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
       {
         id: 1004,
         block: 10,
-        title: "Co si nevybojuješ v samotě, to ve společenství nedáš! Aneb Bez víry ani krok…",
+        title: "Co si nevybojuješ v samotě, to ve společenství nedáš! Aneb Bez víry ani krok...",
         location: "Kaple Stojanov",
         description: `Přicházíme jako společenství, ve dvou, abychom nabídly náhled do života ve společenství, každodenní prožívání víry ve společenství i v samotě. Samota a společenství se prolínají také ve službě potřebným, přednáška bude spojená i se svědectvími ze života seniorů, o které se staráme. Nebude chybět ani krátké Lectio divina inspirované úryvkem letošního AV. Chceme tak společně s těmi, kteří k nám přijdou vytvořit neopakovatelnou atmosféru společenství a prostor pro sdílení.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 40 || presenter.id === 41);
         },
         capacity: 40,
         type: ActivityTypes.PREDNASKA

@@ -5,6 +5,7 @@ import { View, StyleSheet, ScrollView } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import { Avatar, List, Surface } from "react-native-paper";
 import { useStaticData } from "../hooks/useStaticData";
+import { Box } from "native-base";
 
 interface PresentersProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Presenters"> {}
@@ -19,7 +20,7 @@ export default function Presenters({ navigation }: PresentersProps) {
         navigation={navigation}
       />
       <ScrollView style={styles.scrollView}>
-        {staticData.data.presenters.map((presenter, index) => (
+        {staticData.data.presenters.sort((a, b) => a.firstName.localeCompare(b.firstName)).map((presenter, index) => (
           <List.Item
             key={index}
             onPress={() =>
@@ -36,8 +37,9 @@ export default function Presenters({ navigation }: PresentersProps) {
                   />
                 ) : (
                   <Avatar.Text
-                    size={42}
-                    labelStyle={{ letterSpacing: 0.5 }}
+                    style={styles.avatarText}
+                    size={40}
+                    labelStyle={{ letterSpacing: -2, fontFamily: "HammersmithOne", }}
                     label={`${presenter.firstName.substring(
                       0,
                       1
@@ -51,8 +53,10 @@ export default function Presenters({ navigation }: PresentersProps) {
             }}
             title={`${presenter.firstName} ${presenter.lastName}`}
             description={presenter.description}
+            titleStyle={styles.titleStyle}
           />
         ))}
+        <Box style={{height: 120}}></Box>
       </ScrollView>
     </View>
   );
@@ -60,17 +64,27 @@ export default function Presenters({ navigation }: PresentersProps) {
 
 const styles = StyleSheet.create({
   avatar: {},
+  avatarText: {
+    fontFamily: "HammersmithOne",
+    backgroundColor: "#EEEEEE"
+  },
   scrollView: {
-    height: "100%",
+    paddingLeft: 10,
   },
   surface: {
     width: 46,
     height: 46,
-    padding: 8,
+    padding: 4,
     borderRadius: 23,
     elevation: 4,
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#FF5D3A",
+  },
+  titleStyle: {
+    // fontFamily: "HammersmithOne",
+    fontSize: 18,
+    fontWeight: "bold"
   },
 });

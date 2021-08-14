@@ -50,14 +50,7 @@ export default function Activity({ navigation, route }: ActivityProps) {
             style={styles.imageWrapper}
           >
             <View style={{ flex: 1, flexDirection: "column" }}>
-              {/* <Image
-                source={petrGlosar}
-                style={{
-                  ...styles.image,
-                  width: Dimensions.get("window").width / 2,
-                  height: Dimensions.get("window").width,
-                }}
-              /> */}
+
             </View>
           </LinearGradient>
           <ScrollView style={styles.scrollView}>
@@ -93,7 +86,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   scrollView: {
-    backgroundColor: "#f0f0f0"
+    backgroundColor: "#f0f0f0", 
+    padding: 20,
   },
   image: {
     zIndex: 1,

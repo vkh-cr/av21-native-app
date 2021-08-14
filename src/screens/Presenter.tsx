@@ -4,7 +4,7 @@ import { DrawerScreenProps } from "@react-navigation/drawer";
 import { View, Dimensions, Image } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import { usePresenter } from "../hooks/usePresenter";
-import { Chip, Headline, Paragraph } from "react-native-paper";
+import { Chip, Headline, Paragraph, Surface, Avatar } from "react-native-paper";
 import { StyleSheet } from "react-native";
 import { ScrollView, VStack, Center, NativeBaseProvider } from "native-base";
 import { LinearGradient } from "expo-linear-gradient";
@@ -13,12 +13,12 @@ import { LinearGradient } from "expo-linear-gradient";
 import petrGlosar from "../../assets/presenters/petr-glogar.png";
 import { useActivity } from "../hooks/useActivity";
 interface PresenterProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> { }
+  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> {}
 
 export default function Presenter({ navigation, route }: PresenterProps) {
   const params = route.params as { presenterId: string };
   const presenter = usePresenter(params.presenterId);
-
+  const avatarWidth = Dimensions.get("window").width-100;
   return (
     <View>
       <AppHeader
@@ -28,28 +28,50 @@ export default function Presenter({ navigation, route }: PresenterProps) {
         removeShadow
       />
       <ScrollView
-        
         _contentContainerStyle={{
           w: "100%",
         }}
       >
-      <LinearGradient
-        colors={["#1FAAAA", "#f0f0f0"]}
-        style={styles.imageWrapper}
-      >
-        <View style={{ flex: 1, flexDirection: "column" }}>
-          {/* <Image
-            source={petrGlosar}
+        <LinearGradient
+          colors={["#1FAAAA", "#f0f0f0"]}
+          style={styles.imageWrapper}
+        >
+          <View
             style={{
-              ...styles.image,
-              width: Dimensions.get("window").width / 2,
-              height: Dimensions.get("window").width,
+              flex: 1,
+              flexDirection: "column",
+              alignSelf: "center",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          /> */}
-        </View>
-      </LinearGradient>
+          >
+            {/* <Surface style={{ ...styles.surface }}> */}
+            {presenter?.avatar ? (
+              <Avatar.Image
+                size={avatarWidth}
+                source={{
+                  uri: `data:image/png;base64, ${presenter.avatar}`,
+                }}
+              />
+            ) : (
+              <Avatar.Text
+                style={styles.avatarText}
+                size={avatarWidth}
+                labelStyle={{
+                  letterSpacing: -2,
+                  fontFamily: "HammersmithOne",
+                }}
+                label={`${presenter?.firstName.substring(
+                  0,
+                  1
+                )} ${presenter?.lastName.substring(0, 1)}`}
+              />
+            )}
+            {/* </Surface> */}
+          </View>
+        </LinearGradient>
 
-      {/* TODO: this bullshit doesn't work at all, :angry: */}
+        {/* TODO: this bullshit doesn't work at all, :angry: */}
 
         <View style={styles.scrollView}>
           <Headline
@@ -62,8 +84,8 @@ export default function Presenter({ navigation, route }: PresenterProps) {
             <View style={styles.activities}>
               <Headline>Vede toto: </Headline>
               {presenter?.activities.map((activityId, index) => {
-                const activity = useActivity(activityId)
-                console.log("VEDE", activityId)
+                const activity = useActivity(activityId);
+                console.log("VEDE", activityId);
                 return (
                   <Chip
                     key={index}
@@ -73,7 +95,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
                   >
                     {activity?.title}
                   </Chip>
-                )
+                );
               })}
             </View>
           )}
@@ -106,10 +128,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 5,
   },
-  avatar: {
-    shadowRadius: 2,
-    shadowColor: "gray",
-  },
   imageWrapper: {
     height: Dimensions.get("window").width,
     backgroundColor: "#056970",
@@ -128,5 +146,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     color: "white",
+  },
+  avatar: {
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  avatarText: {
+    fontFamily: "HammersmithOne",
+    backgroundColor: "#EEEEEE",
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
