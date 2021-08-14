@@ -33,7 +33,7 @@ export interface ActivityData {
   location: string;
   description: string;
   image: string | null;
-  presenter: PresenterData;
+  presenter: PresenterData[];
   block: number;
   capacity?: number;
   type: ActivityTypes;
@@ -45,7 +45,7 @@ export interface PresenterData {
   lastName: string;
   description: string;
   avatar?: string;
-  activities: [number];
+  activities: number[];
   display?: boolean;
 }
 export interface ContactData {}

@@ -12,8 +12,9 @@ import {
 } from "native-base";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useStaticData } from "../hooks/useStaticData";
-import { ActivityData } from "../types";
+import { ActivityData, ActivityTypes } from "../types";
 import { DrawerScreenProps } from "@react-navigation/drawer";
+import { borderLeft } from "styled-system";
 
 interface ProgramBlockProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> {
@@ -28,26 +29,50 @@ export const ProgramBlock = ({ day, navigation }: ProgramBlockProps) => {
     <SectionList
       sections={harmonogram}
       keyExtractor={(item, index) => item + index}
-      renderItem={({ item }) => {
+      renderItem={({ item, index }) => {
+        let activityColor;
+        switch (item.type) {
+          case ActivityTypes.VOLNOCAS:
+              activityColor = "#FF5D3A"
+            break;
+          case ActivityTypes.PREDNASKA:
+              activityColor = "#1FAAAA"
+              break;
+          case ActivityTypes.DUCHOVNI:
+              activityColor = "#FFC700"
+              break;
+          default:
+            activityColor = "#CECECE"
+            break;
+        }
         return (
           <TouchableOpacity
+            key={index}
+            style={styles.activityWrapper}
             onPress={() =>
               navigation.navigate("Activity", { activityId: item.id })
             }
           >
-            <Flex style={styles.row} m={2} border={"black"}>
-              <Flex flexDirection="column" bg="primary.300" flexGrow={1}>
+            <Flex style={{...styles.activity, borderLeftColor: activityColor}} bg="#EEEEEE" m={2}>
+              <Flex flexDirection="column" flexGrow={1}>
                 <Box>
-                  <Heading size="md">{item.title}</Heading>
+                  <Text style={styles.activityHeader}>{item.title}</Text>
                 </Box>
-                <Box bg="primary.500">
-                  <Text>
-                    {item.presenter.firstName} {item.presenter.lastName}
-                  </Text>
+                <Box>
+                  {item.presenter.display && (
+                    <Text>
+                      {item.presenter.firstName} {item.presenter.lastName}
+                    </Text>
+                  )}
                 </Box>
                 <Box>
                   <Text>{item.location}</Text>
                 </Box>
+                {item.capacity && (
+                  <Box>
+                    <Text>Kapacita: {item.capacity}</Text>
+                  </Box>
+                )}
               </Flex>
               <Box marginLeft={"auto"} style={{ paddingTop: 5 }}>
                 <ChevronRightIcon />
@@ -56,14 +81,22 @@ export const ProgramBlock = ({ day, navigation }: ProgramBlockProps) => {
           </TouchableOpacity>
         );
       }}
-      renderSectionHeader={({ section: { title, time, location, icon } }) => (
-        <Box px={3} py={2} rounded="md" mt={2} bg="primary.200">
-          <Flex flexDir="row" justifyContent="flex-start">
-            {icon && <AntDesign name={icon} size={24} color="black" />}
-            <Text bg="primary.300">{title}</Text>
+      renderSectionHeader={({
+        section: { title, time, location, icon },
+        index,
+      }) => (
+        <Box key={index} px={3} py={2} mt={2} style={styles.section}>
+          <Flex
+            flexDir="row"
+            justifyContent="flex-start"
+            alignItems={"baseline"}
+          >
+            <Text style={styles.sectionHeader}>{title}</Text>
           </Flex>
-          <Box>{time}</Box>
-          <Box>{location}</Box>
+          <Text style={styles.sectionTime} bold>
+            {time}
+          </Text>
+          <Text>{location}</Text>
         </Box>
       )}
     />
@@ -71,15 +104,36 @@ export const ProgramBlock = ({ day, navigation }: ProgramBlockProps) => {
 };
 
 const styles = StyleSheet.create({
-  header: {
+  sectionHeader: {
     fontFamily: "HammersmithOne",
-    fontSize: 165,
+    fontSize: 20,
+    alignSelf: "baseline",
   },
-  row: {
+  sectionTime: {
+    color: "#6b6b6b",
+  },
+  section: {
+    borderLeftColor: "#6b6b6b",
+    borderLeftWidth: 6,
+    backgroundColor: "#E9E9E9",
+  },
+
+  activity: {
     flexDirection: "row",
-    // alignSelf: "auto",
+    alignSelf: "auto",
     justifyContent: "center",
     alignItems: "center",
+    padding: 10,
+    borderRadius: 0,
+    borderLeftWidth: 3,
+  },
+  activityWrapper: {
+    marginHorizontal: 10,
+  },
+  activityHeader: {
+    fontFamily: "HammersmithOne",
+    fontSize: 18,
+    alignSelf: "baseline",
   },
   headers: {
     display: "flex",

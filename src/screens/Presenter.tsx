@@ -11,8 +11,9 @@ import { LinearGradient } from "expo-linear-gradient";
 
 // how to dynamically import image ? via DB ooor?
 import petrGlosar from "../../assets/presenters/petr-glogar.png";
+import { useActivity } from "../hooks/useActivity";
 interface PresenterProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> {}
+  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> { }
 
 export default function Presenter({ navigation, route }: PresenterProps) {
   const params = route.params as { presenterId: string };
@@ -26,40 +27,31 @@ export default function Presenter({ navigation, route }: PresenterProps) {
         navigation={navigation}
         removeShadow
       />
-
+      <ScrollView
+        
+        _contentContainerStyle={{
+          w: "100%",
+        }}
+      >
       <LinearGradient
-        colors={["rgba(255,255,255, 0)", "rgba(31,170,170, 1)"]}
+        colors={["#1FAAAA", "#f0f0f0"]}
         style={styles.imageWrapper}
       >
         <View style={{ flex: 1, flexDirection: "column" }}>
-          <Image
+          {/* <Image
             source={petrGlosar}
             style={{
               ...styles.image,
               width: Dimensions.get("window").width / 2,
               height: Dimensions.get("window").width,
             }}
-          />
-        </View>
-
-        <View style={styles.textContainer}>
-          <Headline style={{ color: "white", fontFamily: "HammersmithOne" }}>
-            {presenter?.firstName}{" "}
-          </Headline>
-          <Headline style={{ color: "white", fontFamily: "HammersmithOne" }}>
-            {presenter?.lastName}
-          </Headline>
+          /> */}
         </View>
       </LinearGradient>
 
       {/* TODO: this bullshit doesn't work at all, :angry: */}
-      <ScrollView
-        px={100}
-        _contentContainerStyle={{
-          w: "100%",
-        }}
-      >
-        <View style={{ flex: 1 }}>
+
+        <View style={styles.scrollView}>
           <Headline
             style={styles.headline}
           >{`${presenter?.firstName} ${presenter?.lastName}`}</Headline>
@@ -69,16 +61,20 @@ export default function Presenter({ navigation, route }: PresenterProps) {
           {presenter?.activities && presenter.activities.length > 0 && (
             <View style={styles.activities}>
               <Headline>Vede toto: </Headline>
-              {presenter?.activities.map((activity, index) => (
-                <Chip
-                  key={index}
-                  icon="pulse"
-                  mode="outlined"
-                  style={styles.badge}
-                >
-                  {activity.title}
-                </Chip>
-              ))}
+              {presenter?.activities.map((activityId, index) => {
+                const activity = useActivity(activityId)
+                console.log("VEDE", activityId)
+                return (
+                  <Chip
+                    key={index}
+                    icon="pulse"
+                    mode="outlined"
+                    style={styles.badge}
+                  >
+                    {activity?.title}
+                  </Chip>
+                )
+              })}
             </View>
           )}
         </View>
@@ -89,12 +85,10 @@ export default function Presenter({ navigation, route }: PresenterProps) {
 
 const styles = StyleSheet.create({
   scrollView: {
-    height: "100%",
     paddingTop: 10,
     paddingBottom: 20,
     paddingLeft: 20,
     paddingRight: 20,
-    alignItems: "center",
   },
   headline: {
     marginTop: 20,

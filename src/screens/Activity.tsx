@@ -28,9 +28,12 @@ interface ActivityProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> {}
 
 export default function Activity({ navigation, route }: ActivityProps) {
-  const params = route.params as { activityId: string };
+  const params = route.params as { activityId: number };
   const activity = useActivity(params.activityId);
   console.log(Dimensions.get("window").width / 2);
+  let presenterNames: string[] = []
+  activity?.presenter.forEach(({firstName, lastName}) => presenterNames.push(`${firstName} ${lastName}`))
+  const joinedNames = presenterNames.join(" + ")
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -43,42 +46,29 @@ export default function Activity({ navigation, route }: ActivityProps) {
         />
         <View>
           <LinearGradient
-            colors={["rgba(255,255,255, 0)", "rgba(31,170,170, 1)"]}
+            colors={["#1FAAAA", "#f0f0f0"]}
             style={styles.imageWrapper}
           >
             <View style={{ flex: 1, flexDirection: "column" }}>
-              <Image
+              {/* <Image
                 source={petrGlosar}
                 style={{
                   ...styles.image,
                   width: Dimensions.get("window").width / 2,
                   height: Dimensions.get("window").width,
                 }}
-              />
-            </View>
-
-            <View style={styles.textContainer}>
-              <Headline
-                style={{ color: "white", fontFamily: "HammersmithOne" }}
-              >
-                {activity?.presenter.firstName}{" "}
-              </Headline>
-              <Headline
-                style={{ color: "white", fontFamily: "HammersmithOne" }}
-              >
-                {activity?.presenter.lastName}
-              </Headline>
+              /> */}
             </View>
           </LinearGradient>
-          <ScrollView contentContainerStyle={styles.scrollView}>
+          <ScrollView style={styles.scrollView}>
             <Headline style={{ fontFamily: "HammersmithOne" }}>
               {activity?.title || ""}
             </Headline>
-            <ActivityInfoPanel icon="calendar" text={`${activity?.date}`} />
+            <ActivityInfoPanel icon="calendar" text={`BLOK ${activity?.block}`} />
             <ActivityInfoPanel icon="map" text={`${activity?.location}`} />
             <ActivityInfoPanel
               icon="account"
-              text={`${activity?.presenter.firstName} ${activity?.presenter.lastName}`}
+              text={joinedNames}
             />
             <Divider />
             <Title>Anotace</Title>
@@ -101,6 +91,9 @@ const styles = StyleSheet.create({
     position: "relative",
     flexDirection: "row",
     justifyContent: "flex-end",
+  },
+  scrollView: {
+    backgroundColor: "#f0f0f0"
   },
   image: {
     zIndex: 1,
