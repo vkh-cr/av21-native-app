@@ -29,13 +29,16 @@ export function AppHeader<T extends string>({
   }, [navigation]);
 
   return (
-    <Appbar.Header theme={{
-      dark: true,
-      colors: {
-        primary: "#1FAAAA",
-        text: "white"
-      },
-    }}style={removeShadow && styles.withoutShadow}>
+    <Appbar.Header
+      theme={{
+        dark: true,
+        colors: {
+          primary: "#1FAAAA",
+          text: "white",
+        },
+      }}
+      style={removeShadow && styles.withoutShadow}
+    >
       {navBack ? (
         <Appbar.Action icon="chevron-left" onPress={handleBackPress} />
       ) : (

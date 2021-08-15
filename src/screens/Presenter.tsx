@@ -13,7 +13,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import petrGlosar from "../../assets/presenters/petr-glogar.png";
 import { useActivity } from "../hooks/useActivity";
 interface PresenterProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> { }
+  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> {}
 
 export default function Presenter({ navigation, route }: PresenterProps) {
   const params = route.params as { presenterId: string };
@@ -49,7 +49,11 @@ export default function Presenter({ navigation, route }: PresenterProps) {
           >
             {/* <Surface style={{ ...styles.surface }}> */}
             {presenter?.avatar ? (
-              <Avatar.Image size={avatarWidth} source={presenter.avatar} style={styles.image} />
+              <Avatar.Image
+                size={avatarWidth}
+                source={presenter.avatar}
+                style={styles.image}
+              />
             ) : (
               <Avatar.Text
                 style={styles.avatarText}
@@ -89,7 +93,9 @@ export default function Presenter({ navigation, route }: PresenterProps) {
                     mode="outlined"
                     style={styles.badge}
                     onPress={() =>
-                      navigation.navigate("Activity", { activityId: activity?.id })
+                      navigation.navigate("Activity", {
+                        activityId: activity?.id,
+                      })
                     }
                   >
                     {activity?.title}

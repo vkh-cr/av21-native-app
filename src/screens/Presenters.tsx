@@ -20,41 +20,46 @@ export default function Presenters({ navigation }: PresentersProps) {
         navigation={navigation}
       />
       <ScrollView style={styles.scrollView}>
-        {staticData.data.presenters.sort((a, b) => a.firstName.localeCompare(b.firstName)).map((presenter, index) => (
-          <List.Item
-            key={index}
-            onPress={() =>
-              navigation.navigate("Presenter", { presenterId: presenter.id })
-            }
-            left={(props) => (
-              <Surface {...props} style={{ ...props.style, ...styles.surface }}>
-                {presenter.avatar ? (
-                  <Avatar.Image
-                    size={50}
-                    source={presenter.avatar}
-                  />
-                ) : (
-                  <Avatar.Text
-                    style={styles.avatarText}
-                    size={40}
-                    labelStyle={{ letterSpacing: -2, fontFamily: "HammersmithOne", }}
-                    label={`${presenter.firstName.substring(
-                      0,
-                      1
-                    )} ${presenter.lastName.substring(0, 1)}`}
-                  />
-                )}
-              </Surface>
-            )}
-            right={(props) => {
-              return <List.Icon {...props} icon="chevron-right" />;
-            }}
-            title={`${presenter.firstName} ${presenter.lastName}`}
-            description={presenter.description}
-            titleStyle={styles.titleStyle}
-          />
-        ))}
-        <Box style={{height: 120}}></Box>
+        {staticData.data.presenters
+          .sort((a, b) => a.firstName.localeCompare(b.firstName))
+          .map((presenter, index) => (
+            <List.Item
+              key={index}
+              onPress={() =>
+                navigation.navigate("Presenter", { presenterId: presenter.id })
+              }
+              left={(props) => (
+                <Surface
+                  {...props}
+                  style={{ ...props.style, ...styles.surface }}
+                >
+                  {presenter.avatar ? (
+                    <Avatar.Image size={50} source={presenter.avatar} />
+                  ) : (
+                    <Avatar.Text
+                      style={styles.avatarText}
+                      size={40}
+                      labelStyle={{
+                        letterSpacing: -2,
+                        fontFamily: "HammersmithOne",
+                      }}
+                      label={`${presenter.firstName.substring(
+                        0,
+                        1
+                      )} ${presenter.lastName.substring(0, 1)}`}
+                    />
+                  )}
+                </Surface>
+              )}
+              right={(props) => {
+                return <List.Icon {...props} icon="chevron-right" />;
+              }}
+              title={`${presenter.firstName} ${presenter.lastName}`}
+              description={presenter.description}
+              titleStyle={styles.titleStyle}
+            />
+          ))}
+        <Box style={{ height: 120 }}></Box>
       </ScrollView>
     </View>
   );
@@ -64,7 +69,7 @@ const styles = StyleSheet.create({
   avatar: {},
   avatarText: {
     fontFamily: "HammersmithOne",
-    backgroundColor: "#EEEEEE"
+    backgroundColor: "#EEEEEE",
   },
   scrollView: {
     paddingLeft: 10,
@@ -83,6 +88,6 @@ const styles = StyleSheet.create({
   titleStyle: {
     // fontFamily: "HammersmithOne",
     fontSize: 18,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
 });

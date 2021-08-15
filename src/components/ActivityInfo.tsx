@@ -15,7 +15,12 @@ export default function ActivityInfoPanel({
   return (
     <View style={styles.row}>
       <View style={styles.icon}>
-        <Avatar.Icon size={44} icon={icon} color={"white"} style={styles.avatar}/>
+        <Avatar.Icon
+          size={44}
+          icon={icon}
+          color={"white"}
+          style={styles.avatar}
+        />
       </View>
       <View>
         <Text style={styles.text}>{text}</Text>
@@ -37,7 +42,7 @@ const styles = StyleSheet.create({
   },
   avatar: {
     backgroundColor: "#FF5D3A",
-  }, 
+  },
   text: {
     fontFamily: "HammersmithOne",
     padding: 10,

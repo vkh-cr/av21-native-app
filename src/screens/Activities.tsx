@@ -1,7 +1,13 @@
 import * as React from "react";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 
-import { View, StyleSheet, ScrollView, Dimensions, Pressable } from "react-native";
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  Dimensions,
+  Pressable,
+} from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import { Avatar, List, Surface } from "react-native-paper";
 import { useStaticData } from "../hooks/useStaticData";
@@ -12,11 +18,9 @@ import ActivityList from "../components/ActivityList";
 import { ActivityTypes } from "../types";
 
 interface ActivitiesProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Activities"> { }
+  extends DrawerScreenProps<Record<string, object | undefined>, "Activities"> {}
 
 export default function Activities({ navigation }: ActivitiesProps) {
-  
-
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: "duchovni", title: "Duchovní" },
@@ -24,9 +28,15 @@ export default function Activities({ navigation }: ActivitiesProps) {
     { key: "volnocas", title: "Workshopy" },
   ]);
 
-  const DuchovniRoute = () => <ActivityList type={ActivityTypes.DUCHOVNI} navigation={navigation} />;
-  const PrednaskyRoute = () => <ActivityList type={ActivityTypes.PREDNASKA} navigation={navigation} />;
-  const VolnocasRoute = () => <ActivityList type={ActivityTypes.VOLNOCAS} navigation={navigation} />;
+  const DuchovniRoute = () => (
+    <ActivityList type={ActivityTypes.DUCHOVNI} navigation={navigation} />
+  );
+  const PrednaskyRoute = () => (
+    <ActivityList type={ActivityTypes.PREDNASKA} navigation={navigation} />
+  );
+  const VolnocasRoute = () => (
+    <ActivityList type={ActivityTypes.VOLNOCAS} navigation={navigation} />
+  );
 
   const initialLayout = { width: Dimensions.get("window").width };
 
@@ -63,8 +73,6 @@ export default function Activities({ navigation }: ActivitiesProps) {
       </Box>
     );
   };
-
-
 
   return (
     <>

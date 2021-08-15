@@ -33,16 +33,16 @@ export const ProgramBlock = ({ day, navigation }: ProgramBlockProps) => {
         let activityColor;
         switch (item.type) {
           case ActivityTypes.VOLNOCAS:
-              activityColor = "#FF5D3A"
+            activityColor = "#FF5D3A";
             break;
           case ActivityTypes.PREDNASKA:
-              activityColor = "#1FAAAA"
-              break;
+            activityColor = "#1FAAAA";
+            break;
           case ActivityTypes.DUCHOVNI:
-              activityColor = "#FFC700"
-              break;
+            activityColor = "#FFC700";
+            break;
           default:
-            activityColor = "#CECECE"
+            activityColor = "#CECECE";
             break;
         }
         return (
@@ -53,7 +53,11 @@ export const ProgramBlock = ({ day, navigation }: ProgramBlockProps) => {
               navigation.navigate("Activity", { activityId: item.id })
             }
           >
-            <Flex style={{...styles.activity, borderLeftColor: activityColor}} bg="#EEEEEE" m={2}>
+            <Flex
+              style={{ ...styles.activity, borderLeftColor: activityColor }}
+              bg="#EEEEEE"
+              m={2}
+            >
               <Flex flexDirection="column" flexGrow={1}>
                 <Box>
                   <Text style={styles.activityHeader}>{item.title}</Text>

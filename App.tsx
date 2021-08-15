@@ -24,7 +24,7 @@ export default function Main() {
 
   const theme = extendTheme({
     colors: {
-      primary: {100: "#056970"},
+      primary: { 100: "#056970" },
     },
   });
 

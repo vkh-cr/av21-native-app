@@ -7,7 +7,7 @@ import { DrawerScreenProps } from "@react-navigation/drawer";
 import { ProgramBlock } from "../components/ProgramBlock";
 
 interface ProgramProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Program"> { }
+  extends DrawerScreenProps<Record<string, object | undefined>, "Program"> {}
 
 export default function Harmonogram({ navigation }: ProgramProps) {
   const [index, setIndex] = React.useState(0);

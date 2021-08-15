@@ -1,4 +1,10 @@
-import { ActivityTypes, News, PresenterData, StaticData, TextTypes } from "./types";
+import {
+  ActivityTypes,
+  News,
+  PresenterData,
+  StaticData,
+  TextTypes,
+} from "./types";
 
 export const news: News = {
   version: 1,
@@ -60,10 +66,9 @@ export const staticData: StaticData = {
         lastName: "",
         display: true,
         avatar: require("../assets/presenters/skola-evangelizace.jpg"),
-        description:
-          `Jan Svoboda: farář z Českého Těšína, ředitel první české pobočky Školy evangelizace svatého Ondřeje 
+        description: `Jan Svoboda: farář z Českého Těšína, ředitel první české pobočky Školy evangelizace svatého Ondřeje 
           Maria Paskuda: farnice z Jablunkova, psycholog na mateřské, koordinátorka školy`,
-       activities: [202],
+        activities: [202],
       },
       {
         id: 5,
@@ -100,7 +105,8 @@ export const staticData: StaticData = {
         lastName: "Kadlec",
         display: true,
         avatar: require("../assets/presenters/vlastimil-kadlec.jpg"),
-        description: "Kněz, člen řeholního společenství Kongregace misionářů oblátů Panny Marie Neposkvrněné, působící v Plasích v plzeňské diecézi.",
+        description:
+          "Kněz, člen řeholního společenství Kongregace misionářů oblátů Panny Marie Neposkvrněné, působící v Plasích v plzeňské diecézi.",
         activities: [300],
       },
       {
@@ -109,7 +115,8 @@ export const staticData: StaticData = {
         lastName: "Flek",
         display: true,
         avatar: "",
-        description: "Evangelický teolog, kazatel a překladatel Bible21. Věnuje se překladatelské a přednáškové činnosti, příležitostně káže v širokém spektru křesťanských církví. Je ženatý, má čtyři děti a dva vnuky.",
+        description:
+          "Evangelický teolog, kazatel a překladatel Bible21. Věnuje se překladatelské a přednáškové činnosti, příležitostně káže v širokém spektru křesťanských církví. Je ženatý, má čtyři děti a dva vnuky.",
         activities: [301],
       },
       {
@@ -118,7 +125,8 @@ export const staticData: StaticData = {
         lastName: "Novotný",
         display: true,
         avatar: require("../assets/presenters/vit-novotny.jpg"),
-        description: "Lektor, kouč; založil projekt Smysluplné rozhovory, jehož vizí je vracet více hloubky do konverzací i vztahů; pořádají pravidelná setkávání a vydali také konverzační karty, díky kterým můžeme lépe poznat lidi ve svém okolí.",
+        description:
+          "Lektor, kouč; založil projekt Smysluplné rozhovory, jehož vizí je vracet více hloubky do konverzací i vztahů; pořádají pravidelná setkávání a vydali také konverzační karty, díky kterým můžeme lépe poznat lidi ve svém okolí.",
         activities: [302, 413, 605],
       },
       {
@@ -127,7 +135,8 @@ export const staticData: StaticData = {
         lastName: "Buchtová",
         display: true,
         avatar: require("../assets/presenters/denisa.png"),
-        description: "Studentka a sociální pracovnice. Která se ve volném čase věnuje výrobě čokoládových pralinek a táborům. Na kterých učila děti, mimo jiné, vyrábět barefoot sandále.",
+        description:
+          "Studentka a sociální pracovnice. Která se ve volném čase věnuje výrobě čokoládových pralinek a táborům. Na kterých učila děti, mimo jiné, vyrábět barefoot sandále.",
         activities: [310],
       },
       {
@@ -141,11 +150,12 @@ export const staticData: StaticData = {
       },
       {
         id: 13,
-        firstName: "Jakub \"Indián\"",
+        firstName: 'Jakub "Indián"',
         lastName: "Venglář",
         display: true,
         avatar: require("../assets/presenters/jakub-venglar.jpg"),
-        description: "Cestovatel, dobrodruh a spisovatel, který je nejspokojenější někde na horách nebo kdesi, kde netuší co přinese další den. Krom podivných cest se věnuje i ultimate frisbee. V roce 2016 dokonce založil brněnský tým Brno Ultimate Frisbee Underground, který zároveň spolutrénuje. Na pomoc si vezme pár spoluhráčů právě z tohoto týmu.",
+        description:
+          "Cestovatel, dobrodruh a spisovatel, který je nejspokojenější někde na horách nebo kdesi, kde netuší co přinese další den. Krom podivných cest se věnuje i ultimate frisbee. V roce 2016 dokonce založil brněnský tým Brno Ultimate Frisbee Underground, který zároveň spolutrénuje. Na pomoc si vezme pár spoluhráčů právě z tohoto týmu.",
         activities: [313],
       },
       {
@@ -154,7 +164,8 @@ export const staticData: StaticData = {
         lastName: "Řmotová",
         display: true,
         avatar: require("../assets/presenters/katerina-rmotova.jpg"),
-        description: "Věnuje se neformálnímu vzdělávání a práci s mládeží v mezinárodním prostředí už něco přes 3 roky. Baví ji koordinovat projekty z nejrůznějších oblastí a podílet se na jejich přípravě. Orientuje se také na práci se skupinou a facilitaci workshopů.",
+        description:
+          "Věnuje se neformálnímu vzdělávání a práci s mládeží v mezinárodním prostředí už něco přes 3 roky. Baví ji koordinovat projekty z nejrůznějších oblastí a podílet se na jejich přípravě. Orientuje se také na práci se skupinou a facilitaci workshopů.",
         activities: [314],
       },
       {
@@ -163,7 +174,8 @@ export const staticData: StaticData = {
         lastName: "Suchár",
         display: true,
         avatar: require("../assets/presenters/josef-suchar.jpg"),
-        description: "Farář v pohraniční osadě Neratov. Se svými spolupracovníky z občanského Sdružení Neratov do ní vrací život a pracuje na obnově barokního kostela Nanebevzetí Panny Marie.",
+        description:
+          "Farář v pohraniční osadě Neratov. Se svými spolupracovníky z občanského Sdružení Neratov do ní vrací život a pracuje na obnově barokního kostela Nanebevzetí Panny Marie.",
         activities: [400],
       },
       {
@@ -172,7 +184,8 @@ export const staticData: StaticData = {
         lastName: "Novotný",
         display: true,
         avatar: require("../assets/presenters/milan-novotny.jpg"),
-        description: "Trvalý jáhen římskokatolické církve, vojenský kaplan 43. výsadkového pluku v Chrudimi, psycholog.",
+        description:
+          "Trvalý jáhen římskokatolické církve, vojenský kaplan 43. výsadkového pluku v Chrudimi, psycholog.",
         activities: [401],
       },
       {
@@ -181,7 +194,8 @@ export const staticData: StaticData = {
         lastName: "Dyčka",
         display: true,
         avatar: require("../assets/presenters/jiri-dycka.jpg"),
-        description: "Jáhen, který působí ve farnosti Velké Meziříčí; youtuber, jeden z Ježíšových fans, člen projektu Live4G.",
+        description:
+          "Jáhen, který působí ve farnosti Velké Meziříčí; youtuber, jeden z Ježíšových fans, člen projektu Live4G.",
         activities: [402],
       },
       {
@@ -208,7 +222,8 @@ export const staticData: StaticData = {
         lastName: "Kašparů",
         display: true,
         avatar: require("../assets/presenters/max-kasparu.jpg"),
-        description: "Řeckokatolický kněz, psychiatr, pedagog, premonstrátský terciář, autor duchovní literatury a nepřizpůsobivý občan.",
+        description:
+          "Řeckokatolický kněz, psychiatr, pedagog, premonstrátský terciář, autor duchovní literatury a nepřizpůsobivý občan.",
         activities: [600],
       },
       {
@@ -217,7 +232,8 @@ export const staticData: StaticData = {
         lastName: "Grolich",
         display: true,
         avatar: require("../assets/presenters/jan-grolich.jpg"),
-        description: "Moravský politik a advokát, od roku 2020 hejtman Jihomoravského kraje. \"I na malé dědině se dají dělat velké věci a inspirovat okolí. Když to jde v malém, musí to jít i ve velkém na kraji.\"",
+        description:
+          'Moravský politik a advokát, od roku 2020 hejtman Jihomoravského kraje. "I na malé dědině se dají dělat velké věci a inspirovat okolí. Když to jde v malém, musí to jít i ve velkém na kraji."',
         activities: [601, 715],
       },
       {
@@ -226,7 +242,8 @@ export const staticData: StaticData = {
         lastName: "Glogar",
         display: true,
         avatar: require("../assets/presenters/petr-glogar.jpg"),
-        description: "Bosý karmelitán, kněz a rodinný terapeut, řídí Fortnu, vede akce a nabízí duchovní doprovázení; vede semináře jak pro mužské skupiny, tak pro manželské páry.",
+        description:
+          "Bosý karmelitán, kněz a rodinný terapeut, řídí Fortnu, vede akce a nabízí duchovní doprovázení; vede semináře jak pro mužské skupiny, tak pro manželské páry.",
         activities: [602],
       },
       {
@@ -235,7 +252,8 @@ export const staticData: StaticData = {
         lastName: "Čanda",
         display: true,
         avatar: require("../assets/presenters/bodaj.jpg"),
-        description: "Ředitel organizace Bodaj, která již několik let díky dobrovolníkům pomáhá dětem v ústavní péči na Ukrajině.",
+        description:
+          "Ředitel organizace Bodaj, která již několik let díky dobrovolníkům pomáhá dětem v ústavní péči na Ukrajině.",
         activities: [603],
       },
       {
@@ -244,7 +262,8 @@ export const staticData: StaticData = {
         lastName: "Hamalová",
         display: true,
         avatar: require("../assets/presenters/dagmar-hamalova.jpg"),
-        description: "Členka Unie katolických žen, pracuje na pozici vychovatelky a speciální pedagožky v dětském domově. Věnuje se také seniorům, podporuje místní ekologickou iniciativu Zelená peřina. Od 2008 je aktivní v místní politice, v současnosti v městském zastupitelstvu.",
+        description:
+          "Členka Unie katolických žen, pracuje na pozici vychovatelky a speciální pedagožky v dětském domově. Věnuje se také seniorům, podporuje místní ekologickou iniciativu Zelená peřina. Od 2008 je aktivní v místní politice, v současnosti v městském zastupitelstvu.",
         activities: [607],
       },
       {
@@ -253,7 +272,8 @@ export const staticData: StaticData = {
         lastName: "Strapáčová",
         display: true,
         avatar: require("../assets/presenters/lucie-strapacova.jpg"),
-        description: "Speciální pedagožka a lektorka zabývající se nejrůznějšími výtvarnými aktivitami, mimo jiné i arteterapiií a akční malbou.",
+        description:
+          "Speciální pedagožka a lektorka zabývající se nejrůznějšími výtvarnými aktivitami, mimo jiné i arteterapiií a akční malbou.",
         activities: [606],
       },
       {
@@ -271,7 +291,8 @@ export const staticData: StaticData = {
         lastName: "Halík",
         display: true,
         avatar: require("../assets/presenters/tomas-halik.jpg"),
-        description: "Kněz, teolog a sociolog, profesor UK. Je farářem Akademické farnosti Praha  a prezidentem České křesťanské akademie.",
+        description:
+          "Kněz, teolog a sociolog, profesor UK. Je farářem Akademické farnosti Praha  a prezidentem České křesťanské akademie.",
         activities: [700],
       },
       {
@@ -282,7 +303,7 @@ export const staticData: StaticData = {
         avatar: require("../assets/presenters/christian-refugee.jpg"),
         description: `Ilona Machandrová - advokátka, předsedkyně a zakládající členka Christian Refugee Service, z.s., zakladatelka výjezdů Projektu Naděje pro Národy
         Ludmila Špoková - advokátní koncipientka, místopředsedkyně a zakládající členka Christian Refugee Service, z.s.`,
-       activities: [702],
+        activities: [702],
       },
       {
         id: 29,
@@ -290,7 +311,8 @@ export const staticData: StaticData = {
         lastName: "Stehlíková",
         display: true,
         avatar: require("../assets/presenters/monika-stehlikova.jpg"),
-        description: "Konzultantka pro nadané, terapeutka ACT, lektorka mindfulness, školitelka a přednášející, poradkyně pro školská zařízení.",
+        description:
+          "Konzultantka pro nadané, terapeutka ACT, lektorka mindfulness, školitelka a přednášející, poradkyně pro školská zařízení.",
         activities: [701],
       },
       {
@@ -299,7 +321,8 @@ export const staticData: StaticData = {
         lastName: "Bůžek",
         display: true,
         avatar: require("../assets/presenters/jiri-buzek.jpg"),
-        description: "Kněz a biolog, farář v Brně-Žebětíně; pracoval na Biofyzikálním ústavu Akademie věd v Brně a má za sebou doktorát z molekulární biologie a genetiky. ",
+        description:
+          "Kněz a biolog, farář v Brně-Žebětíně; pracoval na Biofyzikálním ústavu Akademie věd v Brně a má za sebou doktorát z molekulární biologie a genetiky. ",
         activities: [703],
       },
       {
@@ -308,7 +331,8 @@ export const staticData: StaticData = {
         lastName: "Kotvrda",
         display: true,
         avatar: require("../assets/presenters/jindrich-kotvrda.jpg"),
-        description: "Kněz brněnské diecéze, věnuje se mimo obvyklé pastorační služby duchovnímu doprovázení, psychoterapii, doprovázení komunity L'Arche, společenství Víra a světlo, a křesťanské meditaci podle Johna Maina (wccm.org).",
+        description:
+          "Kněz brněnské diecéze, věnuje se mimo obvyklé pastorační služby duchovnímu doprovázení, psychoterapii, doprovázení komunity L'Arche, společenství Víra a světlo, a křesťanské meditaci podle Johna Maina (wccm.org).",
         activities: [704],
       },
       {
@@ -317,7 +341,8 @@ export const staticData: StaticData = {
         lastName: "Chytilová",
         display: true,
         avatar: require("../assets/presenters/sestra-lucie.jpg"),
-        description: "Patří do duchovní rodiny sekulárního Institutu Servi della Sofferenza, kromě své profese učitelky se věnuje spolupráci při evangelizačních projektech, práci s dětmi a mládeží, duchovnímu doprovázení. Je jí blízká praxe křesťanské meditace podle Johna Maina.",
+        description:
+          "Patří do duchovní rodiny sekulárního Institutu Servi della Sofferenza, kromě své profese učitelky se věnuje spolupráci při evangelizačních projektech, práci s dětmi a mládeží, duchovnímu doprovázení. Je jí blízká praxe křesťanské meditace podle Johna Maina.",
         activities: [704],
       },
       {
@@ -326,7 +351,8 @@ export const staticData: StaticData = {
         lastName: "Adamčík",
         display: true,
         avatar: require("../assets/presenters/jan-adamcik.jpg"),
-        description: "Od mládí vášnivý sportovec s citem pro pohyb. Postupně jeho kroky vedly k bojovým sportům, až zůstal u Krav Maga. Honza absolvoval instruktorský kurz pod vedením zahraničního experta Mateusze Soga. Má certifikaci pro cvičení dospělých - Instruktor (technický stupeň G3).",
+        description:
+          "Od mládí vášnivý sportovec s citem pro pohyb. Postupně jeho kroky vedly k bojovým sportům, až zůstal u Krav Maga. Honza absolvoval instruktorský kurz pod vedením zahraničního experta Mateusze Soga. Má certifikaci pro cvičení dospělých - Instruktor (technický stupeň G3).",
         activities: [711],
       },
       {
@@ -344,7 +370,8 @@ export const staticData: StaticData = {
         lastName: "Grochal",
         display: true,
         avatar: require("../assets/presenters/parova-akrobacie.jpg"),
-        description: "Párovou akrobacií žije od počátku roku 2015 a díky předchozím letitým tanečním a instruktorským zkušenostem se brzy vypracoval na uznávaného průvodce, inspirátora a propagátora této aktivity (nejen) v Brně.",
+        description:
+          "Párovou akrobacií žije od počátku roku 2015 a díky předchozím letitým tanečním a instruktorským zkušenostem se brzy vypracoval na uznávaného průvodce, inspirátora a propagátora této aktivity (nejen) v Brně.",
         activities: [714],
       },
       {
@@ -353,7 +380,8 @@ export const staticData: StaticData = {
         lastName: "Satoria",
         display: true,
         avatar: require("../assets/presenters/karel-satoria.jpg"),
-        description: "Kněz, pedagog, bývalý člen Řádu cisterciáků přísné observance, autor knih Povoláním člověk a Život je sacra zajímavej.",
+        description:
+          "Kněz, pedagog, bývalý člen Řádu cisterciáků přísné observance, autor knih Povoláním člověk a Život je sacra zajímavej.",
         activities: [1000],
       },
       {
@@ -362,7 +390,8 @@ export const staticData: StaticData = {
         lastName: "Balážia",
         display: true,
         avatar: require("../assets/presenters/jan-balazia.jpg"),
-        description: "Již 36 let šťastně ženatý muž, více než 20 let se s manželkou zúčastňuje Manželských setkání; věnuje se mužské spiritualitě; napsal dvě publikace a je součástí sdružení \"Pre rodiny\".",
+        description:
+          'Již 36 let šťastně ženatý muž, více než 20 let se s manželkou zúčastňuje Manželských setkání; věnuje se mužské spiritualitě; napsal dvě publikace a je součástí sdružení "Pre rodiny".',
         activities: [1001],
       },
       {
@@ -371,7 +400,8 @@ export const staticData: StaticData = {
         lastName: "Konvalinková",
         display: true,
         avatar: require("../assets/presenters/sestra-marie-immaculata.jpg"),
-        description: "Řeholní sestra z Kongregace Školských sester sv. Františka, nemocniční kaplanka, psychoterapeutická poradkyně a lektorka; mnoho let pracovala s uvězněnými a závislými lidmi.",
+        description:
+          "Řeholní sestra z Kongregace Školských sester sv. Františka, nemocniční kaplanka, psychoterapeutická poradkyně a lektorka; mnoho let pracovala s uvězněnými a závislými lidmi.",
         activities: [1002],
       },
       {
@@ -380,7 +410,8 @@ export const staticData: StaticData = {
         lastName: "Soták",
         display: true,
         avatar: require("../assets/presenters/tomas-sotak.jpg"),
-        description: "Předseda spolku Laudato si, který vidí smysl v sebemenších krocích vedoucích k ochraně přírody a razí heslo, že každý by měl začít u sebe.",
+        description:
+          "Předseda spolku Laudato si, který vidí smysl v sebemenších krocích vedoucích k ochraně přírody a razí heslo, že každý by měl začít u sebe.",
         activities: [1003],
       },
       {
@@ -389,7 +420,8 @@ export const staticData: StaticData = {
         lastName: "Sikorová",
         display: true,
         avatar: require("../assets/presenters/sestra-laurencie.jpg"),
-        description: "Před 20 lety ji Bůh změnil život tím, že ji povolal do bližšího života s Ním ve společenství sester a službě potřebným. Je to život pádů a povstávání; odevzdávání a přijímání, lekcí odpouštění sobě i druhým, hledání Boha v Písmu sv., v sobě, v bližním i v různých situacích.",
+        description:
+          "Před 20 lety ji Bůh změnil život tím, že ji povolal do bližšího života s Ním ve společenství sester a službě potřebným. Je to život pádů a povstávání; odevzdávání a přijímání, lekcí odpouštění sobě i druhým, hledání Boha v Písmu sv., v sobě, v bližním i v různých situacích.",
         activities: [1004],
       },
       {
@@ -398,7 +430,8 @@ export const staticData: StaticData = {
         lastName: "Macurová",
         display: true,
         avatar: require("../assets/presenters/sestra-magdalena.jpg"),
-        description: "Prožívá své sedmé léto v Konventu sester alžbětinek a chce se podělit o svou zkušenost víry a Božího vedení v každodenním životě, což je často velké dobrodružství. Řekla by o sobě, že je obyčejná sestra s originálním povoláním. Slouží v Domově sv. Alžběty (domov pro seniory) na různých pozicích. Ráda poznává nová místa a nové lidi. Je vděčná za to, že stabilitas loci je někdy i \"labilitas\".",
+        description:
+          'Prožívá své sedmé léto v Konventu sester alžbětinek a chce se podělit o svou zkušenost víry a Božího vedení v každodenním životě, což je často velké dobrodružství. Řekla by o sobě, že je obyčejná sestra s originálním povoláním. Slouží v Domově sv. Alžběty (domov pro seniory) na různých pozicích. Ráda poznává nová místa a nové lidi. Je vděčná za to, že stabilitas loci je někdy i "labilitas".',
         activities: [1004],
       },
     ],
@@ -411,7 +444,9 @@ export const staticData: StaticData = {
         description: `Pohodový večer s čajem, vínem a drobným občerstvením.`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         type: ActivityTypes.VOLNOCAS,
       },
@@ -423,9 +458,11 @@ export const staticData: StaticData = {
         description: `Vzhledem k tomu, že ruchu bude všude dost, využijte možnost se ztišit před Pánem při tichých adoracích. Čtvrteční adorace bude uvedena pouze krátkým slovem, které by nás mělo propojit s jednou cestou naší poutě a to cestou samoty. Tento impuls necháme vyznít do ticha. `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
-        type: ActivityTypes.DUCHOVNI
+        type: ActivityTypes.DUCHOVNI,
       },
       {
         id: 200,
@@ -436,10 +473,12 @@ export const staticData: StaticData = {
         description: `Přednáška o tom, proč je samota důležitá a proč nemáme nikomu říkat ani "mistr" ani "učitel".`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 2);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 2
+          );
         },
         capacity: 120,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 201,
@@ -450,10 +489,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 3);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 3
+          );
         },
         capacity: 120,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 202,
@@ -465,10 +506,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 4);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 4
+          );
         },
         capacity: 60,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 203,
@@ -479,10 +522,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 5);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 5
+          );
         },
         capacity: 60,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 204,
@@ -493,10 +538,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 6);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 6
+          );
         },
         capacity: 60,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 205,
@@ -507,9 +554,11 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 7);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 7
+          );
         },
-        type: ActivityTypes.DUCHOVNI
+        type: ActivityTypes.DUCHOVNI,
       },
       {
         id: 300,
@@ -520,10 +569,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 8);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 8
+          );
         },
         capacity: 100,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 301,
@@ -534,10 +585,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 9);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 9
+          );
         },
         capacity: 130,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 302,
@@ -548,10 +601,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 10);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 10
+          );
         },
         capacity: 100,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 310,
@@ -562,10 +617,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 11);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 11
+          );
         },
         capacity: 12,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 311,
@@ -576,10 +633,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 12);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 12
+          );
         },
         capacity: 15,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 313,
@@ -590,10 +649,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 13);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 13
+          );
         },
         capacity: 20,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 314,
@@ -604,10 +665,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 14);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 14
+          );
         },
         capacity: 24,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 400,
@@ -618,10 +681,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 15);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 15
+          );
         },
         capacity: 140,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 401,
@@ -632,10 +697,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 16);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 16
+          );
         },
         capacity: 100,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 402,
@@ -646,10 +713,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 17);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 17
+          );
         },
         capacity: 100,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 411,
@@ -660,10 +729,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         capacity: 30,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 412,
@@ -674,9 +745,11 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 413,
@@ -687,10 +760,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 10);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 10
+          );
         },
         capacity: 12,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 414,
@@ -700,9 +775,11 @@ export const staticData: StaticData = {
         description: `Společná modlitba pro ty, jenž chtějí být s Kristem ve společenství`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
-        type: ActivityTypes.DUCHOVNI
+        type: ActivityTypes.DUCHOVNI,
       },
       {
         id: 510,
@@ -713,7 +790,9 @@ export const staticData: StaticData = {
 `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 18);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 18
+          );
         },
         type: ActivityTypes.VOLNOCAS,
       },
@@ -726,9 +805,11 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 19);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 19
+          );
         },
-        type: ActivityTypes.DUCHOVNI
+        type: ActivityTypes.DUCHOVNI,
       },
       {
         id: 511,
@@ -738,7 +819,9 @@ export const staticData: StaticData = {
         description: `Večerní oheň, kytara a špekáčky nesmí chybět! Dojdi nasát atmosféru, zazpívat si a potkat se s ostatními po celodenním rušném programu.`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         type: ActivityTypes.VOLNOCAS,
       },
@@ -750,7 +833,9 @@ export const staticData: StaticData = {
         description: `Pohodový večer s čajem, vínem a drobným občerstvením.`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         type: ActivityTypes.VOLNOCAS,
       },
@@ -763,10 +848,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 20);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 20
+          );
         },
         capacity: 100,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 601,
@@ -776,10 +863,12 @@ export const staticData: StaticData = {
         description: `Kdy už budete mít věk na to, abyste se mohli starat o svět kolem sebe? Co staří dělají lépe, než mladí? A proč jsou to všechno nesmysly?`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 21);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 21
+          );
         },
         capacity: 80,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 602,
@@ -790,24 +879,29 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 22);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 22
+          );
         },
         capacity: 80,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 603,
         block: 6,
-        title: "Děti z \"konce\" Ukrajiny - pomoc, pouto, dobrovolnictví, přátelství",
+        title:
+          'Děti z "konce" Ukrajiny - pomoc, pouto, dobrovolnictví, přátelství',
         location: "Sál Stojanov",
         description: `Jak se žije dětem v ústavní péči na Ukrajině? Jak lze pomoci? V čem spočívá dobrovolnická pomoc dětem s postižením? Příběh organizace Bodaj, která již několik let díky dobrovolníkům těmto dětem na Ukrajině pomáhá.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 23);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 23
+          );
         },
         capacity: 40,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 607,
@@ -818,10 +912,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 24);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 24
+          );
         },
         capacity: 40,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 604,
@@ -832,10 +928,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         capacity: 30,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 605,
@@ -846,10 +944,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 10);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 10
+          );
         },
         capacity: 12,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 606,
@@ -860,10 +960,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 25);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 25
+          );
         },
         capacity: 10,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 608,
@@ -874,9 +976,11 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 26);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 26
+          );
         },
-        type: ActivityTypes.DUCHOVNI
+        type: ActivityTypes.DUCHOVNI,
       },
       {
         id: 700,
@@ -887,23 +991,28 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 27);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 27
+          );
         },
         capacity: 80,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 701,
         block: 7,
-        title: "Souvislost mezi učením Ježíše Nazaretského a moderní psychoterapii ACT",
+        title:
+          "Souvislost mezi učením Ježíše Nazaretského a moderní psychoterapii ACT",
         location: "Zimní sál",
         description: `Jak zvládat bolest a utrpení? Kdo jsem já a jak se mohu poznat? Jak objevit svůj potenciál (poznat své hřivny)? Jak mám o sebe pečovat?`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 29);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 29
+          );
         },
         capacity: 80,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 702,
@@ -914,10 +1023,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 28);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 28
+          );
         },
         capacity: 40,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 703,
@@ -928,10 +1039,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 30);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 30
+          );
         },
         capacity: 60,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 704,
@@ -942,10 +1055,13 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 31 || presenter.id === 32 );
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) =>
+              presenter.id === 31 || presenter.id === 32
+          );
         },
         capacity: 60,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 711,
@@ -956,10 +1072,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 33);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 33
+          );
         },
         capacity: 30,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 713,
@@ -970,10 +1088,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 34);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 34
+          );
         },
         capacity: 40,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 714,
@@ -984,10 +1104,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 35);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 35
+          );
         },
         capacity: 12,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 715,
@@ -998,10 +1120,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 21);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 21
+          );
         },
         capacity: 20,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 716,
@@ -1012,10 +1136,12 @@ export const staticData: StaticData = {
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         capacity: 24,
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 800,
@@ -1027,9 +1153,11 @@ A co konkrétně tě bude v rámci tohoto programu čekat? Potkáš se s další
 Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrovolníci žijící v daných regionech. `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
-        type: ActivityTypes.VOLNOCAS
+        type: ActivityTypes.VOLNOCAS,
       },
       {
         id: 910,
@@ -1039,7 +1167,9 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         description: `Pohodový večer můžeš zažít ve sklepě gymnázia. Nejen příznivci lidové hudby jistě ocení cimbálovou muziku Slačáci i lahodné víno přímo od vinaře.`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         type: ActivityTypes.VOLNOCAS,
       },
@@ -1052,9 +1182,11 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
-        type: ActivityTypes.DUCHOVNI
+        type: ActivityTypes.DUCHOVNI,
       },
       {
         id: 911,
@@ -1064,7 +1196,9 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         description: `Večerní oheň, kytara a špekáčky nesmí chybět! Dojdi nasát atmosféru, zazpívat si a potkat se s ostatními po celodenním rušném programu.`,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 0);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 0
+          );
         },
         type: ActivityTypes.VOLNOCAS,
       },
@@ -1077,10 +1211,12 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 36);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 36
+          );
         },
         capacity: 120,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 1001,
@@ -1091,10 +1227,12 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 37);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 37
+          );
         },
         capacity: 120,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 1002,
@@ -1105,10 +1243,12 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 38);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 38
+          );
         },
         capacity: 80,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 1003,
@@ -1119,24 +1259,30 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 39);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) => presenter.id === 39
+          );
         },
         capacity: 40,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
       {
         id: 1004,
         block: 10,
-        title: "Co si nevybojuješ v samotě, to ve společenství nedáš! Aneb Bez víry ani krok...",
+        title:
+          "Co si nevybojuješ v samotě, to ve společenství nedáš! Aneb Bez víry ani krok...",
         location: "Kaple Stojanov",
         description: `Přicházíme jako společenství, ve dvou, abychom nabídly náhled do života ve společenství, každodenní prožívání víry ve společenství i v samotě. Samota a společenství se prolínají také ve službě potřebným, přednáška bude spojená i se svědectvími ze života seniorů, o které se staráme. Nebude chybět ani krátké Lectio divina inspirované úryvkem letošního AV. Chceme tak společně s těmi, kteří k nám přijdou vytvořit neopakovatelnou atmosféru společenství a prostor pro sdílení.
        `,
         image: null,
         get presenter() {
-          return staticData.data.presenters.filter((presenter: PresenterData) => presenter.id === 40 || presenter.id === 41);
+          return staticData.data.presenters.filter(
+            (presenter: PresenterData) =>
+              presenter.id === 40 || presenter.id === 41
+          );
         },
         capacity: 40,
-        type: ActivityTypes.PREDNASKA
+        type: ActivityTypes.PREDNASKA,
       },
     ],
     contacts: [],
@@ -1519,11 +1665,6 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
           icon: "sync",
         },
       ],
-
-
-
-
-
     ],
     maps: [],
     images: [],
@@ -1559,10 +1700,10 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
       },
       {
         type: TextTypes.TEXT,
-        text: `Stojanov je otevřen 6:40 - 22:00, VDCM v čase 7:30 - 22:00 (zavřeno během bloků a mší)
-Noční otevírací doba
-Vchod VDCM bude uzavřen ve 22:00, od této doby budeme dveře otevírat každou půl hodinu až do 2 hod (tzn. ve 22:30, 23:00, 23:30, 00:00, 00:30, 1:00, 1:30, 2:00)
-,Ubytovaní na Stojanově dostanou klíčky, na kterých je i klíč od hlavního vchodu.`,
+        text: ` - Stojanov je otevřen 6:40 - 22:00, VDCM v čase 7:30 - 22:00 (zavřeno během bloků a mší)
+ - Noční otevírací doba
+    - Vchod VDCM bude uzavřen ve 22:00, od této doby budeme dveře otevírat každou půl hodinu až do 2 hod (tzn. ve 22:30, 23:00, 23:30, 00:00, 00:30, 1:00, 1:30, 2:00),
+    - Ubytovaní na Stojanově dostanou klíčky, na kterých je i klíč od hlavního vchodu.`,
       },
       {
         type: TextTypes.NADPIS,
@@ -1570,12 +1711,12 @@ Vchod VDCM bude uzavřen ve 22:00, od této doby budeme dveře otevírat každou
       },
       {
         type: TextTypes.TEXT,
-        text: `Ve vnitřních prostorách prosíme nos ochranné prostředky dýchacích cest - respirátory nebo nano roušky splňující příslušné normy (např. FFP2, KN 95)
-Prosíme o dodržování nočního klidu na ubytování od 22 do 6 hodin.
-Všechny prostory setkání jsou nekuřácké.
-V pokojích na Stojanově i na VDCM se prosíme přezouvej.
-Klíče od pokojů na Stojanově si nech po dobu AV u sebe. Před odjezdem je však vrať na recepci Stojanov!
-V neděli prosíme o vyklizení pokojů na Stojanově i VDCM do 12:30 hodin (do závěrečné mše). Věci si můžeš nechat v sále na Stojanově.`,
+        text: ` - Ve vnitřních prostorách prosíme nos ochranné prostředky dýchacích cest - respirátory nebo nano roušky splňující příslušné normy (např. FFP2, KN 95)
+ - Prosíme o dodržování nočního klidu na ubytování od 22 do 6 hodin.
+ - Všechny prostory setkání jsou nekuřácké.
+ - V pokojích na Stojanově i na VDCM se prosíme přezouvej.
+ - Klíče od pokojů na Stojanově si nech po dobu AV u sebe. Před odjezdem je však vrať na recepci Stojanov!
+ - V neděli prosíme o vyklizení pokojů na Stojanově i VDCM do 12:30 hodin (do závěrečné mše). Věci si můžeš nechat v sále na Stojanově.`,
       },
       {
         type: TextTypes.NADPIS,
@@ -1583,9 +1724,9 @@ V neděli prosíme o vyklizení pokojů na Stojanově i VDCM do 12:30 hodin (do 
       },
       {
         type: TextTypes.TEXT,
-        text: `Náramku na ruce se nezbavuj (ať se dostaneš na program nebo do jídelny).
-Registrace na přednášky a workshopy probíhá online - na program daného dne vždy ráno od 6:45 na adrese registrace.absolventskyvelehrad.cz.
-V případě zdravotních potíží kontaktuj naši zdravotnici Alžbětu Podolovou (telefon +420 774 344 542)`,
+        text: ` - Náramku na ruce se nezbavuj (ať se dostaneš na program nebo do jídelny).
+ - Registrace na přednášky a workshopy probíhá online - na program daného dne vždy ráno od 6:45 na adrese registrace.absolventskyvelehrad.cz.
+ - V případě zdravotních potíží kontaktuj naši zdravotnici Alžbětu Podolovou (telefon +420 774 344 542)`,
       },
       {
         type: TextTypes.NADPIS,
@@ -1593,11 +1734,11 @@ V případě zdravotních potíží kontaktuj naši zdravotnici Alžbětu Podolo
       },
       {
         type: TextTypes.TEXT,
-        text: `Vše důležité se dozvíš na recepci na Stojanově (a na nástěnkách u recepce)
-- můžeš si zde zapůjčit sportovní náčiní, deky či společenské hry
-- budou zde aktuální informace o zpovědích, duchovních rozhovorech a pouti
-- zde ti také odpoví na veškeré dotazy (nebo zjistí odpověď).
-Vše důležité shrneme v ohláškách po každé mši. `,
+        text: ` - Vše důležité se dozvíš na recepci na Stojanově (a na nástěnkách u recepce)
+ - můžeš si zde zapůjčit sportovní náčiní, deky či společenské hry
+ - budou zde aktuální informace o zpovědích, duchovních rozhovorech a pouti
+ - zde ti také odpoví na veškeré dotazy (nebo zjistí odpověď).
+ - Vše důležité shrneme v ohláškách po každé mši. `,
       },
       {
         type: TextTypes.NADPIS,

@@ -27,7 +27,7 @@ import petrGlosar from "../../assets/presenters/petr-glogar.png";
 import ActivityInfoPanel from "../components/ActivityInfo";
 import { Box, ChevronRightIcon, Flex } from "native-base";
 interface ActivityProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> { }
+  extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> {}
 
 export default function Activity({ navigation, route }: ActivityProps) {
   const params = route.params as { activityId: number };
@@ -68,7 +68,9 @@ export default function Activity({ navigation, route }: ActivityProps) {
               <Pressable
                 key={key}
                 onPress={() =>
-                  navigation.navigate("Presenter", { presenterId: presenter.id })
+                  navigation.navigate("Presenter", {
+                    presenterId: presenter.id,
+                  })
                 }
               >
                 <Flex style={styles.activityBox}>
