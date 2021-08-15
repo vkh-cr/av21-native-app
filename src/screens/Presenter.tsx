@@ -22,7 +22,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
 
   console.log(presenter?.avatar);
   return (
-    <View>
+    <>
       <AppHeader
         navBack
         title={`${presenter?.firstName} ${presenter?.lastName}`}
@@ -52,7 +52,6 @@ export default function Presenter({ navigation, route }: PresenterProps) {
               <Avatar.Image
                 size={avatarWidth}
                 source={presenter.avatar}
-                style={styles.image}
               />
             ) : (
               <Avatar.Text
@@ -106,7 +105,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
           )}
         </View>
       </ScrollView>
-    </View>
+    </>
   );
 }
 

@@ -1749,5 +1749,515 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         text: ``,
       },
     ],
+    modlitby: {
+      morning: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Čtvrtek 19. 8. 2021`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Téma: Samota/pusté místo`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `  Když to Ježíš uslyšel, odplul lodí na pusté místo, aby byl sám; ale zástupy o tom uslyšely a pěšky šly z měst za ním. Když vystoupil, uviděl velký zástup a bylo mu jich líto. I uzdravoval jejich nemocné.
+  Když nastal večer, přistoupili k němu učedníci a řekli: „Toto místo je pusté a je už pozdní hodina. Propusť zástupy, ať jdou do vesnic koupit si jídlo.“ Ale Ježíš jim řekl: „Nemusejí odcházet, dejte vy jim jíst!“ Oni odpověděli: „Máme tu jen pět chlebů a dvě ryby." On však řekl: „Přineste je sem!“ Poručil, aby se zástupy rozsadily po trávě. Potom vzal těch pět chlebů a dvě ryby, vzhlédl k nebi, vzdal díky, lámal chleby a dával učedníkům a učedníci zástupům. I jedli všichni a nasytili se; a sebrali nalámaných chlebů, které zbyly, dvanáct plných košů. A jedlo tam na pět tisíc mužů kromě žen a dětí. (Mt 14, 13-21)`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Milost:`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` Prosím o milost nechat se proměnit Kristem, aby v mém zpustošeném srdci mohl zavládnout pokoj a vzrůst dobré semeno.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Meditace:`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `  1. Abych mohl vidět, vnímat, prožívat události dne, jeho radosti, starosti i smutek potřebuji trávit chvíle o samotě. Ježíši vstup do samoty mého srdce, do mé beznaděje a proměň ji v úrodu pokoje a radosti.
+  2. Představ si, jak se asi Ježíš cítil, když se doslechl o smrti Jana Křtitele, chtěl být sám a přesto byl kolem něj dav lidí, nad kterými se slitoval. Myslíš, že ti nedokáže porozumět, když prožíváš smutek a samotu, i když jsi obklopen lidmi?
+  3. Dokážu se pustit věcí, které odvádějí mou pozornost a jít za Ježíšem s touhou mu naslouchat a být uzdravován, i když vyhlídky jsou nejisté? 
+  4. Dovolím Ježíši, aby rozmnožil to málo, co si sám/sama nesu?`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Pamatuj:`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `  1. Chvíle ticha a samoty jsou důležité.
+  2. Během těchto chvil se může Ježíš dotýkat mého zpustošeného srdce a proměňovat ho v zahradu.
+  3. Bůh je dobrý a chce nám dát víc než si dokážeme představit.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Úkol: `,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Pokus se dnes strávit aspoň chvíli v tichu, věnovat Bohu chvíli ticha a snažit se vnímat, co ti Bůh o tobě a tobě chce říct nebo ti ukázat.`,
+        },
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Pátek 20. 8. 2021`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Téma: Pochyby/ důvěra`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Hned na to přiměl Ježíš učedníky, aby vstoupili na loď a jeli před ním na druhý břeh, než propustí zástupy. Když je propustil, vystoupil na horu, aby se o samotě modlil. Když nastal večer, byl tam sám. Loď byla daleko od země a vlny ji zmáhaly, protože vítr vál proti ní. K ránu šel k nim, kráčeje po moři.  Když ho učedníci viděli kráčet po moři, vyděsili se, že je to přízrak, a křičeli strachem. Ježíš na ně hned promluvil a řekl jim: „Vzchopte se, já jsem to, nebojte se!“
+          Petr mu odpověděl: „Pane, jsi-li to ty, poruč mi, ať přijdu k tobě po vodách!“ A on řekl: „Pojď!“ Petr vystoupil z lodi, vykročil na vodu a šel k Ježíšovi. Ale když viděl, jaký je vítr, přepadl ho strach, začal tonout a vykřikl: „Pane, zachraň mne!“ Ježíš hned vztáhl ruku, uchopil ho a řekl mu: „Ty malověrný, proč jsi pochyboval?“
+          Když vstoupil na loď, vítr se utišil. Ti, kdo byli na lodi, klaněli se mu a říkali: „Jistě jsi Boží Syn.“ (Mt 14, 22-33)`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Milost`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Prosím o milost důvěřovat Ti, když mě chceš vést do neznáma.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Meditace`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `  1. Ježíš potřebuje být sám a věnovat čas modlitbě. Potřebuje mít vztah s Otcem. Jak jsem na tom já, naslouchám svým vnitřním touhám?
+  2. Zkus si představ tu situaci na moři. Vyděšené učedníky, které Ježíš uklidňuje. Zaměř se na Petra, co ho to napadlo? Co se mu asi honilo hlavou? Jakou musel mít důvěru v Ježíše, že dokázal vykročit? S upřeným pohledem na Boha se situace z vnějšího pohledu nemění, je pořád stejně šílená, ale Ježíš proměňuje/prohlubuje naši důvěru, náš pohled se mění. Byl bych schopen vykročit z lodi, já sám? Kým je pro mě Ježíš?
+  3. Co všechno chci a potřebuju mít pod kontrolou, co mě zneklidňuje? Ztrácím důvěrů, když se situace, do které jsem se rozhodl vkročit, komplikuje? `,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Pamatuj`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `  1. I učedníci, i když Ježíšovi byli blízko, zažili spoustu zázraků, tak pochybovali. Také se museli učit důvěřovat Ježíši v maličkostech i ve velkých věcech. Nejsi sám, kdo selhává.
+  2. Vždy se můžeš vrátit a zavolat na Ježíše, zachraň mě. On tě nechce nechat topit.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Úkol`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Pokus se dnes po celý den být „teď a tady“. Zkus se zaměřit na to, jak reaguješ na věci, které se během dne objeví a všímat si svých pocitů. Možná si dokážeš všimnout, co odvádí tvou pozornost od toho, co se děje kolem nebo uvnitř tebe.`,
+        },
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Sobota: 21. 8. 2021`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Téma: Milosrdenství`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Když se dostali na druhý břeh, přistáli u Genezaretu. Lidé z toho místa ho poznali a vzkázali do celého okolí. Přinášeli mu všechny nemocné a prosili ho, aby se směli aspoň dotknout třásní jeho roucha. A kdo se dotkli, byli uzdraveni. (Mt 14, 34-36)`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Milost`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Prosím o milost zakoušet ve své slabosti Boží milosrdenství.`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Meditace`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` 1. Proč lidé tak toužili vidět Ježíše? Kvůli jeho skutkům? Byl pro ně senzací nebo mu opravdu ve své bídě, nemocech věřili, že jejich situaci může proměnit? Byl jejich poslední nadějí?
+  2. Byl bych schopen sebrat odvahu, zeptat se Ježíše a dotknout se ho? Nechat se obmýt jeho milosrdenstvím a láskou? Ať se cítím jakkoliv nehodně kvůli svým slabostem, hříchům, protože nejsem dost výkonný, dost dobrý dost... je to překážka pro mě, ale ne pro Boha, jemu nic nebrání, aby se ke mně sklonil. Stejně jako Mu nebránilo sklonit se k těm nejnuznějším z nuzných, uzdravovat malomocné. Často tím, kdo Bohu brání, jsem já sám. 
+  3. Nejsem to právě já, kdo se rozhodne nepřijat Ježíšovo nabízené milosrdenství buď z pýchy nebo jiných důvodů? Nezůstávám občas ve svém trápení schválně, protože mě druzí politují, protože pochybuju o Boží dobrotě, protože se bojím, že Bůh bude chtít něco zpět?`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Pamatuj`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `1. Vždycky jsi Boha hoden.
+  2. Nic tě neodloučí od Boží lásky. Ani tvoje slabosti, ani hřích.
+  3. Stačí se s důvěrou obrátit ke Kristu a dotknout se ho.`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Úkol`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Zkus si uvědomit svoje slabosti, hříchy, situace, které se ti zdají nezměnitelné a nad tvoje síly a pokus se do těchto věcí Ježíše pozvat. Rozhodni se udělat krok k němu.`,
+        },
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Neděle 22. 8. 2021`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Téma: Věrnost`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Mnoho z Ježíšových učedníků řeklo: „To je tvrdá řeč! Kdopak to má poslouchat?“ Ježíš věděl sám od sebe, že jeho učedníci na to reptají, a proto jim řekl: „Nad tím se pohoršujete? Co teprve, až uvidíte Syna člověka, jak vystupuje tam, kde byl dříve? Co dává život, je duch, tělo nic neznamená. Slova, která jsem vám mluvil, jsou duch a jsou život. Ale jsou mezi vámi někteří, kdo nevěří.“ Ježíš totiž věděl od začátku, kdo jsou ti, kdo nevěří, a kdo je ten, který ho zradí. A dodal: „Proto jsem vám říkal, že nikdo ke mně nemůže přijít, není-li mu to dáno od Otce.“ Proto mnoho z jeho učedníků odešlo a už s ním nechodili. Ježíš tedy řekl Dvanácti: „I vy chcete odejít?“ Šimon Petr mu odpověděl: „Pane, ke komu půjdeme? Ty máš slova věčného života, a my jsme uvěřili a poznali, že ty jsi ten Svatý Boží.“ (J 6, 60-69)`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Milost`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Prosím o milost zůstat věrný Ježíši, který dává věčný život.`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Meditace`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `1. Pomoz mi probudit otupělé a zatvrzelé srdce, otevři moje oči a uši, ať vidím a slyším. A moje srdce pochopí, co mi chceš říct. 
+  2. Jak reaguji na Tvoje slovo? Nejsou některá tvá slova pro mě moc tvrdá, protože zjevují pravdu, kterou občas nechci slyšet a vidět a usvědčují mě z mých slabostí a toho, že nechci sklonit hlavu a uznat, že jsem si před ostatními nasadil masku? Byl bych tě schopný odmítnout kvůli zatvrzelosti svého srdce, kvůli svojí pýše?
+  3. Duchu svatý obnov můj život a srdce, abych poznal, kde je tvoje pravda a dej mi pokorné srdce, abych dokázal uznat svoje chyby.`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Pamatuj`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `  1. Ke komu jinému bych šel, když jenom Ježíš mi může dát život.
+  2. Pýcha nám dává klapky před oči a zatvrzuje srdce.
+  3. Ježíš mě nechce nechat odejít, jsem pro něho drahý, nechce mě ztratit. Je to o mém rozhodnutí.`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Úkol`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Pokus se dnes vystoupit ze své komfortní zóny. Zkus si uvědomit, ve kterých oblastech svého života bojuješ s pýchou a rozhodni se v těch situacích pokořovat. Spolkni odpověď, že ty víš všechno, pomož tam, kde bys ohrnul nos. `,
+        },
+      ],
+      magis: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `MAGIS CIRCLE`
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `
+  každý večer (20:00 – 20:30)
+
+  Magis Circle je způsob reflexe dne ve skupině, vycházející z ignaciánského Examenu. Společné sdílíme uplynulý den v malé skupince, jeden mluví, ostatní pouze pozorně poslouchají. Začneme úvodní modlitbou, následuje chvíle ticha a po ní čtyři kola sdílení. Před každým kolem je dobré si znovu přečíst otázky k němu.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Krok 1: Chvilka ztišení`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Během chvíle ticha se ohlédneme zpět, abychom si všimli nejdůležitějších okamžiků uplynulého dne. Připomeneme si okamžiky radosti, smutku, těžkostí nebo překvapení, zejména si ale připomeneme, za co jsme dnes vděční.`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Krok 2: Moje já`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Začínáme sdílet jednoduché myšlenky a dojmy. Jaký byl můj den? Co na něm bylo nejzajímavější? Co se mě nejvíce dotklo (ať už pozitivně, nebo negativně)?`,
+        },{
+          type: TextTypes.NADPIS,
+          text: `Krok 3: Já a Boží slovo`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Pozn.: Na prvním Magis circle ve čtvrtek večer se tento krok přeskakuje.
+  Na co ze Slova na den jsme si během dne vzpomněli, co nám utkvělo v hlavě a k čemu jsme se nejvíce vraceli? Jak se to promítlo do našeho dne, jak to v nás pracovalo a jak se projevilo v našem vztahu k ostatním? V tomto kroku si uvědomujeme souvislost mezi Božím slovem a naším každodenním životem. Sdílíme své dojmy a případné překážky v nalezení Božího působení v uplynulém dni, v aktivitách a vztazích.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Krok 4: Já a ostatní`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Nyní se můžeme vyjádřit k tomu, co řekli ostatní. Jak se nás to dotklo, jaké myšlenky to v nás vzbudilo, jak nás to ovlivnilo?
+  Můžeme případně také dodat něco k tomu, co už jsme řekli. Cílem je všímat si toho, jak působíme na ostatní a jak oni působí na nás. Cílem není rozpoutat diskuzi a snažit se přesvědčit ostatní o svém názoru.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Krok 5: Závěr`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Pokusme se shrnout své pocity do jednoho slova nebo krátké věty. Tímto slovem symbolicky uzavíráme Magis circle.
+  Magis Circle zakončíme modlitbou Páně nebo písní.`,
+        },
+      ],
+      help: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Způsob, jak rozjímat slovo na den: Lectio divina`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Pokud chceš sám/a nebo ve skupince rozjímat o textu Písma, můžeš použít metodu Lectio divina.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `1) Vzývání Ducha svatého`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Uvědomíme si ve chvilce ticha Boží přítomnost mezi námi a v nás. Pak vzýváme vlastními slovy nebo uvedenou modlitbou Ducha svatého, aby nás celou modlitbou provázel. 
+    Modlitba k Duchu svatému
+    Bože, který oživuješ, chci se vystavit působení Tvého slova. 
+    Otevři mé oči a uši, abych Tvému slovu rozuměl/a. 
+    Otevři mé srdce, aby se mne Tvé slovo dotklo. 
+    Otevři mé ruce, aby Tvé slovo bylo pro ostatní poznatelné. 
+    Pro toto všechno si vyprošuji Tvého posilujícího Ducha. 
+          `,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `2) Lectio (četba)`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Přečteme si text. Pak si necháme chvíli času na to, abychom si text „představili“ jako vnější pozorovatelé. Všímáme si postav, základních slov, myšlenek, místa, na kterém se vše odehrává apod. 
+  Můžeme sem vložit i četbu níže uvedeného impulzu ke dni. Záleží na tom, jestli nám v modlitbě spíše pomůže, nebo ne. Není nutné z něj vycházet.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `3) Meditatio (meditace nad textem)`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Tentokrát jde o to, abychom se ptali Pána, co daným textem chce říct právě nám, právě teď a právě tam, kde jsme. Je v textu nějaké slovo, které mi zaznělo zvlášť silně? Je tam něco, co mě přitahuje nebo naopak „dráždí“? Proč? Nacházím se v textu? Ztotožňuji se s některou z jeho postav? Nebo vnímám jako svou jednu z myšlenek v textu? Jakou a proč? `,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `4) Oratio (modlitba)`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Děkujeme Bohu za darované slovo, chválíme ho za to, co nám dal textem pochopit a zakusit, nebo ho prosíme o něco, co jsme si skrze text uvědomili jako potřebné.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `5) Contemplatio (rozjímání)`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Ztišíme se a dovolíme po všem, co jsme si uvědomili nebo si navzájem řekli, aby se nás Bůh dotýkal.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `6) Actio (konání – život)`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Můžeme vyslovit předsevzetí, k němuž nás povzbudila rozjímavá četba Písma. Vše můžeme shrnout do hesla, abychom si ho v průběhu dne mohli zpřítomňovat.`,
+        },
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Examen – zpytování svědomí (možnost večerní individuální modlitby)`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Jestli z nějakého důvodu nejsi v modlitební a sdílecí skupince Magis Circle, můžeš se večer modlit Examen (zpytování svědomí). 
+  Zpytování svědomí si většinou spojujeme se sumírováním svých prohřešků. Svatý Ignác tím ale myslí něco širšího. Svědomí je hlas v nás, ve kterém je přítomen Bůh. Místo v nás, kde k nám Bůh může promlouvat. Podstatou modlitby zpytování svědomí je podívat se, kde v uplynulém dni jsem naslouchal/a Božímu hlasu, všímat si, jestli v tom, co jsem zažíval/a, ke mně promlouval Bůh. Objevit, že Bůh je v mém životě. 
+  Někdy se nám Bůh zdá být více a jindy méně skrytý. Někdy ho naše srdce vnímá více a jindy méně. Všechna díla mají v sobě otisk svého Stvořitele. Examen nám může pomoci k tomu, abychom své srdce lépe poznali a Boha lépe nacházeli ve všech událostech svého života. `,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `1. krok: Prosba o světlo`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` - Uvědomím si, že jsem v Boží přítomnosti.
+ - Prosím Boha, aby mne vedl touto modlitbou a pomohl mi porozumět tomu, co dnešní den přinesl.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `2. krok: Vděčnost`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` - Zpětně procházím svůj den od probuzení až do této chvíle.
+ - Rozpomínám se na vše dobré, co se dnes stalo.
+ - Děkuji Bohu, který mi skrze to vše připomíná, jak mu na mně záleží.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `3. krok: Reflexe dne `,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` - Za co z toho všeho cítím největší vděčnost? 
+ - Která chvíle byla mým setkáním s Bohem, kdy mi byl Bůh blízko? 
+ - Mohu o tomto okamžiku rozmlouvat s Bohem. 
+ - Vede mne skrze to někam?
+ - Co mi dnes naopak život nejvíc bralo? 
+ - Kdy mi bylo těžko, kdy na mne doléhal smutek a pocit odtrženosti od sebe sama i od Boha? 
+ - Svěřuji to Bohu a prosím, aby i do toho vstoupil.`,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `4. krok: Prosba o odpuštění `,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Mám něco, za co chci říci „promiň“? Pokud ano, svěřím to Bohu. `,
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `5. krok: Příprava na zítřek`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Co mě zítra čeká? O co prosím pro zítřejší den?`,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Čtvrthodinu Examenu zakončíme modlitbou Páně nebo písní.`,
+        },
+      ],
+    },
+    duchovni: {
+      general: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Informace`
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` Celým setkáním nás bude provázet 14. kapitola Matoušova evangelia, ale především Mt 14, 13-36. Každý den bude protkaný linkou dané pasáže z Bible. Abychom si texty mohli více zažít, budou se objevovat i při společné ranní modlitbě, jejíž moderovaná část bude přecházet v možnost individuálního rozjímání. 
+  
+  Níže v této brožuře nalezneš jak jednotlivé úryvky, tak body k rozjímání i metody/tipy, které by ti mohly k ponoření do modlitby/vztahu s Bohem pomoci.
+  `,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` Společně budeme také prožívat mše svaté, chybět nebudou ani ranní modlitby a o duchovní program bude postaráno i večer. Doprovázet nás budou kněží Jan Pacner z Brna a Jan Regner z Olomouce. S nimi i dalšími kněžími, se můžeš setkat také při svátosti smíření či duchovních rozhovorech. K dispozici k rozhovorům ti budou i další zasvěcené osoby, všechny poznáš podle symbolu naslouchajícího ucha. Když je potkáš a budeš mít něco na srdci, neboj se je oslovit. `,
+        },
+      ],
+      zpoved: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Zpovědi`
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Po celou dobu setkání bude možnost přijmout svátost smíření buď 
+ - ve vyhrazených časech (čt 21:00-23:00, pá 12:30-14:00, pá během chval 20:30 -22:00, so 12:30-14:00, so během modliteb se zpěvy z Taizé 20:30 – 22:00), 
+ - vždy půl hodiny před začátkem mše svaté v bazilice (pá, so, ne) 
+ - nebo i mimo ně po domluvě s knězem.
+Bližší informace o místě zpovědí a duchovních rozhovorech na daný den dostaneš na recepci Stojanov.
+  
+Ke ztišení a přípravě na svátost smíření budou také sloužit dva programy v dopoledních blocích jak v pátek, tak v sobotu (vždy 10:00 – 11:30). `,
+        },
+      ],
+      prayers: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Chvály`
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Pokud rád/a chválíš Pána hudbou a zpěvem, neměly by ti uniknout páteční večerní chvály vedené kapelou z Veselí nad Moravou nebo sobotní večerní modlitby se zpěvy z Taizé. 
+
+  Během pátečního večera chval i sobotní modlitby se zpěvy z Taizé ti budou k dispozici „modlitebníci”, kteří budou sloužit přímluvnou modlitbou. Další možnost přímluvné modlitby bude v sobotu od 12:30 do 14:00 v kapli Stojanova.
+        
+  V průběhu AV nám pro ztišení budou sloužit kaple na Stojanově a přístupná bude také kaple na gymnáziu. Vzhledem k tomu, že ruchu bude všude dost, využijte možnost se ztišit před Pánem při tichých adoracích. Ta první ve čtvrtek večer bude uvedena pouze krátkým slovem, které by nás mělo propojit s jednou cestou naší poutě, a to cestou samoty. Tento impuls necháme vyznít do ticha. Další možnost krátké adorace bude v pátek po chvalách nebo v sobotu během modliteb se zpěvy Taizé. K soukromé modlitbě můžete využít kapli na Stojanově i na Gymnáziu jak během dne, tak večer.`,
+        },
+      ],
+      pout: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `Pouť AV21 na Velehradu`
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Připoj se k závěrečné části poutě ze Soluně na Velehrad. Vydej se jednou nebo i všemi ze tří cest, cestou Radosti, společenství či samoty. Tři cesty, ale jen jeden cíl - Velehrad.
+  `,
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Na naší sdílené online pouti, která začala v době postní, kolem 30ti poutníků v 53 etapách zdolalo 1040km. Ze Soluně jsme tak ve stopách sv. Cyrila a Metoděje přišli až na Velehrad.
+          `
+        }, 
+        {
+          type: TextTypes.TEXT,
+          text: `Tímto ale pouť nekončí. Bude pokračovat v průběhu celého našeho setkání. Cíl zůstane stejný - Velehrad. Povedou k němu 3 cesty. Cesta samoty, společenství a radosti. 
+          
+Každá cesta bude vycházet od kříže z okolí Velehradu symbolicky od skupiny poutních míst, které byly cílem jednotlivých etap naší společné online pouti. Chceme tak propojit všechna tato místa a poutě s naším společným cílem - Velehradem. A také, a to je nejdůležitější, chceme se právě i prostřednictvím putování přiblížit k našemu společnému cíli - k Bohu.
+
+Tak neváhej a vyraž. `
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Co mám udělat předtím než vyrazím na pouť? `
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` Podívej se do mapy. Zvol si jeden ze tří křížů a vydej se k němu. Zde bude začínat tvá pouť. Máš pak dvě možnosti. Buď se vydáš od tohoto kříže k dalšímu a následně třetímu a zakončíš pak svůj poutní okruh na Velehradě (zde návrh okruhu). Nebo se od kříže vydáš přímo na Velehrad. Projdeš tak jednu ze tří poutních cest. Ty ostatní můžeš projít někdy jindy, či vůbec. Volba je na Tobě.`
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Bude mě něco čekat u křížů, které označují začátek poutě?`
+        },
+        {
+          type: TextTypes.TEXT,
+          text: ` Ano, u každého kříže najdeš podněty k zamyšlení, které se vztahují k tématu jedné z cest - samota, společenství a radost. Tyto podněty si v klidu pročti a v průběhu své poutě pak nad nimi můžeš rozjímat. V poutní knize také najdeš část poutních míst, křížů a Božích muk, ke kterým jsme putovali v průběhu naší sdílené online pouti. 
+  Také zde najdeš barevný provázek a speciální pravítko. Z něj si ustřihni takovou délku která dle pravítka odpovídá vzdálenosti tvého bydliště a Velehradu. Provázek si ponechej, využiješ jej na konci své pouti. U každého kříže najdeš provázek jiné barvy, ustřihni si tedy vždy nový. `
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Kde je cíl pouti? `
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Cíl pouti se nachází v kapli na Stojanově. Tam by měla tvá pouť končit. V kapli najdeš mapu České republiky. Na této mapě jsou již propojená jednotlivá místa naší virtuální pouti s Velehradem. I Ty zde zaznamenej svou pouť. Vezmi si jednu špendlíkovou vlaječku. Napiš na ni své jméno a zapíchni ji do mapy do místa, odkud jsi přijel/a. K této vlaječce přivaž provázek, který sis ustřihl/a u kříže na začátku své poutní cesty. Pokud máš víc než jeden provázek, provázky propleť. Provázek veď a upevni až k Velehradu. Symbolicky tak propojíme celou naši republiku s místem našeho setkání, a světci, kteří přinesli do našich zemí křesťanskou nauku a probudili u nás víru.`
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Co mě čeká na závěr? `
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Jeden z našich letošních cílů je, aby naše setkání a cesta k Bohu AVčkem nekončila. Přáli bychom si, aby ani touto poutí neskončila naše cesta radosti, společenstí a samoty ke Kristu. Proto si na závěr každé poutní cesty na Stovanově v kapli vylosuj úkol. Úkol můžeš splnit buď zde na Velehradě, nebo s ním odjet domů. A veř, že zde najdeš úkoly, které můžeš plnit opakovaně. I takto si naše téma samoty, společenství a radosti můžeme v našich myslích a životech udržet i nadále a pokračovat tak v tom, na čem jsme začali pracovat zde na AV21. Přejeme Ti, ať se Ti to daří. `
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Mám putovat sám? `
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Na pouť se můžeš vypravit buď sám/sama, nebo ve skupině. Záleží na Tobě. Náš návrh je cestu samoty projít v tichosti sám. Pokud půjdeš ve skupině, zkus i tak být myšlenkami spíše sám se sebou. Cestu společenství můžeš naopak prožít ve skupině, ve které můžeš sdílet své myšlenky z rozjímání.  Nicméně i když se vypravíš sám, nebude to vadit. Je to jen na Tobě. `
+        },
+        {
+          type: TextTypes.NADPIS,
+          text: `Na co ještě čekáš? `
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `Najdi si chvíli času a vyraž!`
+        }
+      ],
+      magis: [
+        {
+          type: TextTypes.BIG_NADPIS,
+          text: `MAGIS CIRCLE`
+        },
+        {
+          type: TextTypes.TEXT,
+          text: `  Jsi na AV poprvé? Nikoho tady neznáš a chceš se seznámit s menší skupinkou lidí? Nebo máš jen potřebu svůj duchovní život sdílet s ostatními a jít v modlitbě více do hloubky? Právě k tomuto všemu mají sloužit modlitební a sdílecí Magis skupinky, které mají pevně dané místo v programu. 
+
+  Jestli se se svou skupinkou rozhodneš trávit více času, to je jen na tobě. Jednou z možností, jak trávit více času dohromady, je sejít se k ranní modlitbě pouze ve své skupině, protože všechny texty k modlitbě nalezneš níže v sekci Ranní modlitba. 
+        
+  Pokud se ovšem rozhodneš a k některé skupině se přidáš, tak bys v ní měl/a zůstat po celou dobu AV. Skupiny pro Magis Circle budou čítat 5-8 lidí. Magis circle je způsob reflexe dne vycházející z ignaciánského Examenu, který je přizpůsoben pro modlitbu ve skupince. Bližší informace i způsob, jak se na sdílení ve skupince připravit, nalezneš níže v části Magis Circle – modlitba sdílením.`,
+        },
+      ],
+    },
   },
 };

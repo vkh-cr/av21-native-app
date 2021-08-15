@@ -7,6 +7,7 @@ export interface NewsData {
 }
 
 export enum TextTypes {
+  BIG_NADPIS,
   NADPIS,
   TEXT,
 }
@@ -71,5 +72,17 @@ export interface StaticData {
     images: ImageData[];
     texts: TextData[];
     info: InfoData[];
+    duchovni: {
+      general: InfoData[],
+      zpoved: InfoData[],
+      prayers: InfoData[],
+      pout: InfoData[],
+      magis: InfoData[],
+    },
+    modlitby: {
+      morning: InfoData[],
+      magis: InfoData[],
+      help: InfoData[],
+    }
   };
 }

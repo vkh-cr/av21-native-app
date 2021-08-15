@@ -13,7 +13,7 @@ interface PresentersProps
 export default function Presenters({ navigation }: PresentersProps) {
   const staticData = useStaticData();
   return (
-    <View>
+    <>
       <AppHeader
         title="Přednášející"
         // subtitle="nevim"
@@ -59,9 +59,9 @@ export default function Presenters({ navigation }: PresentersProps) {
               titleStyle={styles.titleStyle}
             />
           ))}
-        <Box style={{ height: 120 }}></Box>
+        {/* <Box style={{ height: 120 }}></Box> */}
       </ScrollView>
-    </View>
+    </>
   );
 }
 

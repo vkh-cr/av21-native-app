@@ -60,7 +60,16 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
             )}
             label="Duchovní program"
             onPress={() => {
-              navigation.navigate("Program");
+              navigation.navigate("DuchovniProgram");
+            }}
+          />
+          <DrawerItem
+            icon={({ color, size }) => (
+              <MaterialCommunityIcons name="heart" color={color} size={size} />
+            )}
+            label="Modlitby"
+            onPress={() => {
+              navigation.navigate("Modlitby");
             }}
           />
           <DrawerItem

@@ -5,31 +5,31 @@ import { Box } from "native-base";
 import { AppHeader } from "../components/AppHeader";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 import { ProgramBlock } from "../components/ProgramBlock";
+import PrayTextBlock from "../components/PrayTextBlock";
+import { useStaticData } from "../hooks/useStaticData";
 
-interface ProgramProps
+interface ModlitbyProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Program"> {}
 
-export default function Harmonogram({ navigation }: ProgramProps) {
+export default function Modlitby({ navigation }: ModlitbyProps) {
+  const { data: { modlitby }} = useStaticData();
+  
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: "ctvrtek", title: "Čtvrtek" },
-    { key: "patek", title: "Pátek" },
-    { key: "sobota", title: "Sobota" },
-    { key: "nedele", title: "Neděle" },
+    { key: "info", title: "Ranní modlitby" },
+    { key: "zpovedi", title: "Magis circle" },
+    { key: "prayers", title: "Modlitební pomoc" },
   ]);
 
-  const FirstDayRoute = () => <ProgramBlock day={0} navigation={navigation} />;
-  const SecondDayRoute = () => <ProgramBlock day={1} navigation={navigation} />;
-  const ThirdDayRoute = () => <ProgramBlock day={2} navigation={navigation} />;
-  const FourDayRoute = () => <ProgramBlock day={3} navigation={navigation} />;
-
+  const InfoRoute = () => <PrayTextBlock sections={modlitby.morning}/>
+  const ZpovediRoute = () => <PrayTextBlock sections={modlitby.magis}/>
+  const PrayersRoute = () => <PrayTextBlock sections={modlitby.help}/>
   const initialLayout = { width: Dimensions.get("window").width };
 
   const renderScene = SceneMap({
-    ctvrtek: FirstDayRoute,
-    patek: SecondDayRoute,
-    sobota: ThirdDayRoute,
-    nedele: FourDayRoute,
+    info: InfoRoute,
+    zpovedi: ZpovediRoute,
+    prayers: PrayersRoute,
   });
 
   const renderTabBar = (props: any) => {
@@ -64,7 +64,7 @@ export default function Harmonogram({ navigation }: ProgramProps) {
   return (
     <>
       <AppHeader
-        title="Harmonogram"
+        title="Modlitby"
         // subtitle="nevim"
         navigation={navigation}
       />
@@ -75,8 +75,6 @@ export default function Harmonogram({ navigation }: ProgramProps) {
         onIndexChange={setIndex}
         initialLayout={initialLayout}
         style={{ marginTop: 10 }}
-        lazy
-        lazyPreloadDistance={2}
       />
     </>
   );

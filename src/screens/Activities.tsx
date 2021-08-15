@@ -2,15 +2,11 @@ import * as React from "react";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 
 import {
-  View,
   StyleSheet,
-  ScrollView,
   Dimensions,
   Pressable,
 } from "react-native";
 import { AppHeader } from "../components/AppHeader";
-import { Avatar, List, Surface } from "react-native-paper";
-import { useStaticData } from "../hooks/useStaticData";
 import { SceneMap, TabView } from "react-native-tab-view";
 import { Box, Text } from "native-base";
 import Animated from "react-native-reanimated";
@@ -82,6 +78,7 @@ export default function Activities({ navigation }: ActivitiesProps) {
         navigation={navigation}
       />
       <TabView
+        lazy
         navigationState={{ index, routes }}
         renderScene={renderScene}
         renderTabBar={renderTabBar}

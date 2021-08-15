@@ -13,7 +13,7 @@ export default function Info({ navigation }: InfoProps) {
   const staticData = useStaticData();
 
   return (
-    <View>
+    <>
       <AppHeader
         title="Informace"
         // subtitle="nevim"
@@ -37,7 +37,7 @@ export default function Info({ navigation }: InfoProps) {
           }
         })}
       </ScrollView>
-    </View>
+    </>
   );
 }
 
@@ -48,10 +48,11 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     fontSize: 20,
     fontFamily: "HammersmithOne",
+    color: "#1FAAAA"
   },
   text: {
     paddingHorizontal: 10,
     fontSize: 16,
-    lineHeight: 21,
+    lineHeight: 22,
   },
 });

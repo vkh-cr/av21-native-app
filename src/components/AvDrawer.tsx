@@ -7,10 +7,11 @@ import Activities from "../screens/Activities";
 import Contacts from "../screens/Contacts";
 import Maps from "../screens/Maps";
 import Presenters from "../screens/Presenters";
-import Program from "../screens/Program";
+import DuchovniProgram from "../screens/DuchovniProgram";
 import Presenter from "../screens/Presenter";
 import Activity from "../screens/Activity";
 import Info from "../screens/Info";
+import Modlitby from "../screens/Modlitby";
 
 const Drawer = createDrawerNavigator();
 
@@ -22,7 +23,8 @@ export default function AvDrawer() {
     >
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Harmonogram" component={Harmonogram} />
-      <Drawer.Screen name="Program" component={Program} />
+      <Drawer.Screen name="DuchovniProgram" component={DuchovniProgram} />
+      <Drawer.Screen name="Modlitby" component={Modlitby} />
       <Drawer.Screen name="Presenters" component={Presenters} />
       <Drawer.Screen name="Activities" component={Activities} />
       <Drawer.Screen name="Maps" component={Maps} />
