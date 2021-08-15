@@ -199,7 +199,7 @@ export const staticData: StaticData = {
         lastName: "",
         display: true,
         avatar: "",
-        description: "",
+        description: "Bude doprovázet Večer chval <3",
         activities: [520],
       },
       {
@@ -334,8 +334,8 @@ export const staticData: StaticData = {
         firstName: "Tereza Uřičářová a Jan Sekanina",
         lastName: "",
         display: true,
-        avatar: "",
-        description: "",
+        avatar: require("../assets/presenters/folklor.jpg"),
+        description: "Fotka je dostatečně vypovídající",
         activities: [713],
       },
       {

@@ -13,10 +13,25 @@ interface ActivityListProps extends DrawerScreenProps<Record<string, object | un
 
 export default function ActivityList({ type, navigation }: ActivityListProps) {
   const staticData = useStaticData();
-
+  let activityColor: string;
+  switch (type) {
+    case ActivityTypes.VOLNOCAS:
+        activityColor = "#FF5D3A"
+      break;
+    case ActivityTypes.PREDNASKA:
+        activityColor = "#1FAAAA"
+        break;
+    case ActivityTypes.DUCHOVNI:
+        activityColor = "#FFC700"
+        break;
+    default:
+      activityColor = "#CECECE"
+      break;
+  }
   return (<ScrollView style={styles.scrollView}>
     {staticData.data.activities.filter((activity) => activity.type === type).map((activity, index) => (
       <List.Item
+        style={{...styles.listItem, borderLeftColor: activityColor}}
         key={index}
         onPress={() =>
           navigation.navigate("Activity", { activityId: activity.id })
@@ -46,5 +61,15 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
+  },
+  listItem: {
+    flexDirection: "row",
+    alignSelf: "auto",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 0,
+    borderLeftWidth: 3,
+    margin: 5,
   },
 });
