@@ -10,6 +10,7 @@ import {
   Dimensions,
   SafeAreaView,
   StatusBar,
+  Pressable,
 } from "react-native";
 import { AppHeader } from "../components/AppHeader";
 import {
@@ -24,16 +25,19 @@ import { StyleSheet } from "react-native";
 import { useActivity } from "../hooks/useActivity";
 import petrGlosar from "../../assets/presenters/petr-glogar.png";
 import ActivityInfoPanel from "../components/ActivityInfo";
+import { Box, ChevronRightIcon, Flex } from "native-base";
 interface ActivityProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> {}
+  extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> { }
 
 export default function Activity({ navigation, route }: ActivityProps) {
   const params = route.params as { activityId: number };
   const activity = useActivity(params.activityId);
   console.log(Dimensions.get("window").width / 2);
-  let presenterNames: string[] = []
-  activity?.presenter.forEach(({firstName, lastName}) => presenterNames.push(`${firstName} ${lastName}`))
-  const joinedNames = presenterNames.join(" + ")
+  let presenterNames: string[] = [];
+  activity?.presenter.forEach(({ firstName, lastName }) =>
+    presenterNames.push(`${firstName} ${lastName}`)
+  );
+  const joinedNames = presenterNames.join(" + ");
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -49,20 +53,32 @@ export default function Activity({ navigation, route }: ActivityProps) {
             colors={["#1FAAAA", "#f0f0f0"]}
             style={styles.imageWrapper}
           >
-            <View style={{ flex: 1, flexDirection: "column" }}>
-
-            </View>
+            <View style={{ flex: 1, flexDirection: "column" }}></View>
           </LinearGradient>
           <ScrollView style={styles.scrollView}>
             <Headline style={{ fontFamily: "HammersmithOne" }}>
               {activity?.title || ""}
             </Headline>
-            <ActivityInfoPanel icon="calendar" text={`BLOK ${activity?.block}`} />
-            <ActivityInfoPanel icon="map" text={`${activity?.location}`} />
             <ActivityInfoPanel
-              icon="account"
-              text={joinedNames}
+              icon="calendar"
+              text={`BLOK ${activity?.block}`}
             />
+            <ActivityInfoPanel icon="map" text={`${activity?.location}`} />
+            {activity?.presenter.map((presenter, key) => (
+              <Pressable
+                key={key}
+                onPress={() =>
+                  navigation.navigate("Presenter", { presenterId: presenter.id })
+                }
+              >
+                <Flex style={styles.activityBox}>
+                  <ActivityInfoPanel icon="account" text={joinedNames} />
+                  <Box marginLeft={"auto"} style={{ paddingTop: 5 }}>
+                    <ChevronRightIcon />
+                  </Box>
+                </Flex>
+              </Pressable>
+            ))}
             <Divider />
             <Title>Anotace</Title>
             <Paragraph>{activity?.description}</Paragraph>
@@ -86,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   scrollView: {
-    backgroundColor: "#f0f0f0", 
+    backgroundColor: "#f0f0f0",
     padding: 20,
   },
   image: {
@@ -138,5 +154,11 @@ const styles = StyleSheet.create({
   avatar: {
     shadowRadius: 2,
     shadowColor: "gray",
+  },
+  activityBox: {
+    flexDirection: "row",
+    alignSelf: "auto",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

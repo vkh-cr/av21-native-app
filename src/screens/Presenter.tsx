@@ -13,12 +13,14 @@ import { LinearGradient } from "expo-linear-gradient";
 import petrGlosar from "../../assets/presenters/petr-glogar.png";
 import { useActivity } from "../hooks/useActivity";
 interface PresenterProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> {}
+  extends DrawerScreenProps<Record<string, object | undefined>, "Presenter"> { }
 
 export default function Presenter({ navigation, route }: PresenterProps) {
   const params = route.params as { presenterId: string };
   const presenter = usePresenter(params.presenterId);
-  const avatarWidth = Dimensions.get("window").width-100;
+  const avatarWidth = Dimensions.get("window").width - 100;
+
+  console.log(presenter?.avatar);
   return (
     <View>
       <AppHeader
@@ -47,12 +49,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
           >
             {/* <Surface style={{ ...styles.surface }}> */}
             {presenter?.avatar ? (
-              <Avatar.Image
-                size={avatarWidth}
-                source={{
-                  uri: `data:image/png;base64, ${presenter.avatar}`,
-                }}
-              />
+              <Avatar.Image size={avatarWidth} source={presenter.avatar} style={styles.image} />
             ) : (
               <Avatar.Text
                 style={styles.avatarText}
@@ -85,13 +82,15 @@ export default function Presenter({ navigation, route }: PresenterProps) {
               <Headline>Vede toto: </Headline>
               {presenter?.activities.map((activityId, index) => {
                 const activity = useActivity(activityId);
-                console.log("VEDE", activityId);
                 return (
                   <Chip
                     key={index}
                     icon="pulse"
                     mode="outlined"
                     style={styles.badge}
+                    onPress={() =>
+                      navigation.navigate("Activity", { activityId: activity?.id })
+                    }
                   >
                     {activity?.title}
                   </Chip>
@@ -134,11 +133,6 @@ const styles = StyleSheet.create({
     position: "relative",
     flexDirection: "row",
     justifyContent: "flex-end",
-  },
-  image: {
-    zIndex: 1,
-    flex: 1,
-    // resizeMode: 'contain',
   },
 
   textContainer: {

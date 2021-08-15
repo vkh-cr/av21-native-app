@@ -1,3 +1,4 @@
+import { DrawerNavigationProp } from "@react-navigation/drawer";
 import * as React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { Avatar } from "react-native-paper";

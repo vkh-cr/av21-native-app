@@ -30,10 +30,8 @@ export default function Presenters({ navigation }: PresentersProps) {
               <Surface {...props} style={{ ...props.style, ...styles.surface }}>
                 {presenter.avatar ? (
                   <Avatar.Image
-                    size={42}
-                    source={{
-                      uri: `data:image/png;base64, ${presenter.avatar}`,
-                    }}
+                    size={50}
+                    source={presenter.avatar}
                   />
                 ) : (
                   <Avatar.Text
