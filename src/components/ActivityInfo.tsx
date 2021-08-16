@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   row: {
     display: "flex",
     flexDirection: "row",
-    height: 54,
   },
   icon: {
     paddingRight: 10,
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     fontFamily: "HammersmithOne",
     padding: 10,
     lineHeight: 44,
-    textAlign: "center",
+    // textAlign: "center",
     fontSize: 24,
   },
 });

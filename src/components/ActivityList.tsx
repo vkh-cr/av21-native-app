@@ -3,7 +3,7 @@ import * as React from "react";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 import { ScrollView } from "native-base";
 import { StyleSheet } from "react-native";
-import { List } from "react-native-paper";
+import { Avatar, List } from "react-native-paper";
 import { useStaticData } from "../hooks/useStaticData";
 import { ActivityTypes } from "../types";
 
@@ -40,6 +40,9 @@ export default function ActivityList({ type, navigation }: ActivityListProps) {
             onPress={() =>
               navigation.navigate("Activity", { activityId: activity.id })
             }
+            left={(props) => {
+              return  <Avatar.Image size={50} source={activity.image} />
+            }}
             right={(props) => {
               return <List.Icon {...props} icon="chevron-right" />;
             }}

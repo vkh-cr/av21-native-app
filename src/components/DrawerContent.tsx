@@ -31,7 +31,7 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
           <DrawerItem
             icon={({ color, size }) => (
               <MaterialCommunityIcons
-                name="format-list-numbered"
+                name="information-outline"
                 color={color}
                 size={size}
               />
@@ -65,7 +65,7 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
           />
           <DrawerItem
             icon={({ color, size }) => (
-              <MaterialCommunityIcons name="heart" color={color} size={size} />
+              <MaterialCommunityIcons name="heart-outline" color={color} size={size} />
             )}
             label="Modlitby"
             onPress={() => {

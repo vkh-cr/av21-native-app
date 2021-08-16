@@ -20,7 +20,6 @@ export default function Presenter({ navigation, route }: PresenterProps) {
   const presenter = usePresenter(params.presenterId);
   const avatarWidth = Dimensions.get("window").width - 100;
 
-  console.log(presenter?.avatar);
   return (
     <>
       <AppHeader
@@ -50,6 +49,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
             {/* <Surface style={{ ...styles.surface }}> */}
             {presenter?.avatar ? (
               <Avatar.Image
+                style={{ backgroundColor: "#f0f0f0" }}
                 size={avatarWidth}
                 source={presenter.avatar}
               />
@@ -70,9 +70,7 @@ export default function Presenter({ navigation, route }: PresenterProps) {
             {/* </Surface> */}
           </View>
         </LinearGradient>
-
-        {/* TODO: this bullshit doesn't work at all, :angry: */}
-
+        
         <View style={styles.scrollView}>
           <Headline
             style={styles.headline}

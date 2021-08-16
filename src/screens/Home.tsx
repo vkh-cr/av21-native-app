@@ -10,7 +10,7 @@ import { Appbar, Card, Text } from "react-native-paper";
 import { useCallback } from "react";
 
 interface HomeProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Home"> {}
+  extends DrawerScreenProps<Record<string, object | undefined>, "Home"> { }
 
 export default function Home({ navigation }: HomeProps) {
   const { news, syncNews, loading } = useNews();
@@ -20,7 +20,7 @@ export default function Home({ navigation }: HomeProps) {
   }, [syncNews]);
 
   return (
-    <ScrollView>
+    <>
       <StatusBar style="light" />
       <AppHeader
         title="Absolventský Velehrad 2021"
@@ -31,23 +31,26 @@ export default function Home({ navigation }: HomeProps) {
           icon="refresh"
           onPress={handleRefresh}
           disabled={loading}
+          color={"#FFFFFF"}
         />
       </AppHeader>
-      {news.data.map((item, index) => (
-        <Card key={index} style={{ padding: 10, margin: 10 }}>
-          {item.image !== "" && (
-            <Card.Cover
-              source={{
-                uri: `data:image/png;base64, ${item.image}`,
-              }}
-            />
-          )}
-          <Card.Title title={item.title} />
-          <Card.Content>
-            <Text>{item.description}</Text>
-          </Card.Content>
-        </Card>
-      ))}
-    </ScrollView>
+      <ScrollView>
+        {news.data.map((item, index) => (
+          <Card key={index} style={{ padding: 10, margin: 10 }}>
+            {item.image !== "" && (
+              <Card.Cover
+                source={{
+                  uri: `data:image/png;base64, ${item.image}`,
+                }}
+              />
+            )}
+            <Card.Title title={item.title} />
+            <Card.Content>
+              <Text>{item.description}</Text>
+            </Card.Content>
+          </Card>
+        ))}
+      </ScrollView>
+    </>
   );
 }

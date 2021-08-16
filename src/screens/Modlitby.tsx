@@ -11,25 +11,28 @@ import { useStaticData } from "../hooks/useStaticData";
 interface ModlitbyProps
   extends DrawerScreenProps<Record<string, object | undefined>, "Program"> {}
 
-export default function Modlitby({ navigation }: ModlitbyProps) {
+export default function Modlitby({ route, navigation }: ModlitbyProps) {
   const { data: { modlitby }} = useStaticData();
+
+  const { tab } = route.params;
   
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = React.useState(tab);
+
   const [routes] = React.useState([
     { key: "info", title: "Ranní modlitby" },
     { key: "zpovedi", title: "Magis circle" },
     { key: "prayers", title: "Modlitební pomoc" },
   ]);
 
-  const InfoRoute = () => <PrayTextBlock sections={modlitby.morning}/>
-  const ZpovediRoute = () => <PrayTextBlock sections={modlitby.magis}/>
-  const PrayersRoute = () => <PrayTextBlock sections={modlitby.help}/>
+  const MorningRoute = () => <PrayTextBlock sections={modlitby.morning}/>
+  const MagisRoute = () => <PrayTextBlock sections={modlitby.magis}/>
+  const HelpRoute = () => <PrayTextBlock sections={modlitby.help}/>
   const initialLayout = { width: Dimensions.get("window").width };
 
   const renderScene = SceneMap({
-    info: InfoRoute,
-    zpovedi: ZpovediRoute,
-    prayers: PrayersRoute,
+    info: MorningRoute,
+    zpovedi: MagisRoute,
+    prayers: HelpRoute,
   });
 
   const renderTabBar = (props: any) => {
@@ -48,7 +51,6 @@ export default function Modlitby({ navigation }: ModlitbyProps) {
             <Box flex={1} alignItems="center" p={2}>
               <Pressable
                 onPress={() => {
-                  console.log(i);
                   setIndex(i);
                 }}
               >

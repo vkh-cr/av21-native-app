@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "av21-native-app",
+    "name": "AV21",
     "slug": "av21-native-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,7 +21,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#056970"
-      }
+      },
+      "package": "com.vojtechcerveny.av21",
+      "permissions" : []
     },
     "web": {
       "favicon": "./assets/favicon.png"

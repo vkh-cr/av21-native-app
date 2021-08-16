@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dimensions, Animated, Pressable } from "react-native";
+import { Dimensions, Animated, Pressable, StyleSheet } from "react-native";
 import { TabView, SceneMap } from "react-native-tab-view";
 import { Box, Button, Flex } from "native-base";
 import { AppHeader } from "../components/AppHeader";
@@ -30,30 +30,46 @@ export default function DuchovniProgram({ navigation }: ProgramProps) {
     "https://en.mapy.cz/turisticka?vlastni-body&x=17.3863412&y=49.1047735&z=15&ut=K%C5%99%C3%AD%C5%BE%20-%20cesta%20radosti&ut=k%C5%99%C3%AD%C5%BE%20-%20cesta%20spole%C4%8Denstv%C3%AD&ut=k%C5%99%C3%AD%C5%BE%20-%20cesta%20samoty&uc=97X5qxTU-cjI0dpwcn0c60&ud=49%C2%B06%2746.754%22N%2C%2017%C2%B023%272.563%22E&ud=49%C2%B06%2715.225%22N%2C%2017%C2%B024%2725.063%22E&ud=49%C2%B05%2728.413%22N%2C%2017%C2%B023%271.018%22E";
   const linkOkruh =
     "https://en.mapy.cz/turisticka?planovani-trasy&x=17.3856618&y=49.1022479&z=15&rc=97Z1pxTSpqe2Gbm537VjYng3xi.Ghj7fYegeXg8khei3vFhS.EAgfweix3hUgbT&rs=coor&rs=base&rs=coor&rs=coor&rs=base&rs=stre&rs=coor&rs=coor&rs=base&rs=firm&ri=&ri=2282527&ri=&ri=&ri=2302117&ri=135737&ri=&ri=&ri=1908280&ri=12833996&mrp=%7B%22c%22%3A132%7D&xc=%5B%5D";
-  const extraBlockPout = () => {
-    <Flex>
+  
+  const extraBlockPout = (): React.ReactChild => 
+    <Flex marginBottom={10}>
       <Button
+        style={styles.button}
         onPress={() => {
           Linking.openURL(linkBody);
         }}
       >
-        Body pouti
+        Body pouti (mapy.cz)
       </Button>
       <Button
+        style={styles.button}
         onPress={() => {
           Linking.openURL(linkOkruh);
         }}
       >
-        Okruh pouti
+        Okruh pouti (mapy.cz)
       </Button>
     </Flex>;
-  };
+
+const extraBlockMagis = (): React.ReactChild => 
+<Flex marginBottom={10}>
+  <Button
+    style={styles.button}
+    onPress={() => {
+      navigation.navigate("Modlitby", {
+        tab: 1
+      });
+    }}
+  >
+    Magis
+  </Button>
+</Flex>; 
 
   const InfoRoute = () => <PrayTextBlock sections={duchovni.general} />;
   const ZpovediRoute = () => <PrayTextBlock sections={duchovni.zpoved} />;
   const PrayersRoute = () => <PrayTextBlock sections={duchovni.prayers} />;
-  const PoutRoute = () => <PrayTextBlock sections={duchovni.pout} />;
-  const MagisRoute = () => <PrayTextBlock sections={duchovni.magis} />;
+  const PoutRoute = () => <PrayTextBlock sections={duchovni.pout}>{extraBlockPout()}</PrayTextBlock>;
+  const MagisRoute = () => <PrayTextBlock sections={duchovni.magis}>{extraBlockMagis()}</PrayTextBlock>;
   const initialLayout = { width: Dimensions.get("window").width };
 
   const renderScene = SceneMap({
@@ -80,7 +96,6 @@ export default function DuchovniProgram({ navigation }: ProgramProps) {
             <Box flex={1} alignItems="center" p={2}>
               <Pressable
                 onPress={() => {
-                  console.log(i);
                   setIndex(i);
                 }}
               >
@@ -111,3 +126,11 @@ export default function DuchovniProgram({ navigation }: ProgramProps) {
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    marginHorizontal: 10,
+    marginVertical: 5,
+    backgroundColor: "#1FAAAA"
+  },
+})

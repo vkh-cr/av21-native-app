@@ -218,7 +218,7 @@ export const staticData: StaticData = {
       },
       {
         id: 20,
-        firstName: "Jaroslav Maxmilián",
+        firstName: "Jaroslav Maxmilián dlouhe jmeno jak cyp",
         lastName: "Kašparů",
         display: true,
         avatar: require("../assets/presenters/max-kasparu.jpg"),
@@ -282,7 +282,11 @@ export const staticData: StaticData = {
         lastName: "Regner",
         display: true,
         avatar: "",
-        description: "",
+        description: `Narodil se roku 1974 v Náchodě a vyrůstal v Červeném Kostelci. Po maturitní zkoušce na Střední odborné škole uměleckořemeslné v Praze pracoval jako řezbář a sochař v Ateliérech Břetislava Kafky v Červeném Kostelci. Pak absolvoval Teologický konvikt v Litoměřicích a vojenskou službu. V roce 1995 vstoupil k jezuitům. V letech 1997-2000 studoval filozofii v Krakově. Od srpna 2000 do září 2001 působil jako redaktor v české sekci Vatikánského rozhlasu. V letech 2001-2004 studoval teologii na římské Gregoriánské univerzitě.
+
+        Od června 2004 do dubna 2007 působil v Praze při kostele sv. Ignáce. Od roku 2004 začal spolupracovat s bulletinem Jezuité, nejprve jako předseda redakční rady, později jako odpovědný redaktor. V roce 2006 obhájil na KTF UK diplomovou práci. V letech 2007-2010 studoval postgraduálně fundamentální teologii ve Frankfurtu nad Mohanem. Na KTF UK v Praze v červnu 2014 obhájil rigorózní práci, o dva roky později pak práci disertační.
+        
+        V české metropoli v letech 2010-2016 působil v Akademické farnosti u Nejsv. Salvátora a při kostele sv. Ignáce na Karlově náměstí. Od srpna 2016 do února 2017 na Srí Lance absolvoval závěrečnou část řeholní formace (třetí probaci). Od března 2017 do února 2018 opět působil v Praze. Od března 2018 je členem olomoucké komunity a působí v akademické farnosti při kostele Panny Marie Sněžné.`,
         activities: [608],
       },
       {
@@ -442,7 +446,7 @@ export const staticData: StaticData = {
         title: "Čajovna/vinárna",
         location: "Sklep gymnázia",
         description: `Pohodový večer s čajem, vínem a drobným občerstvením.`,
-        image: null,
+        image: require("../assets/activities/1.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -456,7 +460,7 @@ export const staticData: StaticData = {
         title: "Tichá adorace",
         location: "Kaple Stojanov (do 23:00)",
         description: `Vzhledem k tomu, že ruchu bude všude dost, využijte možnost se ztišit před Pánem při tichých adoracích. Čtvrteční adorace bude uvedena pouze krátkým slovem, které by nás mělo propojit s jednou cestou naší poutě a to cestou samoty. Tento impuls necháme vyznít do ticha. `,
-        image: null,
+        image: require("../assets/activities/2.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -471,7 +475,7 @@ export const staticData: StaticData = {
           '"Být sám sebou" znamená být sám a být sebou aneb "Ať Tě netrápí hvízdání a ať nepotřebuješ potlesk"',
         location: "Slovanský sál",
         description: `Přednáška o tom, proč je samota důležitá a proč nemáme nikomu říkat ani "mistr" ani "učitel".`,
-        image: null,
+        image: require("../assets/activities/3.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 2
@@ -487,7 +491,7 @@ export const staticData: StaticData = {
         location: "Zimní sál",
         description: `Věděli jste ale, že ve škole jsou úspěšnější dívky? A věděli jste, že tento trend nekončí na základní škole a že se do velké míry promítá i do mezilidských vztahů? Jan Vepřek bude mluvit o výchově kluků a o formaci školního prostředí z pozice tatínka tří chlapců a jedné dívky a z pozice pedagoga a ředitele Základní školy a gymnázia Navis u Prahy.
        `,
-        image: null,
+        image: require("../assets/activities/4.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 3
@@ -504,7 +508,7 @@ export const staticData: StaticData = {
         location: "Sál Stojanov",
         description: `Škola evangelizace má za úkol formovat křesťany, aby dokázali sdílet svou víru a účinně evangelizovat. Naše škola není uzavřené hnutí, ale pastorační projekt, ze kterého mohou čerpat všichni zájemci z katolické církve. Škola evangelizace svatého Ondřeje a všechny její aktivity stojí na třech pilířích: Kérygma - soustředíme se na hlásání živého Ježíše Krista; Charisma - jsme otevřeni Duchu Svatému a jeho darům; Koinonia - ve společenství Církve je každý člověk důležitý a má své povolání v evangelizaci.
        `,
-        image: null,
+        image: require("../assets/activities/6.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 4
@@ -520,7 +524,7 @@ export const staticData: StaticData = {
         location: "Kaple Stojanov",
         description: `Jak rozvíjet a udržet modlitební život a osobní vztah s Bohem v dnešní době, kdy žijeme velice rychlé a intenzivní životy plné povinností a impulsů, které nás rozptylují nebo nám dokonce zabraňují v rozvíjení duchovního života. A lze zůstat přitom v modlitbě ještě kreativní a radostný bez tlaku, že bych se "měl" modlit?
        `,
-        image: null,
+        image: require("../assets/activities/9.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 5
@@ -536,7 +540,7 @@ export const staticData: StaticData = {
         location: "Třída 1, Gymnázium",
         description: `Opravdové příběhy z místa, kde je samota hmatatelná a bolí. Sestra Filoména již 21 let navštěvuje odsouzené ženy na specializovaném oddělení ve věznici. S Boží pomocí se snaží pomáhat odstraňovat nánosy různých pochybení.
        `,
-        image: null,
+        image: require("../assets/activities/8.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 6
@@ -552,7 +556,7 @@ export const staticData: StaticData = {
         location: "Kaple Gymnázium",
         description: `Vnímáš, že potřebuješ znovu obnovit vztah s Bohem a zajít si ke svátosti smíření, ale máš pocit, že se nedokážeš připravit? Nebo se chceš jen zastavit, ztišit a chvilku rozjímat?
        `,
-        image: null,
+        image: require("../assets/activities/8.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 7
@@ -567,7 +571,7 @@ export const staticData: StaticData = {
         location: "Kaple Stojanov",
         description: `Na povrchu zkáza, nejistota, bezradnost, osamocení... uvnitř smysl a naděje nového a opravdového začátku. Duch svatý v posledních měsících hodně bořil a hodně budoval. Co už jednou pro vždy nechat v troskách a na čem naopak nově stavět? Jak pandemie odhalila samé základy naší víry a našeho života? Jak se společenství rodí z osamocení, služba z bezmoci a radost z krize a bolesti?
        `,
-        image: null,
+        image: require("../assets/activities/10.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 8
@@ -583,7 +587,7 @@ export const staticData: StaticData = {
         location: "Slovanský sál",
         description: `Jak by mohl vypadat Ježíšův příběh, kdyby se odehrál dnes? Parabible je aktuální, místy až provokativní biblickou parafrází. Dávný příběh o Ježíši Nazaretském zasazuje do kulis současného Česka, především ale staví dnešního čtenáře před nově obnažené pointy dávných evangelijních příběhů a výroků.
        `,
-        image: null,
+        image: require("../assets/activities/11.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 9
@@ -599,7 +603,7 @@ export const staticData: StaticData = {
         location: "Zimní sál",
         description: `Naše společnost je díky internetu a sociálním sítím tou nejpropojenější v historii, paradoxně ale zároveň raketově roste u lidí pocit osamělosti. Jak budovat vztahy s našimi blízkými nás, bohužel, ve škole nikdo neučí a tak v dobré víře napodobujeme to, co vidíme okolo nás. Často tak bezmyšlenkově opakujeme věci, které nefungují a naše vztahy tím trpí. Žijeme v přesvědčení, že někdo buď komunikovat umí, nebo ne. Ale budování pevných vztahů je umění, které je možné rozvíjet, a stejně jako malíř tříbí svou techniku i my se můžeme zlepšovat v tom, jak o vztahy s důležitými lidmi pečovat tak, abychom si byli doopravdy blízko.
        `,
-        image: null,
+        image: require("../assets/activities/rozhovory.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 10
@@ -615,7 +619,7 @@ export const staticData: StaticData = {
         location: "Sraz venku za VDCM",
         description: `Chození naboso se v poslední době stává velice populární. Chceš si i Ty vyrobit své barefoot sandály? Zde máš možnost. Naši dobrovolníci Ti ukáží, jak na to. Veškerý materiál i pomoc budeš mít k dispozici. Protože ale materiál na výrobu bot něco stojí a chtěli bychom být fér vůči ostatním, bude Tě tento workshop stát 100 korun. To ale za získanou dovednost a nový kousek do botníku stojí, ne?!
        `,
-        image: null,
+        image: require("../assets/activities/12.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 11
@@ -631,7 +635,7 @@ export const staticData: StaticData = {
         location: "Třída 1, gymnázium",
         description: `Co farnost, to jedinečné společenství. Máš zkušenost, jak rozdmýchat dění ve farnosti? Hýříš nápady, které čekají na realizaci? Nebo by ses jen rád více zapojil do farního života a schází ti inspirace? Máš pocit, že by to šlo ve Tvé farnosti dělat jinak a lépe? Přijď se o tom za námi pobavit! Průvodcování tímto workshopem jsme s radostí svěřili Kubovi Vašulínovi z moravské farnosti Střelice.
        `,
-        image: null,
+        image: require("../assets/activities/zapojeni-do-farnosti.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 12
@@ -647,7 +651,7 @@ export const staticData: StaticData = {
         location: "Hřiště u ZŠ",
         description: `Ultimate je kolektivní hrou, ve které je cílem chytit disk v koncové zóně. Principem hry se tak podobá například ragby, avšak tento sport je bezkontaktní a s diskem se nesmí běhat. Hráč s diskem (házeč) může stejně jako v basketbalu pivotovat - otáčet se a činit úkroky s jednou nohou stále pevně na zemi. Pohyb a vytvoření prostoru pro přihrávku pak zůstává na jeho spoluhráčích. Zapomeň na házení v kolečku deseti lidí bez nutnosti vyvinout větší námahu. V tomto sportu hrají prim rychlost, taktické myšlení a herní přehled. Ve hře se často střídá útok a obrana. Průprava není nutná. Se vším, co je ke hře třeba, tě seznámí zkušení hráči.
        `,
-        image: null,
+        image: require("../assets/activities/14.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 13
@@ -663,7 +667,7 @@ export const staticData: StaticData = {
         location: "Třída 2, gymnázium",
         description: `Nenásilná komunikace (NVC) nabízí příležitost, prostřednictvím které máme možnost znovu objevovat spojení mezi sebou samými, druhými a Bohem samotným. Na workshopu budeš mít možnost v upřímnosti s otevřeným srdcem nahlédnout pod povrch běžných frází, slov a činů. Ústředními prvky bude práce s pocity a potřebami v kombinaci s naším tělem a pohybem.
        `,
-        image: null,
+        image: require("../assets/activities/nvc.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 14
@@ -679,7 +683,7 @@ export const staticData: StaticData = {
         location: "Slovanský sál",
         description: `Povídání s inspirativním otcem, který z malé zapadlé vesničky vytvořil jedno z nejnavštěvovanějších poutních míst. Z tiché farnosti se stalo živé společenství a jeho dobré srdce pociťují až v daleké Indii. Co vše jej potkává na jeho cestě? Jak Duch Svatý působí v jeho životě a je vždy jednoduché Boží plány přijmout? Přijď a využij možnosti se zeptat na to, co tě zajímá a bál/a ses zeptat.
        `,
-        image: null,
+        image: require("../assets/activities/17.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 15
@@ -695,7 +699,7 @@ export const staticData: StaticData = {
         location: "Zimní sál",
         description: `Ve své přednášce se bude zabývat formovánim a kvalitou mužské identity. Budeme se dotýkat tématu kvalit a druhů mužské síly. Rovněž zabrousíme do oblasti muž křesťan.
        `,
-        image: null,
+        image: require("../assets/activities/men.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 16
@@ -711,7 +715,7 @@ export const staticData: StaticData = {
         location: "Kaple Stojanov",
         description: `Naše víra se stejně jako my dostala do karantény. Jak se změnilo prožívání křesťanství v čase covidu? Co nového jsme se naučili a naopak o co jsme přišli? A jak správně víru oživit, abychom nezůstali sami, ale žili víru společně? O tom všem bude řeč a o tom všem bude možné se společně pobavit. Zároveň bude krátce představen projekt Live 4G, který má být odpovědí na přesunutí víry do virtuálního prostoru.
        `,
-        image: null,
+        image: require("../assets/activities/26.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 17
@@ -727,7 +731,7 @@ export const staticData: StaticData = {
         location: "Sklep gymnázia",
         description: `Jedinečná příležitost k seznámení v bezpečném prostředí mezi mladými nezadanými věřícími a zdarma. Pokud se rozhodneš Speed datingu zúčastnit, čeká tě seznámení naživo s patnácti účastníky opačného pohlaví :) Vždy máte jen několik málo minut na to, abyste se navzájem poznali, poté se muži přesunou k dalšímu stolu k jiné ženě. Oba si pak navzájem zhodnotíte, zda jste si padli do oka či ne. Jen pro zajímavost: rychlé rande vymyslel rabín Yaacov Deyo, který chtěl zvýšit počet židovských svateb. (Že z toho bude svatba, vám rozhodně neslibujeme.)
        `,
-        image: null,
+        image: require("../assets/activities/5.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -743,7 +747,7 @@ export const staticData: StaticData = {
         location: "mimo areál",
         description: `V rámci dění letošního ročníku Absolventského Velehradu navážeme spolupráci a pokusíme se zpříjemnit páteční odpoledne lidem z domovů Vincentinum a Buchlovská na Velehradě, kde pečují o osoby se zdravotním postižením. Sraz před Stojanovem.
        `,
-        image: null,
+        image: require("../assets/activities/28.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -758,7 +762,7 @@ export const staticData: StaticData = {
         location: "Třída 1, gymnázium",
         description: `Smysluplné rozhovory jsou projektem propojující otevřené lidi, kteří se rádi baví a přemýšlí o hlubších tématech. Myšlenkou tohoto projektu je dát lidem příležitost znovu si povídat. Z očí do očí, upřímně a bez povrchnosti, protože za každou běžnou konverzací se zpravidla skrývají naše sny, bolesti, touhy i trápení. Připravte se na odpovědi, které v Tobě i v ostatních posluchačích vyvolají emoce. Protože jen takové nás přimějí opravdově se zamyslet nad našimi životy.
        `,
-        image: null,
+        image: require("../assets/activities/talk.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 10
@@ -773,7 +777,7 @@ export const staticData: StaticData = {
         title: "Společná modlitba",
         location: "Kaple Stojanov",
         description: `Společná modlitba pro ty, jenž chtějí být s Kristem ve společenství`,
-        image: null,
+        image: require("../assets/activities/27.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -788,7 +792,7 @@ export const staticData: StaticData = {
         location: "Slovanský sál",
         description: `Pět mladých mužů, pět odlišných cest, které se však scházejí v jednu. Členy kapely Way to go nepojí pouze láska k hudbě, ale také touha skrze ni chválit Boha, v kterého a kterému věří. Tvorba této pop-rockové kapely je specifická četným užitím pánských vícehlasů, které podtrhává význam hlubokých textů. Jožka, František, Robin, Tom a Pavel chtějí každému z diváků předat maximální hudební, ale i duchovní zážitek.
 `,
-        image: null,
+        image: require("../assets/activities/23.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 18
@@ -803,7 +807,7 @@ export const staticData: StaticData = {
         location: "Kaple Stojanov",
         description: `Tento večer je určen ke společné oslavě Boha, kdy ho můžeme chválit a oslavovat prostřednictvím hudby. Chvála je způsob modlitby, která bezprostředněji uznává, že Bůh je Bohem. Opěvuje ho pro něho samého, oslavuje ho, protože ON JE a za to kdo je, bez ohledu na to, co koná. Stejně jako adorace nás povede na cestu samoty, tak právě chvály můžou být zdrojem hluboké radosti.
        `,
-        image: null,
+        image: require("../assets/activities/43.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 19
@@ -817,7 +821,7 @@ export const staticData: StaticData = {
         title: "Táborák",
         location: "Zahrada Stojanov",
         description: `Večerní oheň, kytara a špekáčky nesmí chybět! Dojdi nasát atmosféru, zazpívat si a potkat se s ostatními po celodenním rušném programu.`,
-        image: null,
+        image: require("../assets/activities/26.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -831,7 +835,7 @@ export const staticData: StaticData = {
         title: "Čajovna/vinárna",
         location: "Sklep gymnázia",
         description: `Pohodový večer s čajem, vínem a drobným občerstvením.`,
-        image: null,
+        image: require("../assets/activities/1.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -846,7 +850,7 @@ export const staticData: StaticData = {
         location: "Slovanský sál",
         description: `Samota není totéž co osamělost. Samota, pokud se k ní rozhodneme svobodně, může přinášet pozitiva, protože v onom tichu slyšíme cosi v nás, a nebo nám dá poznat to, co v hluku světa nevnímáme. Pocit osamělosti ale může prožívat i ten, kdo žije ve společenství rodiny nebo přátel. Celý lidský život je o vztazích. Od početí až do posledního výdechu. O vztahu k sobě, k lidem, hodnotám materiálním, duševním i duchovním. Ale všechny uvedené vztahy mohou trpět sedmi nemocemi. Pojďme hledat prevenci i uzdravení.
        `,
-        image: null,
+        image: require("../assets/activities/alone.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 20
@@ -861,7 +865,7 @@ export const staticData: StaticData = {
         title: "Na to jsi moc mladej",
         location: "Kaple Stojanov",
         description: `Kdy už budete mít věk na to, abyste se mohli starat o svět kolem sebe? Co staří dělají lépe, než mladí? A proč jsou to všechno nesmysly?`,
-        image: null,
+        image: require("../assets/activities/too-young.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 21
@@ -877,7 +881,7 @@ export const staticData: StaticData = {
         location: "Kaple Stojanov",
         description: `V životě poměrně hodně času věnujeme naší minulosti nebo budoucnosti. Naše kalkulativní mysl je stále zaměstnána tím, co a jak bude nebo bylo, proč je to či ono. Neustále analyzuje. Přitom nic z toho není v našich rukou. Naopak. Bůh se zjevuje jako tvořivá přítomnost. Bůh je přítomnost. Tak i naše prožívání přítomnosti, tedy onen kontemplativní mód naší mysli, se může stávat způsobem jak tvořivě nakládat s naší životní zkušeností včetně osamocení a samoty.
        `,
-        image: null,
+        image: require("../assets/activities/waiting.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 22
@@ -894,7 +898,7 @@ export const staticData: StaticData = {
         location: "Sál Stojanov",
         description: `Jak se žije dětem v ústavní péči na Ukrajině? Jak lze pomoci? V čem spočívá dobrovolnická pomoc dětem s postižením? Příběh organizace Bodaj, která již několik let díky dobrovolníkům těmto dětem na Ukrajině pomáhá.
        `,
-        image: null,
+        image: require("../assets/activities/friendship.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 23
@@ -910,7 +914,7 @@ export const staticData: StaticData = {
         location: "Třída 2, gymnázium",
         description: `Život každého z nás roste v rodině, v generacích, ale také v občanské společnosti. Stojí za to překonat vlastní uzavřenost, zaměření na individuální osobní život a vyvážit rodinné priority. Nebát se veřejného nasazení, přijmout službu potřebným. Osamělost křesťanské víry ve většinově nevěřící společnosti je někdy bolestná. Přesto křesťanské hodnoty dokážou pohnout světem, proměňují životy křesťanů i nevěřících.
        `,
-        image: null,
+        image: require("../assets/activities/woman.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 24
@@ -926,7 +930,7 @@ export const staticData: StaticData = {
         location: "Sklep gymnázia",
         description: `Jedinečná příležitost k seznámení v bezpečném prostředí mezi mladými nezadanými věřícími a zdarma. Pokud se rozhodneš Speed datingu zúčastnit, čeká tě seznámení naživo s patnácti účastníky opačného pohlaví :) Vždy máte jen několik málo minut na to, abyste se navzájem poznali, poté se muži přesunou k dalšímu stolu k jiné ženě. Oba si pak navzájem zhodnotíte, zda jste si padli do oka či ne. Jen pro zajímavost: rychlé rande vymyslel rabín Yaacov Deyo, který chtěl zvýšit počet židovských svateb. (Že z toho bude svatba, vám rozhodně neslibujeme.)
        `,
-        image: null,
+        image: require("../assets/activities/5.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -942,7 +946,7 @@ export const staticData: StaticData = {
         location: "Třída 1, gymnázium",
         description: `Smysluplné rozhovory jsou projektem propojující otevřené lidi, kteří se rádi baví a přemýšlí o hlubších tématech. Myšlenkou tohoto projektu je dát lidem příležitost znovu si povídat. Z očí do očí, upřímně a bez povrchnosti, protože za každou běžnou konverzací se zpravidla skrývají naše sny, bolesti, touhy i trápení. Připravte se na odpovědi, které v Tobě i v ostatních posluchačích vyvolají emoce. Protože jen takové nás přimějí opravdově se zamyslet nad našimi životy.
        `,
-        image: null,
+        image: require("../assets/activities/rozhovory.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 10
@@ -958,7 +962,7 @@ export const staticData: StaticData = {
         location: "Sraz venku za VDCM",
         description: `Zkoušel jsi někdy malovat záchodovou štětkou, houbičkou na nádobí nebo ovocem? Pokud ne a rád by sis touto zkušeností prošel, máme tady aktivitu právě pro tebe. Provede tě jí zkušená lektorka, která má s touto technikou mnohaleté zkušenosti.
        `,
-        image: null,
+        image: require("../assets/activities/34.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 25
@@ -974,7 +978,7 @@ export const staticData: StaticData = {
         location: "Kaple Gymnázium",
         description: `Vnímáš, že potřebuješ znovu obnovit vztah s Bohem a zajít si ke svátosti smíření, ale máš pocit, že se nedokážeš připravit? Nebo se chceš jen zastavit, ztišit a chvilku rozjímat?
        `,
-        image: null,
+        image: require("../assets/activities/8.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 26
@@ -989,7 +993,7 @@ export const staticData: StaticData = {
         location: "Slovanský sál",
         description: `"Tato doba není jen epochou změn, nýbrž změnou epochy", tvrdí papež František. Sekularizace nezpůsobila konec náboženství, avšak přispěla k jeho proměně. Pokud chtějí církve odpovědět na výzvu této doby, musí projít hlubokou reformou nejprve v oblasti teologie a spirituality, následně v oblasti pastorace a institucionálních struktur. Důležitou součástí reformy je přechod od navyklého stylu pastorace a misie, od starosti pouze o vlastní věřící a o nárůst jejich počtu, k službě doprovázení lidí na duchovních cestách. Kontemplace a akce, samota i společenství, se musí vzájemně doplňovat.
        `,
-        image: null,
+        image: require("../assets/activities/cross.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 27
@@ -1005,7 +1009,7 @@ export const staticData: StaticData = {
           "Souvislost mezi učením Ježíše Nazaretského a moderní psychoterapii ACT",
         location: "Zimní sál",
         description: `Jak zvládat bolest a utrpení? Kdo jsem já a jak se mohu poznat? Jak objevit svůj potenciál (poznat své hřivny)? Jak mám o sebe pečovat?`,
-        image: null,
+        image: require("../assets/activities/cross2.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 29
@@ -1021,7 +1025,7 @@ export const staticData: StaticData = {
         location: "Třída 1, gymnázium",
         description: `Jaký je život na cestě a v čem spočívá pomoc lidem, kteří v Evropě touží začít znovu? O tom se učíme již řadu let na tzv. Balkánské stezce i u nás, v České republice a rády se o naše zážitky podělíme. Dozvědět se můžete třeba jaký se na Balkánské stezce vaří čaj nebo proč si myslíme, že by křesťan neměl být k příchozím lhostejný.
        `,
-        image: null,
+        image: require("../assets/activities/47.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 28
@@ -1037,7 +1041,7 @@ export const staticData: StaticData = {
         location: "Sál Stojanov",
         description: `Ekologická encyklika papeže Františka slaví letos šesté výročí vydání. Podíváme se na její východiska a obsah, kapitolu po kapitole - na pozadí fotografií, které ukazují krásu Božího stvoření a pocházejí hlavně ze skandinávské přírody, ale i z farní zahrady v Brně-Žebětíně.
        `,
-        image: null,
+        image: require("../assets/activities/nature.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 30
@@ -1053,7 +1057,7 @@ export const staticData: StaticData = {
         location: "Kaple Stojanov",
         description: `Křesťanská modlitba v dějinách často k cestě na hlubinu využívala opakování slova či slov. Nechat se vést modlitebním slovem/větou vede k jednoduchosti a osvobozování se a odpočinku od vlastních myšlenek, nápadů, představ a obrazů. Může se stávat tzv. čirou modlitbou. Je jednoduchá, nikoli však snadná... Můžeme ji zkusit podle návodu benediktinského mnicha Johna Maina, inspirovaného Janem Kasiánem, Oblakem nevědění i Ježíšovou modlitbou.
        `,
-        image: null,
+        image: require("../assets/activities/43.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) =>
@@ -1070,7 +1074,7 @@ export const staticData: StaticData = {
         location: "Sraz venku u baziliky",
         description: `Krav Maga patří mezi nejúčinnější sebeobranné systémy. Je používaná mnoha armádními a policejními jednotkami. Zároveň je pro svou jednoduchost oblíbená mezi lidmi, kteří chtějí zlepšit svou fyzičku, zvýšit sebevědomí a zároveň se chtějí naučit bránit se. Hodina a půl cvičení s naším hostem Honzou, který vede tréninky Krav Maga v Ostravě.
        `,
-        image: null,
+        image: require("../assets/activities/38.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 33
@@ -1086,7 +1090,7 @@ export const staticData: StaticData = {
         location: "Sklep gymnázia",
         description: `Máš rád cimbál? A chtěl by ses naučit tance, které by sis u cimbálu mohl zatančit? Dáme ti možnost. Naši skvělí tanečníci tě provedou workshopem folklorních tanců, které využiješ například i večer ve vinárně.
        `,
-        image: null,
+        image: require("../assets/presenters/folklor.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 34
@@ -1102,7 +1106,7 @@ export const staticData: StaticData = {
         location: "Třída 3, gymnázium",
         description: `Párová akrobacie je úžasně komplexní a hravá seberozvojová aktivita, která se dá cvičit takřka kdekoliv a kdykoliv. "Báze" - tedy osoba, která je při cvičení v kontaktu se zemí, potřebuje jen podložku (bude zajštěno), "letkyním" postačí legíny a přiléhavější tričko. Cvičí se naboso. Kapacitu tohoto workshopu jsme omezili na 12 osob - budeme se párovat a střídat podle potřeby a zaměstnáme všechny pokročilosti. Náš zkušený instruktor se o všechno postará.
        `,
-        image: null,
+        image: require("../assets/activities/41.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 35
@@ -1118,7 +1122,7 @@ export const staticData: StaticData = {
         location: "Třída 2, gymnázium",
         description: `Zajímáš se o dění ve společnosti, ve svém okolí, ve své obci? Chtěl bys být více aktivní a zapojit se do života obce a nevíš jak? Nebo víš jak, ale nevíš, jestli je to správná cesta a potřebuješ to s někým probrat?
        `,
-        image: null,
+        image: require("../assets/activities/community.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 21
@@ -1134,7 +1138,7 @@ export const staticData: StaticData = {
         location: "Sraz venku za VDCM",
         description: `Pointillismus je technika malby, která kombinací malých, od sebe vzdálených bodů základních barev vytváří dojem složité barevnosti. Technika je založena na schopnostech vnímání oka a mysli, které míchají jednotlivé body do celé škály barev.
        `,
-        image: null,
+       image: require("../assets/activities/34.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -1151,7 +1155,7 @@ export const staticData: StaticData = {
         description: `Letošní novinka! Příležitost potkat se a seznámit se všemi účastníky AV z tvého regionu. U zrodu tohoto programového bloku stála jednoduchá myšlenka. Chceme, aby Absolventský Velehrad neskončil nedělním odjezdem domů. Přáli bychom si, aby jeho myšlenka žila v jednotlivých regionech dál. To znamená, aby byla v rámci regionu možnost potkávat se k nejrůznějším aktivitám, sdílení, modlitbě právě v rámci naší skupiny absolventů, tak jako tady na Velehradě. 
 A co konkrétně tě bude v rámci tohoto programu čekat? Potkáš se s dalšími účastníky AV, kteří třeba žijí jen nedaleko od tebe. Seznámíš se a něco společně během těch 90 minut zažijete. Jednotlivé aktivity se budou lišit region od regionu. Budou ti představeny možnosti, nebo třeba společně vymyslíte nové, jak a kde se dále po AVčku potkávat.
 Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrovolníci žijící v daných regionech. `,
-        image: null,
+        image: require("../assets/activities/setkani-regionu.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -1165,7 +1169,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         title: "Posezení u cimbálu",
         location: "Sklep gymnázia",
         description: `Pohodový večer můžeš zažít ve sklepě gymnázia. Nejen příznivci lidové hudby jistě ocení cimbálovou muziku Slačáci i lahodné víno přímo od vinaře.`,
-        image: null,
+        image: require("../assets/activities/1.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -1180,7 +1184,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         location: "Kaple Stojanov",
         description: `Sobotní večer bude také protkán modlitbou a tentokrát tato společná modlitba bude proložena zpěvy z Taizé v podání naší AV scholy. Tato modlitba má zase za cíl nás přiblížit více ke Kristu. Jednoduché opakující texty písní nás připraví na Boží slovo a na chvíle ticha a rozjímání, které budeme prožívat ve společenství ostatních.
        `,
-        image: null,
+       image: require("../assets/activities/43.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -1194,7 +1198,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         title: "Táborák",
         location: "Zahrada Stojanov",
         description: `Večerní oheň, kytara a špekáčky nesmí chybět! Dojdi nasát atmosféru, zazpívat si a potkat se s ostatními po celodenním rušném programu.`,
-        image: null,
+        image: require("../assets/activities/26.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 0
@@ -1209,7 +1213,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         location: "Slovanský sál",
         description: `Život ví své... Nechce být jen dějištěm, prostorem a časem, nabídnutým mým projektům a realizacím. Ví, že je věčný a tak věčným být chce. Hic et nunc - zde a teď.
        `,
-        image: null,
+       image: require("../assets/activities/zivot.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 36
@@ -1225,7 +1229,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         location: "Zimní sál",
         description: `Ako si muž a žena môžu rozumieť, keď každý chce niečo iné, muž ženu, žena  muža. Tento známy aforizmus má v sebe istú múdrosť. Je to nielen o fyzickej, emočnej, psychickej rozdielnosti, ale aj o tom, čo sú ciele a zdroje v našich životoch. O vplyve výchovy a jej presah na krízy v manželstve a duchovnom rozmere toho všetkého na náš život. Prečo sú vtipy len o svokrách (tchýně) a nie o svokroch (tchán). Toho všetkého by sme sa spoločne mohli dotknúť v téme: Duchovná cesta muža a ženy.
        `,
-        image: null,
+       image: require("../assets/activities/path.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 37
@@ -1241,7 +1245,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         location: "Sál Stojanov",
         description: `I když má člověk někdy pocit, že je život těžký, málo barevný a příjemný, nebo že je pro něj dokonce nesnesitelný a k neunesení, tak přesto má CENU ho žít. V přednášce bude řeč o tom, jak se postavit k životu čelem, jak najít smysl života a naději v nelehkých okamžicích života. Vše bude podepřeno příběhy lidí, kteří to nevzdali a chytili svůj život "za pačesy".
        `,
-        image: null,
+       image: require("../assets/activities/46.jpg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 38
@@ -1257,7 +1261,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         location: "Třída 1, gymnázium",
         description: `Svět se blíží k šestému hromadnému vymírání. Příčinou jsou poprvé lidé. Papež František a mnozí další bijí na poplach vyzývají lidi ke změně. Co tedy děláme špatně a jak se k tomu můžeme postavit v našem každodenním životě?
        `,
-        image: null,
+       image: require("../assets/activities/home.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) => presenter.id === 39
@@ -1274,7 +1278,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         location: "Kaple Stojanov",
         description: `Přicházíme jako společenství, ve dvou, abychom nabídly náhled do života ve společenství, každodenní prožívání víry ve společenství i v samotě. Samota a společenství se prolínají také ve službě potřebným, přednáška bude spojená i se svědectvími ze života seniorů, o které se staráme. Nebude chybět ani krátké Lectio divina inspirované úryvkem letošního AV. Chceme tak společně s těmi, kteří k nám přijdou vytvořit neopakovatelnou atmosféru společenství a prostor pro sdílení.
        `,
-        image: null,
+       image: require("../assets/activities/praying.jpeg"),
         get presenter() {
           return staticData.data.presenters.filter(
             (presenter: PresenterData) =>
@@ -1861,14 +1865,14 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         {
           type: TextTypes.TEXT,
           text: `Když se dostali na druhý břeh, přistáli u Genezaretu. Lidé z toho místa ho poznali a vzkázali do celého okolí. Přinášeli mu všechny nemocné a prosili ho, aby se směli aspoň dotknout třásní jeho roucha. A kdo se dotkli, byli uzdraveni. (Mt 14, 34-36)`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Milost`,
         },
         {
           type: TextTypes.TEXT,
           text: `Prosím o milost zakoušet ve své slabosti Boží milosrdenství.`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Meditace`,
         },
@@ -1877,7 +1881,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
           text: ` 1. Proč lidé tak toužili vidět Ježíše? Kvůli jeho skutkům? Byl pro ně senzací nebo mu opravdu ve své bídě, nemocech věřili, že jejich situaci může proměnit? Byl jejich poslední nadějí?
   2. Byl bych schopen sebrat odvahu, zeptat se Ježíše a dotknout se ho? Nechat se obmýt jeho milosrdenstvím a láskou? Ať se cítím jakkoliv nehodně kvůli svým slabostem, hříchům, protože nejsem dost výkonný, dost dobrý dost... je to překážka pro mě, ale ne pro Boha, jemu nic nebrání, aby se ke mně sklonil. Stejně jako Mu nebránilo sklonit se k těm nejnuznějším z nuzných, uzdravovat malomocné. Často tím, kdo Bohu brání, jsem já sám. 
   3. Nejsem to právě já, kdo se rozhodne nepřijat Ježíšovo nabízené milosrdenství buď z pýchy nebo jiných důvodů? Nezůstávám občas ve svém trápení schválně, protože mě druzí politují, protože pochybuju o Boží dobrotě, protože se bojím, že Bůh bude chtít něco zpět?`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Pamatuj`,
         },
@@ -1886,7 +1890,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
           text: `1. Vždycky jsi Boha hoden.
   2. Nic tě neodloučí od Boží lásky. Ani tvoje slabosti, ani hřích.
   3. Stačí se s důvěrou obrátit ke Kristu a dotknout se ho.`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Úkol`,
         },
@@ -1905,14 +1909,14 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         {
           type: TextTypes.TEXT,
           text: `Mnoho z Ježíšových učedníků řeklo: „To je tvrdá řeč! Kdopak to má poslouchat?“ Ježíš věděl sám od sebe, že jeho učedníci na to reptají, a proto jim řekl: „Nad tím se pohoršujete? Co teprve, až uvidíte Syna člověka, jak vystupuje tam, kde byl dříve? Co dává život, je duch, tělo nic neznamená. Slova, která jsem vám mluvil, jsou duch a jsou život. Ale jsou mezi vámi někteří, kdo nevěří.“ Ježíš totiž věděl od začátku, kdo jsou ti, kdo nevěří, a kdo je ten, který ho zradí. A dodal: „Proto jsem vám říkal, že nikdo ke mně nemůže přijít, není-li mu to dáno od Otce.“ Proto mnoho z jeho učedníků odešlo a už s ním nechodili. Ježíš tedy řekl Dvanácti: „I vy chcete odejít?“ Šimon Petr mu odpověděl: „Pane, ke komu půjdeme? Ty máš slova věčného života, a my jsme uvěřili a poznali, že ty jsi ten Svatý Boží.“ (J 6, 60-69)`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Milost`,
         },
         {
           type: TextTypes.TEXT,
           text: `Prosím o milost zůstat věrný Ježíši, který dává věčný život.`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Meditace`,
         },
@@ -1921,7 +1925,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
           text: `1. Pomoz mi probudit otupělé a zatvrzelé srdce, otevři moje oči a uši, ať vidím a slyším. A moje srdce pochopí, co mi chceš říct. 
   2. Jak reaguji na Tvoje slovo? Nejsou některá tvá slova pro mě moc tvrdá, protože zjevují pravdu, kterou občas nechci slyšet a vidět a usvědčují mě z mých slabostí a toho, že nechci sklonit hlavu a uznat, že jsem si před ostatními nasadil masku? Byl bych tě schopný odmítnout kvůli zatvrzelosti svého srdce, kvůli svojí pýše?
   3. Duchu svatý obnov můj život a srdce, abych poznal, kde je tvoje pravda a dej mi pokorné srdce, abych dokázal uznat svoje chyby.`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Pamatuj`,
         },
@@ -1930,7 +1934,7 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
           text: `  1. Ke komu jinému bych šel, když jenom Ježíš mi může dát život.
   2. Pýcha nám dává klapky před oči a zatvrzuje srdce.
   3. Ježíš mě nechce nechat odejít, jsem pro něho drahý, nechce mě ztratit. Je to o mém rozhodnutí.`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Úkol`,
         },
@@ -1958,14 +1962,14 @@ Jednotlivá setkání si pro vás připravili a chtějí s vámi prožít dobrov
         {
           type: TextTypes.TEXT,
           text: `Během chvíle ticha se ohlédneme zpět, abychom si všimli nejdůležitějších okamžiků uplynulého dne. Připomeneme si okamžiky radosti, smutku, těžkostí nebo překvapení, zejména si ale připomeneme, za co jsme dnes vděční.`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Krok 2: Moje já`,
         },
         {
           type: TextTypes.TEXT,
           text: `Začínáme sdílet jednoduché myšlenky a dojmy. Jaký byl můj den? Co na něm bylo nejzajímavější? Co se mě nejvíce dotklo (ať už pozitivně, nebo negativně)?`,
-        },{
+        }, {
           type: TextTypes.NADPIS,
           text: `Krok 3: Já a Boží slovo`,
         },
@@ -2185,7 +2189,7 @@ Ke ztišení a přípravě na svátost smíření budou také sloužit dva progr
           type: TextTypes.TEXT,
           text: `Na naší sdílené online pouti, která začala v době postní, kolem 30ti poutníků v 53 etapách zdolalo 1040km. Ze Soluně jsme tak ve stopách sv. Cyrila a Metoděje přišli až na Velehrad.
           `
-        }, 
+        },
         {
           type: TextTypes.TEXT,
           text: `Tímto ale pouť nekončí. Bude pokračovat v průběhu celého našeho setkání. Cíl zůstane stejný - Velehrad. Povedou k němu 3 cesty. Cesta samoty, společenství a radosti. 

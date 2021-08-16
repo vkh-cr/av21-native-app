@@ -33,7 +33,7 @@ export interface ActivityData {
   title: string;
   location: string;
   description: string;
-  image: string | null;
+  image?: string | null;
   presenter: PresenterData[];
   block: number;
   capacity?: number;

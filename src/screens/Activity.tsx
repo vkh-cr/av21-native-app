@@ -23,37 +23,83 @@ import {
 } from "react-native-paper";
 import { StyleSheet } from "react-native";
 import { useActivity } from "../hooks/useActivity";
-import petrGlosar from "../../assets/presenters/petr-glogar.png";
 import ActivityInfoPanel from "../components/ActivityInfo";
 import { Box, ChevronRightIcon, Flex } from "native-base";
+import { ActivityTypes } from "../types";
 interface ActivityProps
-  extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> {}
+  extends DrawerScreenProps<Record<string, object | undefined>, "Activity"> { }
 
 export default function Activity({ navigation, route }: ActivityProps) {
   const params = route.params as { activityId: number };
   const activity = useActivity(params.activityId);
-  console.log(Dimensions.get("window").width / 2);
+  const avatarWidth = Dimensions.get("window").width - 100;
+
   let presenterNames: string[] = [];
   activity?.presenter.forEach(({ firstName, lastName }) =>
     presenterNames.push(`${firstName} ${lastName}`)
   );
   const joinedNames = presenterNames.join(" + ");
+  let activityColor: string;
+  switch (activity?.type) {
+    case ActivityTypes.VOLNOCAS:
+      activityColor = "#FF5D3A";
+      break;
+    case ActivityTypes.PREDNASKA:
+      activityColor = "#1FAAAA";
+      break;
+    case ActivityTypes.DUCHOVNI:
+      activityColor = "#FFC700";
+      break;
+    default:
+      activityColor = "#CECECE";
+      break;
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
-      <View>
+    <>
         <AppHeader
           navBack
           title={activity?.title || "Aktivita"}
           // subtitle="nevim"
           navigation={navigation}
           removeShadow
+          color={activityColor}
         />
-        <View>
+
           <LinearGradient
-            colors={["#1FAAAA", "#f0f0f0"]}
+            colors={[activityColor, "#f0f0f0"]}
             style={styles.imageWrapper}
           >
-            <View style={{ flex: 1, flexDirection: "column" }}></View>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: "column",
+                alignSelf: "center",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {activity?.image ? (
+                <Avatar.Image
+                  style={{ backgroundColor: "#f0f0f0" }}
+                  size={avatarWidth}
+                  source={activity.image}
+                />
+              ) : (
+                <Avatar.Text
+                  style={styles.avatarText}
+                  size={avatarWidth}
+                  labelStyle={{
+                    letterSpacing: -2,
+                    fontFamily: "HammersmithOne",
+                  }}
+                  label={`${activity?.title.substring(
+                    0,
+                    1
+                  )}`}
+                />
+              )}
+            </View>
           </LinearGradient>
           <ScrollView style={styles.scrollView}>
             <Headline style={{ fontFamily: "HammersmithOne" }}>
@@ -74,8 +120,10 @@ export default function Activity({ navigation, route }: ActivityProps) {
                 }
               >
                 <Flex style={styles.activityBox}>
-                  <ActivityInfoPanel icon="account" text={joinedNames} />
-                  <Box marginLeft={"auto"} style={{ paddingTop: 5 }}>
+                  <View style={{ marginTop: 5, flex: 10 }}>
+                    <ActivityInfoPanel icon="account" text={joinedNames}/>
+                  </View>
+                  <Box marginLeft={"auto"} style={{ marginTop: 5, flex: 1 }}>
                     <ChevronRightIcon />
                   </Box>
                 </Flex>
@@ -85,9 +133,7 @@ export default function Activity({ navigation, route }: ActivityProps) {
             <Title>Anotace</Title>
             <Paragraph>{activity?.description}</Paragraph>
           </ScrollView>
-        </View>
-      </View>
-    </SafeAreaView>
+    </>
   );
 }
 
@@ -153,13 +199,21 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 5,
   },
-  avatar: {
-    shadowRadius: 2,
-    shadowColor: "gray",
-  },
   activityBox: {
     flexDirection: "row",
     alignSelf: "auto",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  avatar: {
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  avatarText: {
+    fontFamily: "HammersmithOne",
+    backgroundColor: "#EEEEEE",
+    alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
   },

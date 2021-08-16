@@ -11,6 +11,7 @@ interface AppHeaderProps<T extends string> {
   navigation: DrawerNavigationProp<Record<string, object | undefined>, T>;
   children?: React.ReactNode;
   removeShadow?: boolean;
+  color?: string,
 }
 
 export function AppHeader<T extends string>({
@@ -20,6 +21,7 @@ export function AppHeader<T extends string>({
   children,
   navBack,
   removeShadow,
+  color,
 }: AppHeaderProps<T>) {
   const handleMenuPress = useCallback(() => {
     navigation.toggleDrawer();
@@ -33,18 +35,18 @@ export function AppHeader<T extends string>({
       theme={{
         dark: true,
         colors: {
-          primary: "#1FAAAA",
-          text: "white",
+          primary: color || "#1FAAAA",
+          text: "#FFFFFF",
         },
       }}
       style={removeShadow && styles.withoutShadow}
     >
-      {navBack ? (
-        <Appbar.Action icon="chevron-left" onPress={handleBackPress} />
+      {navBack ? ( 
+        <Appbar.Action icon="chevron-left" onPress={handleBackPress} color={"#FFFFFF"}/>
       ) : (
-        <Appbar.Action icon="menu" onPress={handleMenuPress} />
+        <Appbar.Action icon="menu" onPress={handleMenuPress} color={"#FFFFFF"}/>
       )}
-      <Appbar.Content title={title} subtitle={subtitle} />
+      <Appbar.Content title={title} subtitle={subtitle} titleStyle={{color: "#FFFFFF"}} />
       {children}
     </Appbar.Header>
   );
